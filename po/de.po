@@ -38,11 +38,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 5.9\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
-"product=GnuCash&component=Translations\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
+"cgi?product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2024-10-17 17:12+0200\n"
-"PO-Revision-Date: 2024-10-14 09:15+0000\n"
-"Last-Translator: \"Frank H. Ellenberger\" <frank.h.ellenberger@gmail.com>\n"
+"PO-Revision-Date: 2024-10-27 15:00+0000\n"
+"Last-Translator: Christian Wehling <christian.wehling@web.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnucash/gnucash/"
 "de/>\n"
 "Language: de\n"
@@ -50,7 +50,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 
 #: bindings/guile/date-utilities.scm:173
 #: gnucash/report/reports/example/daily-reports.scm:260
@@ -1479,20 +1479,14 @@ msgid "Sell"
 msgstr "Verkauf"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:198
-#, fuzzy
-#| msgid ""
-#| "Selling stock long, and record capital gain/loss.\n"
-#| "\n"
-#| "If you are unable to calculate capital gains you can enter aplaceholder "
-#| "amount and correct it in the transaction later."
 msgid ""
 "Selling stock long, and record capital gain/loss.\n"
 "\n"
 "If you are unable to calculate capital gains you can enter a placeholder "
 "amount and correct it in the transaction later."
 msgstr ""
-"Verkaufen Sie Long-Position Aktien, und erfassen Sie den Kapitalgewinn/-"
-"verlust.\n"
+"Verkaufen Sie Long-Position Aktien, und erfassen Sie den Kapitalgewinn/"
+"-verlust.\n"
 "\n"
 "Wenn Sie nicht wissen, wie Kapitalgewinne berechnet werden, können Sie einen "
 "beliebigen Betrag als Platzhalter eingeben und ihn später in der Buchung "
@@ -2179,16 +2173,12 @@ msgstr ""
 "einen Lieferanten."
 
 #: gnucash/gnome/dialog-commodities.cpp:183
-#, fuzzy
-#| msgid ""
-#| "That commodity is currently used by at least one of your accounts. You "
-#| "may not delete it."
 msgid ""
 "This commodity is currently used by the following accounts. You may not "
 "delete it.\n"
 msgstr ""
-"Diese Währung/Wertpapier wird von (mindestens) einem Konto benutzt. Sie "
-"können es daher nicht löschen."
+"Diese Währung/Wertpapier wird derzeit von den folgenden Konten verwendet. "
+"Sie können dies daher nicht löschen.\n"
 
 #: gnucash/gnome/dialog-commodities.cpp:201
 msgid ""
@@ -9691,17 +9681,13 @@ msgstr ""
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:59
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:60
-#, fuzzy
-#| msgid "The number of payments cannot be zero."
 msgid "The number of months to be shown in editor."
-msgstr "Die Anzahl der Zahlungen kann nicht Null sein."
+msgstr "Die Anzahl der Monate, die im Editor angezeigt werden sollen."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:64
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:65
-#, fuzzy
-#| msgid "Position of the vertical pane divider."
 msgid "The horizontal position of the editor divider."
-msgstr "Position des vertikalen Fensterteilers."
+msgstr "Position des horizontalen Fensterteilers."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:76
 msgid "Set the \"notify\" flag by default"
@@ -9756,6 +9742,10 @@ msgid ""
 "by registering for a free account at the Alpha Vantage website, https://www."
 "alphavantage.co/support/#api-key."
 msgstr ""
+"Zur Nutzung von Alpha Vantage benötigen Sie einen API-Schlüssel. Sie "
+"erhalten einen Schlüssel, wenn Sie sich für ein kostenloses Konto auf der "
+"Alpha Vantage-Website registrieren, https://www.alphavantage.co/support/#api-"
+"key."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.general.finance-quote.gschema.xml.in:10
 #: gnucash/gtkbuilder/dialog-preferences.glade:3687
@@ -9770,6 +9760,9 @@ msgid ""
 "obtain a key by registering for a free account at the YH Finance website, "
 "https://financeapi.net/pricing."
 msgstr ""
+"Zur Nutzung von YH Finance benötigen Sie einen API-Schlüssel. Sie erhalten "
+"einen Schlüssel, wenn Sie sich für ein kostenloses Konto auf der YH Finance-"
+"Website registrieren, https://financeapi.net/pricing."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.gschema.xml.in:10
 msgid "The version of these settings"
@@ -20272,17 +20265,13 @@ msgstr ""
 "ungültig."
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:665
-#, fuzzy
-#| msgid ""
-#| "Choice of account makes this a multi-currency transaction but price, "
-#| "(negated) value or (negated) transfer column is missing or invalid."
 msgid ""
 "Choice of accounts makes this a multi-currency transaction but price, "
 "(negated) value or (negated) transfer amount column is missing or invalid."
 msgstr ""
-"Durch die Wahl des Kontos handelt es sich um eine Buchung in mehreren "
+"Durch die Wahl der Konten handelt es sich um eine Buchung in mehreren "
 "Währungen, aber die Spalten Preis, (negierter) Wert oder (negierter) "
-"Transfer fehlen oder sind ungültig."
+"Überweisungsbetrag fehlen oder sind ungültig."
 
 #: gnucash/import-export/csv-imp/gnc-imp-settings-csv.cpp:46
 msgid "No Settings"
@@ -20602,10 +20591,8 @@ msgid "Unknown OFX investment account"
 msgstr "Unbekanntes OFX Investment-Konto"
 
 #: gnucash/import-export/ofx/gnc-ofx-import.cpp:1308
-#, fuzzy
-#| msgid "Finding duplicate transactions"
 msgid "Removing duplicate transactions…"
-msgstr "Duplizierte Buchungen finden"
+msgstr "Doppelte Buchungen löschen…"
 
 #: gnucash/import-export/ofx/gnc-ofx-import.cpp:1362
 #, c-format
@@ -27836,26 +27823,20 @@ msgid "Net Loss"
 msgstr "Nettoverlust"
 
 #: gnucash/report/reports/standard/txn-columns.scm:33
-#, fuzzy
-#| msgid "Transaction Report"
 msgid "Transaction Breakdown Report"
-msgstr "Buchungsbericht"
+msgstr "Bericht zur Buchungsverteilung"
 
 #: gnucash/report/reports/standard/txn-columns.scm:37
-#, fuzzy
-#| msgid "Number of columns"
 msgid "Limit for number of columns"
-msgstr "Anzahl der Spalten"
+msgstr "Begrenzung der Spaltenanzahl"
 
 #: gnucash/report/reports/standard/txn-columns.scm:38
 msgid "Set the upper limit for number of columns"
-msgstr ""
+msgstr "Obergrenze für die Anzahl der Spalten festlegen"
 
 #: gnucash/report/reports/standard/txn-columns.scm:154
-#, fuzzy
-#| msgid "Income summary accounts"
 msgid "Too many accounts"
-msgstr "Abschlusskonten"
+msgstr "Zu viele Konten"
 
 #: gnucash/report/reports/standard/txn-columns.scm:155
 msgid ""
@@ -27863,6 +27844,9 @@ msgid ""
 "Select a different subset of transactions, or increase the limit in the "
 "options."
 msgstr ""
+"Die Anzahl der durch die gefundenen Buchungen verknüpften Konten "
+"überschreitet den Grenzwert. Wählen Sie eine andere Untergruppe von "
+"Buchungen aus, oder erhöhen Sie das Limit in den Optionen."
 
 #: gnucash/report/reports/standard/view-column.scm:45
 #: gnucash/report/reports/standard/view-column.scm:56
@@ -30693,11 +30677,11 @@ msgstr "_Bericht exportieren"
 
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:37
 msgid "_Save layout as default"
-msgstr ""
+msgstr "Layout als Voreinstellung _speichern"
 
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:39
 msgid "Save current layout as default"
-msgstr ""
+msgstr "Aktuelles Layout als Voreinstellung speichern"
 
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:55
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:155
@@ -31900,16 +31884,14 @@ msgid "Checking business splits in account %s: %u of %u"
 msgstr "Überprüfe geschäftliche Buchungsteile im Konto %s: %u von %u"
 
 #: libgnucash/engine/Scrub.cpp:146
-#, fuzzy, c-format
-#| msgid "Looking for orphans in transaction: %u of %u"
+#, c-format
 msgid "Looking for orphans in transaction: %u of %zu"
-msgstr "Suche nach verwaisten Buchungen: %u von %u"
+msgstr "Suche nach verwaisten Buchungen: %u von %zu"
 
 #: libgnucash/engine/Scrub.cpp:357
-#, fuzzy, c-format
-#| msgid "Looking for imbalances in transaction date %s: %u of %u"
+#, c-format
 msgid "Looking for imbalances in transaction date %s: %u of %zu"
-msgstr "Suche nach unausgeglichenen Buchungen zum Datum %s: %u von %u"
+msgstr "Suche nach unausgeglichenen Buchungen zum Datum %s: %u von %zu"
 
 #: libgnucash/engine/Split.cpp:1644
 msgctxt ""
