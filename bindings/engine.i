@@ -322,6 +322,8 @@ Account * gnc_book_get_template_root(QofBook *book);
 %typemap(in) GSList *key_path " $1 = gnc_scm_to_gslist_string($input);"
 %typemap(freearg) GSList *key_path "g_slist_free_full ($1, g_free);"
 
+const SplitsVec& xaccAccountGetSplits (const Account*);
+
 QofBook* qof_book_new (void);
 void qof_book_options_delete (QofBook *book, GSList *key_path);
 void qof_book_set_option (QofBook *book, KvpValue *new_value, GSList *key_path);
