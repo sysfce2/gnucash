@@ -104,7 +104,7 @@
 
 (define (make-split-list account split-filter-pred)
   (reverse (filter split-filter-pred
-                   (xaccAccountGetSplitList account))))
+                   (xaccAccountGetSplits account))))
 
 ;; returns a predicate that returns true only if a split is
 ;; between early-date and late-date

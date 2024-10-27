@@ -193,7 +193,7 @@ date point, a projected minimum balance including scheduled transactions."))
       ;; accounts up to the report start date.
       (let* ((accounts-dates (map (compose xaccTransGetDate xaccSplitGetParent car)
                                   (filter pair?
-                                          (map xaccAccountGetSplitList accounts))))
+                                          (map xaccAccountGetSplits accounts))))
              (earliest (and (pair? accounts-dates) (apply min accounts-dates)))
              (sx-hash (if earliest
                           (gnc-sx-all-instantiate-cashflow-all earliest from-date)

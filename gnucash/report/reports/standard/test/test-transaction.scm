@@ -232,7 +232,7 @@
     ;;                     (xaccSplitGetAmount s)
     ;;                     (xaccAccountGetName (xaccSplitGetAccount (xaccSplitGetOtherSplit s)))
     ;;                     ))
-    ;;           (xaccAccountGetSplitList bank))
+    ;;           (xaccAccountGetSplits bank))
 
     ;; Finally we can begin testing
     (test-begin "general options")

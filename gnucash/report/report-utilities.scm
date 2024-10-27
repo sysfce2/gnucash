@@ -476,8 +476,8 @@
   (define (less? a b) (< (to-date a) (to-date b)))
 
   (let lp ((splits (if split->date
-                       (stable-sort! (xaccAccountGetSplitList acc) less?)
-                       (xaccAccountGetSplitList acc)))
+                       (sort (xaccAccountGetSplits acc) less?)
+                       (xaccAccountGetSplits acc)))
            (dates (sort dates <))
            (result '())
            (last-result nosplit->elt))
@@ -1242,7 +1242,7 @@
              (gnc-account-get-full-name acc)
              (gnc-commodity-get-mnemonic (xaccAccountGetCommodity acc))
              (xaccAccountGetTypeStr (xaccAccountGetType acc)))
-     (for-each (cut gnc:dump-split <> #f) (xaccAccountGetSplitList acc))
+     (for-each (cut gnc:dump-split <> #f) (xaccAccountGetSplits acc))
      (format #t "         Balance: ~a Cleared: ~a Reconciled: ~a\n"
              (gnc:monetary->string
               (gnc:make-gnc-monetary
@@ -1267,7 +1267,7 @@
                             (gnc-get-current-root-account))))
          (inv-txns (filter (lambda (t) (eqv? (xaccTransGetTxnType t) TXN-TYPE-INVOICE))
                            (map xaccSplitGetParent
-                                (append-map xaccAccountGetSplitList acc-APAR))))
+                                (append-map xaccAccountGetSplits acc-APAR))))
          (invoices (map gncInvoiceGetInvoiceFromTxn inv-txns)))
     (define (maybe-date time64)         ;handle INT-MAX differently
       (if (= 9223372036854775807 time64) "?" (qof-print-date time64)))
