@@ -86,6 +86,7 @@ GLIST_HELPER_INOUT(PriceList, SWIGTYPE_p_GNCPrice);
 // TODO: free PriceList?
 GLIST_HELPER_INOUT(CommodityList, SWIGTYPE_p_gnc_commodity);
 VECTOR_HELPER_INOUT(SplitsVec, SWIGTYPE_p_Split, Split);
+VECTORREF_HELPER_INOUT(SplitsVec&, SWIGTYPE_p_Split, Split);
 VECTOR_HELPER_INOUT(AccountVec, SWIGTYPE_p_Account, Account);
 
 %typemap(newfree) char * "g_free($1);"
