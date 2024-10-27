@@ -3881,10 +3881,11 @@ xaccAccountGetNoclosingBalanceChangeInCurrencyForPeriod (Account *acc, time64 t1
 /********************************************************************\
 \********************************************************************/
 
-const SplitsVec
+const SplitsVec&
 xaccAccountGetSplits (const Account *account)
 {
-    g_return_val_if_fail (GNC_IS_ACCOUNT(account), SplitsVec{});
+    static const SplitsVec empty;
+    g_return_val_if_fail (GNC_IS_ACCOUNT(account), empty);
     return GET_PRIVATE(account)->splits;
 }
 
