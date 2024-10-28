@@ -436,20 +436,22 @@ gnc_tree_view_owner_new (GncOwnerType owner_type)
                                   GNC_TREE_MODEL_OWNER_COL_EMAIL,
                                   GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
                                   sort_by_string);
-    gnc_tree_view_add_numeric_column(GNC_TREE_VIEW(view), _("Balance"), GNC_OWNER_TREE_BALANCE_COL,
+    gnc_tree_view_add_numeric_column(GNC_TREE_VIEW(view), C_("column header", "Balance"),
+                                     GNC_OWNER_TREE_BALANCE_COL,
                                      SAMPLE_OWNER_VALUE,
                                      GNC_TREE_MODEL_OWNER_COL_BALANCE,
                                      GNC_TREE_MODEL_OWNER_COL_COLOR_BALANCE,
                                      GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
                                      sort_by_balance_value);
 
-    view->balance_report_column
-        = gnc_tree_view_add_numeric_column(GNC_TREE_VIEW(view), _("Balance"), GNC_OWNER_TREE_BALANCE_REPORT_COL,
-                                           SAMPLE_OWNER_VALUE,
-                                           GNC_TREE_MODEL_OWNER_COL_BALANCE_REPORT,
-                                           GNC_TREE_MODEL_OWNER_COL_COLOR_BALANCE,
-                                           GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
-                                           sort_by_balance_value);
+    view->balance_report_column =
+      gnc_tree_view_add_numeric_column(GNC_TREE_VIEW(view), C_("column header", "Balance"),
+                                       GNC_OWNER_TREE_BALANCE_REPORT_COL,
+                                       SAMPLE_OWNER_VALUE,
+                                       GNC_TREE_MODEL_OWNER_COL_BALANCE_REPORT,
+                                       GNC_TREE_MODEL_OWNER_COL_COLOR_BALANCE,
+                                       GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
+                                       sort_by_balance_value);
 
     view->notes_column
         = gnc_tree_view_add_text_column(GNC_TREE_VIEW(view), _("Notes"), GNC_OWNER_TREE_NOTES_COL, NULL,
@@ -893,7 +895,7 @@ gtvo_update_column_names (GncTreeViewOwner *view)
     const gchar *mnemonic = gnc_commodity_get_mnemonic(gnc_default_report_currency());
 
     gtvo_update_column_name(view->balance_report_column,
-                            /* Translators: %s is a currency mnemonic.*/
+                            /* Translators: %s is a currency mnemonic and this is a column header.*/
                             _("Balance (%s)"), mnemonic);
     gnc_tree_view_set_show_column_menu(GNC_TREE_VIEW(view), FALSE);
     gnc_tree_view_set_show_column_menu(GNC_TREE_VIEW(view), TRUE);

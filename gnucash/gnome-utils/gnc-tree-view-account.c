@@ -834,7 +834,7 @@ gnc_tree_view_account_new_with_root (Account *root, gboolean show_root)
                                            GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
                                            sort_by_present_value);
 
-    gnc_tree_view_add_numeric_column(GNC_TREE_VIEW(view), _("Balance"), "balance",
+    gnc_tree_view_add_numeric_column(GNC_TREE_VIEW(view), C_("column header", "Balance"), "balance",
                                      SAMPLE_ACCOUNT_VALUE,
                                      GNC_TREE_MODEL_ACCOUNT_COL_BALANCE,
                                      GNC_TREE_MODEL_ACCOUNT_COL_COLOR_BALANCE,
@@ -1787,7 +1787,7 @@ gtva_update_column_names (GncTreeViewAccount *view)
                             /* Translators: %s is a currency mnemonic.*/
                             _("Present (%s)"), mnemonic);
     gtva_update_column_name(view->balance_report_column,
-                            /* Translators: %s is a currency mnemonic.*/
+                            /* Translators: %s is a currency mnemonic and this is a column header.*/
                             _("Balance (%s)"), mnemonic);
     gtva_update_column_name(view->cleared_report_column,
                             /* Translators: %s is a currency mnemonic.*/
