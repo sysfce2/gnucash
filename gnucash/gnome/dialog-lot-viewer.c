@@ -938,7 +938,7 @@ lv_init_lot_view (GNCLotViewer *lv)
     gtk_tree_view_append_column(view, column);
 
     renderer = gtk_cell_renderer_text_new();
-    column = gtk_tree_view_column_new_with_attributes(C_("column heading", "Balance"), renderer,
+    column = gtk_tree_view_column_new_with_attributes(_("Balance"), renderer,
              "text", LOT_COL_BALN, NULL);
     configure_number_columns (column, renderer, LOT_COL_BALN_DOUBLE);
     gtk_tree_view_append_column(view, column);
@@ -1030,7 +1030,7 @@ lv_init_split_view (GNCLotViewer *lv, GtkTreeView *view)
     gtk_tree_view_append_column(view, column);
 
     renderer = gtk_cell_renderer_text_new();
-    column = gtk_tree_view_column_new_with_attributes(C_("column header", "Balance"), renderer,
+    column = gtk_tree_view_column_new_with_attributes(_("Balance"), renderer,
              "text", SPLIT_COL_BALANCE, NULL);
     configure_number_columns (column, renderer, SPLIT_COL_BALANCE_DOUBLE);
     gtk_tree_view_append_column(view, column);
