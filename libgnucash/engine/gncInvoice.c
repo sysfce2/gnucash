@@ -29,7 +29,6 @@
 
 #include <config.h>
 
-#include <stdint.h>
 #include <inttypes.h>
 #include <glib.h>
 #include <glib/gi18n.h>

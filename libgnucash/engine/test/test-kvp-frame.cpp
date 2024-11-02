@@ -27,6 +27,7 @@
 #include "../kvp-frame.hpp"
 #include <gtest/gtest.h>
 #include <algorithm>
+#include <cstdint>
 
 class KvpFrameTest : public ::testing::Test
 {

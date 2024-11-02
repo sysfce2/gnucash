@@ -51,6 +51,7 @@
 #endif
 #include <fcntl.h>
 #include <unistd.h>
+#include <stdint.h>
 
 #include "dialog-utils.h"
 #include "assistant-ab-initial.h"

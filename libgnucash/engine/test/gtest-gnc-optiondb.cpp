@@ -27,6 +27,7 @@
 #include "gnc-option-ui.hpp"
 #include "kvp-value.hpp"
 #include <glib-2.0/glib.h>
+#include <cstdint>
 
 #include "gnc-session.h"
 

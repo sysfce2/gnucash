@@ -25,6 +25,7 @@
 #include "gnc-option-gtk-ui.hpp"
 #include <config.h>  // for scanf format string
 #include <memory>
+#include <cstdint>
 #include <qof.h>
 #include <gnc-engine.h> // for GNC_MOD_GUI
 #include <gnc-commodity.h> // for GNC_COMMODITY

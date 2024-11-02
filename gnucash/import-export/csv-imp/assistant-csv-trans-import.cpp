@@ -36,6 +36,7 @@
 #include <glib/gi18n.h>
 #include <stdexcept>
 #include <stdlib.h>
+#include <cstdint>
 
 #include "gnc-path.h"
 #include "gnc-ui.h"

@@ -27,6 +27,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
+#include <cstdint>
 
 #include "kvp-value.hpp"
 #include "kvp-frame.hpp"
