@@ -27,6 +27,7 @@
 #include <config.h>
 #include "qof.h"
 
+#include <cstdint>
 #include <boost/variant.hpp>
 
 //Must be a struct because it's exposed to C so that it can in turn be

@@ -35,6 +35,7 @@
 #include <string>
 #include <vector>
 #include <optional>
+#include <cstdint>
 #include <gnc-datetime.hpp>
 #include "gnc-tokenizer.hpp"
 

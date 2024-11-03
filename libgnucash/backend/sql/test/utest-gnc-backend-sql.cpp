@@ -23,6 +23,7 @@
 #include <glib.h>
 
 #include <config.h>
+#include <cstdint>
 #include <string.h>
 #include <unittest-support.h>
 /* Add specific headers for this class */

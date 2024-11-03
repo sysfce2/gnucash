@@ -33,6 +33,7 @@
 #include <config.h>
 #include <glib.h>
 
+#include <cstdint>
 #include <utility>
 #include "qof.h"
 #include "qofbook-p.h"

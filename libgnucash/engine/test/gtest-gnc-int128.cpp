@@ -22,6 +22,7 @@
  *******************************************************************/
 
 #include <gtest/gtest.h>
+#include <cstdint>
 #include "../gnc-int128.hpp"
 
 TEST(GncInt128_constructors, test_default_constructor)

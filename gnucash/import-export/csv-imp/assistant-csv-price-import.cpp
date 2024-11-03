@@ -34,6 +34,7 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <stdlib.h>
+#include <cstdint>
 
 #include "gnc-ui.h"
 #include "gnc-uri-utils.h"

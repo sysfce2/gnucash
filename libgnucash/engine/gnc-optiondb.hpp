@@ -38,6 +38,7 @@
 #include <exception>
 #include <optional>
 #include <iostream>
+#include <cstdint>
 
 #include <config.h>
 #include "Account.h"
