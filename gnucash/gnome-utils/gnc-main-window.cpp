@@ -2279,11 +2279,19 @@ main_window_find_tab_items (GncMainWindow *window,
 
     tab_widget = gtk_notebook_get_tab_label(GTK_NOTEBOOK(priv->notebook),
                                            page->notebook_page);
-    if (GTK_IS_EVENT_BOX (tab_widget))
-        tab_hbox = gtk_bin_get_child(GTK_BIN(tab_widget));
-    else if (GTK_IS_BOX (tab_widget))
-        tab_hbox = tab_widget;
-    else
+
+    // Walk through children to find the box containing label+entry
+    tab_hbox = tab_widget;
+    while (tab_hbox) {
+        if (g_strcmp0(gtk_widget_get_name(tab_hbox), "tab-content") == 0) {
+            break;
+        }
+        GList* _children = gtk_container_get_children(GTK_CONTAINER(tab_hbox));
+        tab_hbox = _children ? GTK_WIDGET(_children->data) : nullptr;
+        g_list_free(_children);
+    }
+
+    if (!GTK_IS_BOX(tab_hbox))
     {
         PWARN ("Unknown widget for tab label %p", tab_widget);
         return FALSE;
@@ -3319,7 +3327,9 @@ gnc_main_window_open_page (GncMainWindow *window,
     gtk_box_pack_start (GTK_BOX (tab_container), tab_clickable_area, TRUE, TRUE, 0);
 
     // Create a box for the tab's content
+    // Give it a name so we can find it later (see main_window_find_tab_items)
     GtkWidget *tab_content = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
+    gtk_widget_set_name(tab_content, "tab-content");
     gtk_container_add(GTK_CONTAINER(tab_clickable_area), tab_content);
     gtk_widget_show(tab_content);
 
