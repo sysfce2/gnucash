@@ -3315,6 +3315,12 @@ gnc_main_window_open_page (GncMainWindow *window,
 
     tab_container = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
 
+    text = gnc_plugin_page_get_page_long_name(page);
+    if (text)
+    {
+        gtk_widget_set_tooltip_text(tab_container, text);
+    }
+
     if (g_strcmp0 (gnc_plugin_page_get_plugin_name (page), "GncPluginPageAccountTree") == 0)
         gtk_widget_set_name (GTK_WIDGET(tab_container), "gnc-id-account-page-tab-box");
 
@@ -3343,12 +3349,6 @@ gnc_main_window_open_page (GncMainWindow *window,
     }
     else
         gtk_box_pack_start (GTK_BOX (tab_content), label, TRUE, TRUE, 0);
-
-    text = gnc_plugin_page_get_page_long_name(page);
-    if (text)
-    {
-        gtk_widget_set_tooltip_text(tab_clickable_area, text);
-    }
 
     entry = gtk_entry_new();
     gtk_widget_hide (entry);
