@@ -205,7 +205,7 @@ GncFQQuoteSource::run_cmd (const StrVec& args, const std::string& json_string) c
     try
     {
         std::future<std::vector<char> > out_buf, err_buf;
-        boost::asio::io_service svc;
+        boost::asio::io_context svc;
 
         auto input_buf = bp::buffer (json_string);
 	bp::child process;
