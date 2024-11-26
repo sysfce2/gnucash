@@ -583,7 +583,7 @@ if (Boost_FOUND)
   set(HAVE_BOOST 1)
 endif()
 if (NOT HAVE_BOOST)
-message (SEND_ERROR "A suitable Boost is not installed, and is required. GnuCash requires that Boost be compatible and compiled with C++17. Boost 1.67 is the first compatible release but some distributions have patched earlier ones to work with C++17. Please install it and ensure that the following libraries are built: date_time, filesystem, locale, regex, program_options and system.")
+message (SEND_ERROR "A suitable Boost is not installed, and is required. GnuCash requires that Boost be compatible and compiled with C++17. Please install it and ensure that the following libraries are built: date_time, filesystem, locale, regex, program_options and system.")
 endif()
 
 
