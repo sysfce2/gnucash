@@ -72,11 +72,6 @@ Libraries/Deps
                                                 regex libraries.
                                                 locale and regex libs must be
                                                 built with ICU support.
-                                                Note that 1.67.0 is the first
-                                                *release* that supports C++17,
-                                                but that some distributions
-                                                have patched earlier versions
-                                                to work.
   swig                  3.0.12                  Makes Guile and Python Bindings.
   webkit                2.4.11 (Windows,
                         2.14.1 (Everything Else)
