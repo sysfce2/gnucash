@@ -447,7 +447,6 @@ GtkTreeModel *get_model (bool all_commodity)
     const gnc_commodity_table *commodity_table = gnc_get_current_commodities ();
     gnc_commodity *tmp_commodity = nullptr;
     char  *tmp_namespace = nullptr;
-    GList *commodity_list = nullptr;
     GList *namespace_list = gnc_commodity_table_get_namespaces (commodity_table);
     GtkTreeIter iter;
 
@@ -471,8 +470,7 @@ GtkTreeModel *get_model (bool all_commodity)
         {
             if ((g_utf8_collate (tmp_namespace, GNC_COMMODITY_NS_CURRENCY ) == 0) || (all_commodity == true))
             {
-                commodity_list = gnc_commodity_table_get_commodities (commodity_table, tmp_namespace);
-                commodity_list  = g_list_first (commodity_list);
+                auto comm_list = gnc_commodity_table_get_commodities (commodity_table, tmp_namespace);
 
                 // if this is the CURRENCY, add a row to be identified as a separator row
                 if ((g_utf8_collate (tmp_namespace, GNC_COMMODITY_NS_CURRENCY) == 0) && (all_commodity == true))
@@ -482,11 +480,11 @@ GtkTreeModel *get_model (bool all_commodity)
                                            SORT_COMM, "CURRENCY-", COMM_PTR, nullptr, SEP, true, -1);
                 }
 
-                while (commodity_list != nullptr)
+                for (auto node = comm_list; node; node = g_list_next (node))
                 {
                     const gchar *name_str;
                     gchar *sort_str;
-                    tmp_commodity = (gnc_commodity*)commodity_list->data;
+                    tmp_commodity = (gnc_commodity*)node->data;
                     DEBUG("Looking at commodity %s", gnc_commodity_get_fullname (tmp_commodity));
 
                     name_str = gnc_commodity_get_printname (tmp_commodity);
@@ -503,12 +501,11 @@ GtkTreeModel *get_model (bool all_commodity)
                                            SORT_COMM, sort_str, COMM_PTR, tmp_commodity, SEP, false, -1);
 
                     g_free (sort_str);
-                    commodity_list = g_list_next (commodity_list);
                 }
+                g_list_free (comm_list);
             }
         }
     }
-    g_list_free (commodity_list);
     g_list_free (namespace_list);
     g_object_unref (store);
 
