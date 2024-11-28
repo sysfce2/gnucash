@@ -1979,6 +1979,7 @@ gnc_register_multichoice_callback_option(GncOptionDBPtr& db,
         const auto book{qof_session_get_book(gnc_get_current_session())};
         const auto commodity_table{gnc_commodity_table_get_table(book)};
         const auto namespaces{gnc_commodity_table_get_namespaces(commodity_table)};
+        GncOption* rv = nullptr;
         for (auto node = namespaces; node && commodity == nullptr;
              node = g_list_next(node))
         {
@@ -1987,10 +1988,13 @@ gnc_register_multichoice_callback_option(GncOptionDBPtr& db,
                                                    value);
 
             if (commodity)
-                return gnc_make_commodity_option(section, name, key, doc_string,
-                                                 commodity);
+            {
+                rv = gnc_make_commodity_option(section, name, key, doc_string, commodity);
+                break;
+            }
         }
-        return nullptr;
+        g_list_free (namespaces);
+        return rv;
     }
 
     static GncOption*

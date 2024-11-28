@@ -461,10 +461,9 @@ GtkTreeModel *get_model (bool all_commodity)
     gtk_list_store_set (GTK_LIST_STORE(store), &iter,
                             DISPLAYED_COMM, " ", SORT_COMM, " ", COMM_PTR, nullptr, SEP, false, -1);
 
-    namespace_list = g_list_first (namespace_list);
-    while (namespace_list != nullptr)
+    for (auto node = namespace_list; node; node = g_list_next (node))
     {
-        tmp_namespace = (char*)namespace_list->data;
+        tmp_namespace = (char*)node->data;
         DEBUG("Looking at namespace %s", tmp_namespace);
 
         /* Hide the template entry */
@@ -508,7 +507,6 @@ GtkTreeModel *get_model (bool all_commodity)
                 }
             }
         }
-        namespace_list = g_list_next (namespace_list);
     }
     g_list_free (commodity_list);
     g_list_free (namespace_list);
