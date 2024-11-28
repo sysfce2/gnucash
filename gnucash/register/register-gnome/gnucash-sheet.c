@@ -1104,6 +1104,8 @@ gnucash_sheet_insert_cb (GtkEditable *editable,
         g_signal_stop_emission_by_name (G_OBJECT(sheet->entry),
                                         "insert_text");
     }
+
+    g_free (new_text);
 }
 
 static char*
