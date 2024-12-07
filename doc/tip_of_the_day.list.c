@@ -10,7 +10,7 @@ see the table at https://wiki.gnucash.org/wiki/Mailing_Lists")
 
  N_( "The GnuCash developers are easy to contact. As well \
 as several mailing lists, you can chat to them live on IRC! \
-Join them on #gnucash at irc.gnome.org")
+Join them on #gnucash at irc.gimp.net")
 
  N_( "You can easily import your existing financial data from Quicken, \
 MS Money or other programs that export QIF files or OFX files. In the \
