@@ -26,7 +26,7 @@
 # Eric <hamburger1024@mailbox.org>, 2022.
 # 帅是我2 <a1173522112@163.com>, 2022.
 # Carlson Mak <hbmaak@gmail.com>, 2023.
-# Zhaoquan Huang <zhaoquan2008@hotmail.com>, 2023.
+# Zhaoquan Huang <zhaoquan2008@hotmail.com>, 2023, 2024.
 # yu0A <yuhongbo@member.fsf.org>, 2023.
 # yuht <yuht@qq.com>, 2023.
 # Ral Hole <ral-hole@outlook.com>, 2023.
@@ -35,19 +35,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 5.9\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
-"product=GnuCash&component=Translations\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
+"cgi?product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2024-10-17 17:12+0200\n"
-"PO-Revision-Date: 2024-07-20 07:34+0000\n"
-"Last-Translator: fleefar <825272947@qq.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"gnucash/gnucash/zh_Hans/>\n"
+"PO-Revision-Date: 2024-11-01 05:00+0000\n"
+"Last-Translator: Zhaoquan Huang <zhaoquan2008@hotmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/gnucash/gnucash/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 
 #: bindings/guile/date-utilities.scm:173
@@ -1321,21 +1321,21 @@ msgstr "没有有余额的股票科目！"
 #. Initial stock long purchase
 #: gnucash/gnome/assistant-stock-transaction.cpp:160
 msgid "Open buy"
-msgstr "公开买入"
+msgstr "初始买入"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:161
 msgid "Initial stock long purchase."
-msgstr "初始股票买入"
+msgstr "初始股票买入。"
 
 #. Translators: this is a stock transaction describing an
 #. initial stock short sale
 #: gnucash/gnome/assistant-stock-transaction.cpp:171
 msgid "Open short"
-msgstr "公开卖出"
+msgstr "初始做空"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:172
 msgid "Initial stock short sale."
-msgstr "初始股票卖空"
+msgstr "初始股票卖空。"
 
 #. Translators: this is a stock transaction describing
 #. new purchase of stock.
@@ -1355,7 +1355,7 @@ msgstr "买入"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:187
 msgid "Buying stock long."
-msgstr "正在买入股票。"
+msgstr "买入股票。"
 
 #. Translators: this is a stock transaction describing new
 #. sale of stock, and recording capital gain/loss
@@ -1374,12 +1374,6 @@ msgid "Sell"
 msgstr "卖出"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:198
-#, fuzzy
-#| msgid ""
-#| "Selling stock long, and record capital gain/loss.\n"
-#| "\n"
-#| "If you are unable to calculate capital gains you can enter aplaceholder "
-#| "amount and correct it in the transaction later."
 msgid ""
 "Selling stock long, and record capital gain/loss.\n"
 "\n"
@@ -1408,18 +1402,18 @@ msgid ""
 msgstr ""
 "公司向持有人发放现金股利。\n"
 "\n"
-"任何已分红的股利再投资时必须记为正常的股票购买。"
+"任何已分红的股利再投资时必须记为正常的股票买入。"
 
 #. Translators: this is a stock transaction describing return
 #. of capital
 #: gnucash/gnome/assistant-stock-transaction.cpp:222
 msgid "Return of capital"
-msgstr "资本回报率"
+msgstr "资本回报"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:223
 msgid ""
 "Company returns capital, reducing the cost basis without affecting # units."
-msgstr "公司回报资本，在减少成本基础时不要影响 # 股份。"
+msgstr "公司回报资本，在减少成本基础时不影响股份数量。"
 
 #. Translators: this is a stock transaction describing return
 #. of capital, reclassifying a dividend into return of capital
@@ -1432,21 +1426,20 @@ msgid ""
 "Company returns capital, reducing the cost basis without affecting # units. "
 "A distribution previously recorded as a dividend is reclassified to return "
 "of capital, often due to end-of-year tax information."
-msgstr ""
-"公司返还资本，降低成本基础，而不影响# 股份。 以前记录为股息的分配被重新分类为"
-"资本回报，通常是由于年终税务信息。"
+msgstr "公司返还资本，降低成本基础，而不影响股份数量。 "
+"以前记录为股利的分配被重新分类为资本回报，通常是由于年终税务信息。"
 
 #. Translators: this is a stock transaction describing a
 #. notional distribution recorded as dividend
 #: gnucash/gnome/assistant-stock-transaction.cpp:246
 msgid "Notional distribution (dividend)"
-msgstr "名义分配（股息）"
+msgstr "名义分配（股利）"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:247
 msgid ""
 "Company issues a notional distribution, which is recorded as dividend income "
 "and increases the cost basis without affecting # units."
-msgstr "公司作出一个名义分配，把它记作股息分红并增加成本而不产生实质影响。"
+msgstr "公司作出一个名义分配，把它记作股利收入并增加成本而不对股份数量产生影响。"
 
 #. Translators: this is a stock transaction describing a
 #. notional distribution recorded as capital gain
@@ -1458,8 +1451,7 @@ msgstr "名义分配（资本收益）"
 msgid ""
 "Company issues a notional distribution, which is recorded as capital gain "
 "and increases the cost basis without affecting # units."
-msgstr ""
-"公司发行估值分配，记录为资本收益，并在不影响# 股份的情况下增加成本基础。"
+msgstr "公司发行名义分配，记录为资本收益，并在不影响股份数量的情况下增加成本基础。"
 
 #. Translators: this is a stock transaction describing a stock
 #. split
@@ -1471,15 +1463,6 @@ msgid "Stock split"
 msgstr "股票分割"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:271
-#, fuzzy
-#| msgid ""
-#| "Company redeems units, thereby increasing the stock price by a multiple, "
-#| "while keeping the total monetary value of the overall investment "
-#| "constant.\n"
-#| "\n"
-#| "If the reverse split results in a cash in lieu for remainder units, "
-#| "please record the sale using the Stock Transaction Assistant first, then "
-#| "record the reverse split."
 msgid ""
 "Company issues additional units, thereby reducing the stock price by a "
 "divisor , while keeping the total monetary value of the overall investment "
@@ -1488,10 +1471,10 @@ msgid ""
 "If the split results in a cash in lieu for remainder units, please record "
 "the sale using the Stock Transaction Assistant first, then record the split."
 msgstr ""
-"公司回购股票，从而使股票价格按对应比例提高，并保持整体的投资价值不变。\n"
+"公司发行新股票，从而使股票价格按对应比例降低，并保持整体的投资价值不变。\n"
 "\n"
-"如果反向拆分是以现金支付回购剩余股份，请先用股票交易助手记录销售，然后再记录"
-"反向拆分。"
+"如果股票分割是以现金支付回购剩余股份，请先用股票交易助手记录卖出，然后再记录"
+"分割。"
 
 #. Translators: this is a stock transaction describing a reverse split
 #. Translators: this is a stock transaction describing a
@@ -1499,7 +1482,7 @@ msgstr ""
 #: gnucash/gnome/assistant-stock-transaction.cpp:283
 #: gnucash/gnome/assistant-stock-transaction.cpp:410
 msgid "Reverse split"
-msgstr "反向拆分"
+msgstr "反向分割"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:284
 msgid ""
@@ -1512,8 +1495,8 @@ msgid ""
 msgstr ""
 "公司回购股票，从而使股票价格按对应比例提高，并保持整体的投资价值不变。\n"
 "\n"
-"如果反向拆分是以现金支付回购剩余股份，请先用股票交易助手记录销售，然后再记录"
-"反向拆分。"
+"如果反向股票分割是以现金支付回购剩余股份，请先用股票交易助手记录卖出，然后再"
+"记录反向分割。"
 
 #. Translators: this is a stock transaction describing
 #. shorting of stock.
@@ -1538,18 +1521,21 @@ msgid ""
 "If you are unable to calculate capital gains you can enter a placeholder "
 "amount and correct it in the transaction later."
 msgstr ""
+"购买股票以弥补空头头寸，并记录资本收益/损失。\n"
+"\n"
+"如果你无法计算资本收益，你可以输入一个占位符金额并稍后在交易中纠正。"
 
 #. Translators: this is a stock transaction describing
 #. dividends retrieved from holder when shorting stock
 #: gnucash/gnome/assistant-stock-transaction.cpp:325
 msgid "Compensatory dividend"
-msgstr "补偿性股息"
+msgstr "补偿性股利"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:326
 msgid ""
 "Company issues dividends, and the short stock holder must make a "
 "compensatory payment for the dividend."
-msgstr "公司分配股息，此时股票空头持有者必须对股息进行补偿性支付。"
+msgstr "公司分配股利，此时股票空头持有者必须对股利进行补偿性支付。"
 
 #. Translators: this is a stock transaction describing return
 #. of capital retrieved from holder when shorting stock
@@ -1562,25 +1548,17 @@ msgid ""
 "Company returns capital, and the short stock holder must make a compensatory "
 "payment for the returned capital. This reduces the cost basis (less "
 "negative, towards 0.00 value) without affecting # units."
-msgstr ""
-"公司回购股本，空头持有者必须向回购的股本进行补偿性支付。这样会降低成本（负"
-"数，接近0.00的价格）不影响。"
+msgstr "公司回购股本，空头持有者必须向回购的股本进行补偿性支付。这样会降低成本（使原"
+"本为负数的成本更接近0.00）而不影响股份数量。"
 
 #. Translators: this is a stock transaction describing
 #. reclassifying a compensatory dividend into compensatory
 #. return of capital when shorting stock
 #: gnucash/gnome/assistant-stock-transaction.cpp:351
-#, fuzzy
-#| msgid "Compensatory return of capital"
 msgid "Compensatory return of capital (reclassification)"
-msgstr "资本补偿性回报"
+msgstr "资本补偿性回报（重新分类）"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:352
-#, fuzzy
-#| msgid ""
-#| "Company returns capital, and the short stock holder must make a "
-#| "compensatory payment for the returned capital. This reduces the cost "
-#| "basis (less negative, towards 0.00 value) without affecting # units."
 msgid ""
 "Company returns capital, and the short stock holder must make a compensatory "
 "payment for the returned capital. This reduces the cost basis (less "
@@ -1588,17 +1566,16 @@ msgid ""
 "previously recorded as a compensatory dividend is reclassified to "
 "compensatory return of capital,often due to end-of-year tax information."
 msgstr ""
-"公司回购股本，空头持有者必须向回购的股本进行补偿性支付。这样会降低成本（负"
-"数，接近0.00的价格）不影响。"
+"公司回购股本，空头持有者必须进行补偿性支付。这样会降低成本（使原本为负数的成"
+"本更接近0.00），而不影响股份数量。之前被记录的补偿性股利被重新分类为补偿性资"
+"本利得，通常是由于年底的税务信息。"
 
 #. Translators: this is a stock transaction describing a
 #. notional distribution recorded as dividend when shorting
 #. stock
 #: gnucash/gnome/assistant-stock-transaction.cpp:367
-#, fuzzy
-#| msgid "Compensatory notional distribution"
 msgid "Compensatory notional distribution (dividend)"
-msgstr "补偿性名义分配"
+msgstr "补偿性名义分配（股利）"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:368
 msgid ""
@@ -1607,47 +1584,27 @@ msgid ""
 "loss/negative dividend income amount, and increases the cost basis (more "
 "negative, away from 0.00 value) without affecting # units."
 msgstr ""
-"公司发行名义分配，空头就必须为名义分配赔偿一些费用。这被记为一个损失或负的股"
-"息收入金额，并且增加成本基础（这个成本基础负的更多，远超0.00这个数字）而不要"
-"影响 # 股份 。"
+"公司作出名义分配，空头必须为该名义分配补偿一些费用。这被记为一个损失或负的股"
+"利收入，并且增加成本基础（使原本为负数的成本基础更加远离0."
+"00）而不影响股份数量。"
 
 #. Translators: this is a stock transaction describing a
 #. notional distribution recorded as capital gain when
 #. shorting stock
 #: gnucash/gnome/assistant-stock-transaction.cpp:382
-#, fuzzy
-#| msgid "Compensatory notional distribution"
 msgid "Compensatory notional distribution (capital gain)"
-msgstr "补偿性名义分配"
+msgstr "补偿性名义分配（资本回报）"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:383
-#, fuzzy
-#| msgid ""
-#| "Company issues a notional distribution, and the short stock holder must "
-#| "make a compensatory payment for the notional distribution. This is "
-#| "recorded as a loss/negative dividend income amount, and increases the "
-#| "cost basis (more negative, away from 0.00 value) without affecting # "
-#| "units."
 msgid ""
 "Company issues a notional distribution, and the short stock holder must make "
 "a compensatory payment for the notional distribution. This is recorded as a "
 "capital loss amount, and increases the cost basis (more negative, away from "
 "0.00 value) without affecting # units."
-msgstr ""
-"公司发行名义分配，空头就必须为名义分配赔偿一些费用。这被记为一个损失或负的股"
-"息收入金额，并且增加成本基础（这个成本基础负的更多，远超0.00这个数字）而不要"
-"影响 # 股份 。"
+msgstr "公司发行名义分配，空头必须为名义分配赔偿一些费用。这被记为一个损失，并且增加"
+"成本基础（使原本为负的成本基础远离0.00）而不影响股份数量 。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:397
-#, fuzzy
-#| msgid ""
-#| "Company redeems units, thereby increasing the stock price by a multiple, "
-#| "while keeping the total monetary value of the overall investment "
-#| "constant.\n"
-#| "\n"
-#| "If the reverse split results in a cash in lieu for remainder units, "
-#| "please record the cover buy using the Stock Transaction Assistant first, "
-#| "then record the reverse split."
 msgid ""
 "Company issues additional units, thereby reducing the stock price by a "
 "divisor, while keeping the total monetary value of the overall investment "
@@ -1657,10 +1614,10 @@ msgid ""
 "the cover buy using the Stock Transaction Assistant first, then record the "
 "split."
 msgstr ""
-"公司回购股份，因此股价会按一个乘数增加，且保持总投资常数的货币价值。\n"
+"公司发行新股份，因此股价会按一个比例减小，且保持投资的总货币价值不变。\n"
 "\n"
-"如果反向拆分导致以现金代替剩余单位，请先使用股票交易助手记录补仓，再记录反向"
-"拆分。"
+"如果股票分割中以现金代替剩余股份，请先使用股票交易助手记录买入，再记录股票分"
+"割。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:411
 msgid ""
@@ -1671,10 +1628,10 @@ msgid ""
 "record the cover buy using the Stock Transaction Assistant first, then "
 "record the reverse split."
 msgstr ""
-"公司回购股份，因此股价会按一个乘数增加，且保持总投资常数的货币价值。\n"
+"公司回购股份，因此股价会按一个乘数增加，且保持投资的总货币价值不变。\n"
 "\n"
-"如果反向拆分导致以现金代替剩余单位，请先使用股票交易助手记录补仓，再记录反向"
-"拆分。"
+"如果反向分割中以现金代替剩余单位，请先使用股票交易助手记录平仓买入，再记录反"
+"向分割。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:503
 msgid "No errors found. Click Apply to create transaction."
@@ -1692,7 +1649,7 @@ msgstr "存在以下警告："
 #: gnucash/gnome/assistant-stock-transaction.cpp:716
 #: gnucash/report/reports/standard/balsheet-pnl.scm:799
 msgid "missing"
-msgstr "交易"
+msgstr "缺失"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:694
 #: gnucash/gnome/assistant-stock-transaction.cpp:1044
@@ -1714,21 +1671,18 @@ msgstr "%s的数量必须为正数。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:705
 #: gnucash/gnome/assistant-stock-transaction.cpp:1055
-#, fuzzy, c-format
-#| msgid "Include sub-accounts of all selected accounts."
+#, c-format
 msgid "The %s amount has no associated account."
-msgstr "包括所有选定账户的子账户。"
+msgstr "%s数量没有选定账户"
 
 #. Translators: "N/A" here means that a commodity doesn't have a valid price.
 #: gnucash/gnome/assistant-stock-transaction.cpp:771
 msgid "N/A"
-msgstr "N/A"
+msgstr "不可用"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:863
-#, fuzzy
-#| msgid "Amount for %s is missing."
 msgid "Amount for stock value is missing."
-msgstr "缺少%s的数量。"
+msgstr "缺少股份数量。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:875
 msgid "Invalid stock new balance."
@@ -1744,7 +1698,7 @@ msgstr "新余额必须低于旧余额。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:886
 msgid "Stock amount must be positive."
-msgstr "股票金额必须为正数。"
+msgstr "股份数量必须为正数。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:890
 msgid "Cannot sell more units than owned."
@@ -1755,29 +1709,21 @@ msgid "Cannot cover buy more units than owed."
 msgstr "不能补仓买入比欠的数量多的股票。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1129
-#, fuzzy
-#| msgid "Stock"
 msgctxt "Stock Assistant: Page name"
 msgid "Stock"
 msgstr "股票"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1131
-#, fuzzy
-#| msgid "Cash"
 msgctxt "Stock Assistant: Page name"
 msgid "Cash"
 msgstr "现金"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1133
-#, fuzzy
-#| msgid "Fees"
 msgctxt "Stock Assistant: Page name"
 msgid "Fees"
 msgstr "费用"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1135
-#, fuzzy
-#| msgid "Dividend"
 msgctxt "Stock Assistant: Page name"
 msgid "Dividend"
 msgstr "股利"
@@ -1797,9 +1743,9 @@ msgid ""
 "and therefore capital gains, of transactions dated after the new entry. "
 "Please review all transactions to ensure proper recording."
 msgstr ""
-"您会进入一次日期为%s，早于此账户的最后一次交易的交易，日期为%s。这样做可能会"
-"影响在日后的交易中的成本基础，从而影响资本收益。请检查所有交易以确保正确记"
-"录。"
+"您即将输入的交易日期为%s，早于此账户的最后一次交易（日期为%s）。这样做可能会"
+"影响在该交易之后的交易的成本基础，从而影响资本收益。请检查所有交易以确保正确"
+"记录。"
 
 #. Translators: %s refer to: stock mnemonic, broker currency,
 #. date of transaction.
@@ -1811,7 +1757,7 @@ msgstr "将记录1 %s = %s的价格在%s上。"
 #: gnucash/gnome/assistant-stock-transaction.cpp:1411
 #, c-format
 msgid "Transaction can't balance, %s is error value %s"
-msgstr ""
+msgstr "交易无法平衡，%s的错误代码为%s"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1417
 #, c-format
@@ -1841,7 +1787,7 @@ msgstr "下个余额"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1929
 msgid "Enter the new balance of shares after the stock split."
-msgstr "在拆股之后输入新的股份余额"
+msgstr "输入股票分割后的股份余额。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1930
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:212
@@ -6757,7 +6703,7 @@ msgstr "日期超出范围"
 
 #: gnucash/gnome-utils/dialog-utils.c:766
 msgid "Remember and don't _ask me again."
-msgstr "请记住，不要再询问(_A)。"
+msgstr "记住该选择，不再询问(_A)。"
 
 #: gnucash/gnome-utils/dialog-utils.c:767
 msgid "Don't _tell me again."
@@ -6765,7 +6711,7 @@ msgstr "请勿再通知(_T)。"
 
 #: gnucash/gnome-utils/dialog-utils.c:770
 msgid "Remember and don't ask me again this _session."
-msgstr "请记住，不要再询问；此选项暂存(_S)。"
+msgstr "记住该选择，本次会话中不再询问(_S)。"
 
 #: gnucash/gnome-utils/dialog-utils.c:771
 msgid "Don't tell me again this _session."
@@ -12166,7 +12112,7 @@ msgstr ""
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:816
 #: gnucash/import-export/aqb/dialog-ab.glade:1201
 msgid "_Amount"
-msgstr "数量(_A)"
+msgstr "金额(_A)"
 
 #: gnucash/gtkbuilder/assistant-stock-split.glade:293
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:365
@@ -12214,14 +12160,9 @@ msgstr "股票拆分完成"
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:9
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:27
 msgid "Stock Transaction Assistant"
-msgstr "股票交易向导"
+msgstr "股票交易助手"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:22
-#, fuzzy
-#| msgid ""
-#| "This assistant will help you record a stock transaction. The transaction "
-#| "type (purchase, sale, dividend, distribution, return of capital, stock "
-#| "split) will determine the transaction splits involved in the transaction."
 msgid ""
 "This assistant will help you record a stock transaction. The transaction "
 "type (purchase, sale, dividend, distribution, return of capital, stock "
@@ -12231,12 +12172,13 @@ msgid ""
 "transaction currency will be offered for cash, capital gains, dividends, and "
 "fees."
 msgstr ""
-"本向导将帮助你记录一次股票交易。交易类型（购买、出售、股息、分配、资本回报、"
-"股票分割）将决定交易中的交易拆分。"
+"本向导将帮助你记录一次股票交易。交易类型（买入、卖出、股利、分配、资本收益、"
+"股票分割）将决定交易中的交易分录。注意交易货币将为该股票的货币类型，多种货币"
+"交易暂不支持：只有设置有交易货币的科目支持现金、资本收益、股利和费用。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:45
 msgid "Select the date and description for your records."
-msgstr "选择日期和你的科目描述。"
+msgstr "选择交易记录的日期和描述。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:109
 #: gnucash/gtkbuilder/dialog-payment.glade:662
@@ -12249,9 +12191,8 @@ msgid ""
 "types depend on whether the current stock balance is positive, nil, or "
 "negative (i.e. when shorting stock). The type will determine the component "
 "splits."
-msgstr ""
-"选择你想记录的股票的类型。可用的类型取决于当前的股票余额是正数，无还是负数"
-"（即做空股票）。类型将决定拆分的各部分。"
+msgstr "选择你想记录的股票交易的类型。可用的类型取决于当前的股票余额是正数，无还是负"
+"数（即做空股票）。类型将决定交易的各个分录。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:195
 msgid "Transaction Type"
@@ -12263,15 +12204,15 @@ msgstr "之前的余额"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:312
 msgid "Stock Amount"
-msgstr "股票金额"
+msgstr "股票数量"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:329
 msgid "Enter the value of the shares."
-msgstr "输入股份名称。"
+msgstr "输入股份价值。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:404
 msgid "_Stock Value"
-msgstr "税率(_S)"
+msgstr "股票价值(_S)"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:425
 msgid "Stock Value"
@@ -12307,9 +12248,9 @@ msgid ""
 "expensed. If there are no fees involved in this transaction, it can be left "
 "blank."
 msgstr ""
-"在本页中，输入在本次交易中的任意经纪费用。费用可能被资本化至资产账户，也可能"
-"被记入经纪费账户。一般而言，买入的费用应该被资本化，卖出的费用应该被记入经纪"
-"费账户。如果本次交易不涉及费用，那么可以留空。"
+"在本页中，输入在本次交易中的经纪费用。费用可能被资本化至资产账户，也可以被记"
+"入经纪费账户。一般而言，买入的费用应该被资本化，卖出的费用应该被记入经纪费账"
+"户。如果本次交易不涉及费用，那么可以留空。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:606
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:665
@@ -12323,23 +12264,21 @@ msgstr "经纪费"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:641
 msgid "Capitalize brokerage fees into stock account?"
-msgstr "将资本破产费用加入股票账户中？"
+msgstr "将经纪费用计入股票账户中？"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:682
 msgid "In this page, input any dividend income received in this transaction."
-msgstr "在页面中，在本次交易中输入任意的股息收入。"
+msgstr "在页面中，在本次交易中输入任意的股利收入。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:756
 msgid "Dividend Account"
-msgstr "股息科目"
+msgstr "股利科目"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:795
 msgid ""
 "In this page, input any capital gains or losses incurred, and the associated "
 "income account. Capital gains are positive, and capital losses are negative."
-msgstr ""
-"在本页中，输入任意产生的资本收益或亏损和相关的收入账户。资本收益为正，资本亏"
-"损为负。"
+msgstr "在本页中，输入资本收益或亏损以及相关的科目。资本收益为正，资本亏损为负。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:846
 msgid "Capital Gain"
@@ -12358,9 +12297,8 @@ msgid ""
 "A summary of splits is shown as follows. If the summary is correct, and "
 "there are no errors, please press \"Apply\". You may also press \"Back\" to "
 "review your choices, or \"Cancel\" to quit without making any changes. "
-msgstr ""
-"下面是分隔的一个简明的效果，如果效果正确无误，那请点击“应用”。您也可以通过"
-"按“后退”来检查您的选择，或是点击“退出”来退出并且不保存任何修改。 "
+msgstr "以下是交易分录的概要。如果正确无误，请点击“应用”。您也可以通过按“后退”来检查"
+"您的选择，或是点击“取消”来退出并且不保存任何修改。 "
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:956
 msgid "Finish"
@@ -15998,7 +15936,7 @@ msgstr "<b>定义</b>"
 #: gnucash/register/ledger-core/split-register.c:2124
 #: gnucash/register/ledger-core/split-register.c:2127
 msgid "_Value"
-msgstr "税率(_V)"
+msgstr "值(_V)"
 
 #: gnucash/gtkbuilder/dialog-tax-table.glade:506
 #: gnucash/ui/gnc-reconcile-window.ui:30
@@ -19931,13 +19869,13 @@ msgstr "sample:花费:汽车:汽油"
 #: gnucash/register/ledger-core/gncEntryLedgerLayout.c:132
 msgctxt "sample for 'Taxable'"
 msgid "T?"
-msgstr "税率？"
+msgstr "应税？"
 
 #. Translators: Abbreviation sample for Tax Included
 #: gnucash/register/ledger-core/gncEntryLedgerLayout.c:137
 msgctxt "sample for 'Tax Included'"
 msgid "TI"
-msgstr "税率"
+msgstr "已税"
 
 #: gnucash/register/ledger-core/gncEntryLedgerLayout.c:141
 msgctxt "sample for 'Tax Table'"
@@ -24690,7 +24628,7 @@ msgstr "警告：下面的~a子交易没有分配到一个批次当中。批次�
 #: gnucash/report/reports/standard/investment-lots.scm:1425
 #, scheme-format
 msgid ": amount ~a, value ~a"
-msgstr ": 金额~a，值~a"
+msgstr ": 数量~a，价值~a"
 
 #: gnucash/report/reports/standard/investment-lots.scm:1445
 #, scheme-format
@@ -27160,7 +27098,7 @@ msgstr "显示其它科目名称？如果这是分录，那么此参数会被预
 
 #: gnucash/report/trep-engine.scm:966
 msgid "Amount of detail to display per transaction."
-msgstr "指定详细显示事务的数量。"
+msgstr "指定每项交易中详细信息的数量。"
 
 #: gnucash/report/trep-engine.scm:968
 msgid "One split per line"
@@ -28846,14 +28784,10 @@ msgid "Reconcile the selected account."
 msgstr "核实选中的科目"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:244
-#, fuzzy
-#| msgid ""
-#| "Automatically clear individual transactions, so as to reach a certain "
-#| "cleared amount"
 msgid ""
 "Automatically clear individual transactions, so as to reach a certain "
 "cleared amount."
-msgstr "只要达到一定的结清金额，就自动结清独立的交易事项"
+msgstr "只要达到一定的结清金额，就自动结清独立的交易事项。"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:256
 #, fuzzy
