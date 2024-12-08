@@ -104,10 +104,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GnuCash 5.9\n"
+"Project-Id-Version: GnuCash 5.10\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
 "product=GnuCash&component=Translations\n"
-"POT-Creation-Date: 2024-10-17 17:12+0200\n"
+"POT-Creation-Date: 2024-12-08 11:07-0800\n"
 "PO-Revision-Date: 2018-03-03 22:41+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -304,7 +304,7 @@ msgid "The current date."
 msgstr "Den nuværende dato."
 
 #: bindings/guile/options.scm:388 gnucash/gnome/top-level.c:462
-#: libgnucash/engine/gnc-optiondb.cpp:1200 libgnucash/engine/qofbookslots.h:72
+#: libgnucash/engine/gnc-optiondb.cpp:1201 libgnucash/engine/qofbookslots.h:72
 msgid "Business"
 msgstr "Forretning"
 
@@ -316,41 +316,41 @@ msgstr "Forretning"
 #: gnucash/gtkbuilder/dialog-customer.glade:146
 #: gnucash/gtkbuilder/dialog-vendor.glade:147
 #: gnucash/report/reports/support/taxinvoice.eguile.scm:149
-#: libgnucash/engine/gnc-optiondb.cpp:1300
+#: libgnucash/engine/gnc-optiondb.cpp:1301
 msgid "Company Name"
 msgstr "Firmanavn"
 
-#: bindings/guile/options.scm:390 libgnucash/engine/gnc-optiondb.cpp:1303
+#: bindings/guile/options.scm:390 libgnucash/engine/gnc-optiondb.cpp:1304
 msgid "Company Address"
 msgstr "Firmaets adresse"
 
-#: bindings/guile/options.scm:391 libgnucash/engine/gnc-optiondb.cpp:1326
+#: bindings/guile/options.scm:391 libgnucash/engine/gnc-optiondb.cpp:1327
 msgid "Company ID"
 msgstr "Firma-id"
 
-#: bindings/guile/options.scm:392 libgnucash/engine/gnc-optiondb.cpp:1311
+#: bindings/guile/options.scm:392 libgnucash/engine/gnc-optiondb.cpp:1312
 msgid "Company Phone Number"
 msgstr "Firmaets telefonnummer"
 
-#: bindings/guile/options.scm:393 libgnucash/engine/gnc-optiondb.cpp:1315
+#: bindings/guile/options.scm:393 libgnucash/engine/gnc-optiondb.cpp:1316
 msgid "Company Fax Number"
 msgstr "Firmaets faxnummer"
 
-#: bindings/guile/options.scm:394 libgnucash/engine/gnc-optiondb.cpp:1323
+#: bindings/guile/options.scm:394 libgnucash/engine/gnc-optiondb.cpp:1324
 msgid "Company Website URL"
 msgstr "Firmaets internetside"
 
-#: bindings/guile/options.scm:395 libgnucash/engine/gnc-optiondb.cpp:1319
+#: bindings/guile/options.scm:395 libgnucash/engine/gnc-optiondb.cpp:1320
 msgid "Company Email Address"
 msgstr "Firmaets e-post-adresse"
 
-#: bindings/guile/options.scm:396 libgnucash/engine/gnc-optiondb.cpp:1307
+#: bindings/guile/options.scm:396 libgnucash/engine/gnc-optiondb.cpp:1308
 msgid "Company Contact Person"
 msgstr "Firmaets kontaktperson"
 
 #: bindings/guile/options.scm:397
 #: gnucash/gtkbuilder/dialog-preferences.glade:1021
-#: libgnucash/engine/gnc-optiondb.cpp:1347
+#: libgnucash/engine/gnc-optiondb.cpp:1348
 msgid "Fancy Date Format"
 msgstr "Smart datoformat"
 
@@ -363,11 +363,11 @@ msgstr "Tilpasset"
 #: gnucash/register/ledger-core/gncEntryLedgerModel.c:122
 #: gnucash/report/reports/standard/invoice.scm:716
 #: gnucash/report/reports/standard/new-owner-report.scm:55
-#: libgnucash/engine/gnc-optiondb.cpp:1353
+#: libgnucash/engine/gnc-optiondb.cpp:1354
 msgid "Tax"
 msgstr "Skat"
 
-#: bindings/guile/options.scm:400 libgnucash/engine/gnc-optiondb.cpp:1353
+#: bindings/guile/options.scm:400 libgnucash/engine/gnc-optiondb.cpp:1354
 msgid "Tax Number"
 msgstr "Skattenummer"
 
@@ -802,10 +802,15 @@ msgid ""
 msgstr ""
 
 #: doc/tip_of_the_day.list.c:11
+#, fuzzy
+#| msgid ""
+#| "The GnuCash developers are easy to contact. As well as several mailing "
+#| "lists, you can chat to them live on IRC! Join them on #gnucash at irc."
+#| "gnome.org"
 msgid ""
 "The GnuCash developers are easy to contact. As well as several mailing "
-"lists, you can chat to them live on IRC! Join them on #gnucash at irc.gnome."
-"org"
+"lists, you can chat to them live on IRC! Join them on #gnucash at irc.gimp."
+"net"
 msgstr ""
 "GnuCash udviklerne er nemme at komme i kontakt med. Udover flere postlister "
 "kan du sludre med dem direkte på IRC! Du finder dem på #gnucash på irc.gnome."
@@ -1303,11 +1308,11 @@ msgstr "Låntilbagebetalingsindstilling: »%s«"
 #: gnucash/gtkbuilder/dialog-transfer.glade:128
 #: gnucash/gtkbuilder/gnc-plugin-page-register.glade:368
 #: gnucash/import-export/bi-import/dialog-bi-import-gui.c:144
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:359
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:374
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:364
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:379
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:52
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:59
-#: gnucash/import-export/import-main-matcher.cpp:1589
+#: gnucash/import-export/import-main-matcher.cpp:1591
 #: gnucash/import-export/import-match-picker.cpp:313
 #: gnucash/import-export/import-match-picker.cpp:353
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3823
@@ -1390,7 +1395,7 @@ msgstr "Fejl ved tilføjelse af pris."
 #: gnucash/import-export/aqb/gnc-ab-utils.c:476
 #: gnucash/import-export/bi-import/dialog-bi-import-gui.c:147
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:66
-#: gnucash/import-export/import-main-matcher.cpp:1590
+#: gnucash/import-export/import-main-matcher.cpp:1592
 #: gnucash/import-export/import-match-picker.cpp:312
 #: gnucash/import-export/qif-imp/dialog-account-picker.c:433
 #: gnucash/register/ledger-core/split-register-model.c:346
@@ -1926,9 +1931,9 @@ msgstr "Indtast antallet af købte eller solgte aktier"
 #: gnucash/gnome/gnc-split-reg.c:669
 #: gnucash/gtkbuilder/dialog-payment.glade:495
 #: gnucash/gtkbuilder/dialog-transfer.glade:205
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:382
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:387
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:72
-#: gnucash/import-export/import-main-matcher.cpp:1594
+#: gnucash/import-export/import-main-matcher.cpp:1596
 #: gnucash/import-export/import-match-picker.cpp:316
 #: gnucash/import-export/import-match-picker.cpp:356
 #: gnucash/register/ledger-core/split-register-model.c:360
@@ -2000,7 +2005,7 @@ msgstr "Redigér"
 #: gnucash/gnome-search/dialog-search.c:1077
 #: gnucash/gtkbuilder/dialog-bi-import-gui.glade:147
 #: gnucash/report/reports/standard/invoice.scm:774
-#: libgnucash/engine/Account.cpp:178 libgnucash/engine/gncInvoice.c:1098
+#: libgnucash/engine/Account.cpp:178 libgnucash/engine/gncInvoice.c:1097
 msgid "Bill"
 msgstr "Regning"
 
@@ -2028,7 +2033,7 @@ msgstr "Bilag"
 #: gnucash/report/reports/standard/taxinvoice.scm:177
 #: gnucash/report/reports/support/receipt.eguile.scm:91
 #: gnucash/report/reports/support/taxinvoice.eguile.scm:106
-#: libgnucash/engine/Account.cpp:159 libgnucash/engine/gncInvoice.c:1096
+#: libgnucash/engine/Account.cpp:159 libgnucash/engine/gncInvoice.c:1095
 msgid "Invoice"
 msgstr "Faktura"
 
@@ -2253,7 +2258,7 @@ msgstr "Slet vare?"
 #: gnucash/import-export/aqb/dialog-ab.glade:891
 #: gnucash/import-export/aqb/dialog-ab.glade:1012
 #: gnucash/import-export/aqb/dialog-ab.glade:1675
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2101
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2102
 #: gnucash/register/ledger-core/gncEntryLedger.c:921
 #: gnucash/register/ledger-core/gncEntryLedgerControl.c:896
 #: gnucash/register/ledger-core/split-register-control.cpp:1577
@@ -2595,11 +2600,11 @@ msgstr "Transaktionsdetaljer"
 #: gnucash/import-export/aqb/dialog-ab.glade:1744
 #: gnucash/import-export/aqb/dialog-ab.glade:1798
 #: gnucash/import-export/bi-import/dialog-bi-import-gui.c:145
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:362
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:377
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:367
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:382
 #: gnucash/import-export/csv-exp/csv-tree-export.cpp:61
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:61
-#: gnucash/import-export/import-main-matcher.cpp:1593
+#: gnucash/import-export/import-main-matcher.cpp:1595
 #: gnucash/import-export/import-match-picker.cpp:315
 #: gnucash/import-export/import-match-picker.cpp:355
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3833
@@ -2785,9 +2790,9 @@ msgstr "Lukkeposter"
 
 #: gnucash/gnome/dialog-find-transactions.c:118
 #: gnucash/gnome/gnc-plugin-page-register.cpp:393
-#: gnucash/gnome/window-reconcile.cpp:1446
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:364
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:389
+#: gnucash/gnome/window-reconcile.cpp:1450
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:369
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:394
 msgid "Reconcile"
 msgstr "Afstem"
 
@@ -2832,7 +2837,7 @@ msgstr "Afstemningsdato"
 #: gnucash/gnome/gnc-plugin-page-register.cpp:4046
 #: gnucash/gnome-search/dialog-search.c:879
 #: gnucash/gnome-search/dialog-search.c:885
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:381
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:386
 #: gnucash/report/trep-engine.scm:245
 msgid "Number/Action"
 msgstr "Nummer/handling"
@@ -2845,7 +2850,7 @@ msgstr "Nummer/handling"
 #: gnucash/gnome-search/dialog-search.c:886
 #: gnucash/gtkbuilder/gnc-plugin-page-budget.glade:103
 #: gnucash/import-export/bi-import/dialog-bi-import-gui.c:146
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:381
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:386
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:65
 #: gnucash/register/ledger-core/gncEntryLedgerModel.c:57
 #: gnucash/register/ledger-core/split-register-model.c:332
@@ -2861,8 +2866,8 @@ msgstr "Handling"
 #: gnucash/gnome/gnc-plugin-page-register.cpp:4045
 #: gnucash/gnome-search/dialog-search.c:881
 #: gnucash/gnome-search/dialog-search.c:887
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:361
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:376
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:366
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:381
 #: gnucash/report/trep-engine.scm:257
 msgid "Transaction Number"
 msgstr "Transaktionsnummer"
@@ -2875,8 +2880,8 @@ msgstr "Transaktionsnummer"
 #: gnucash/gnome-search/dialog-search.c:888
 #: gnucash/gtkbuilder/dialog-payment.glade:268
 #: gnucash/gtkbuilder/gnc-date-format.glade:99
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:361
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:376
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:366
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:381
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:60
 #: gnucash/report/trep-engine.scm:251
 msgid "Number"
@@ -2901,7 +2906,7 @@ msgstr "Beskrivelse, bemærkning eller note"
 #: gnucash/gtkbuilder/dialog-vendor.glade:453
 #: gnucash/gtkbuilder/gnc-plugin-page-budget.glade:503
 #: gnucash/import-export/bi-import/dialog-bi-import-gui.c:142
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:378
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:383
 #: gnucash/import-export/csv-exp/csv-tree-export.cpp:62
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:62
 #: gnucash/import-export/customer-import/dialog-customer-import-gui.c:133
@@ -3070,7 +3075,7 @@ msgstr "Samlet betaling:"
 #: gnucash/gnome/dialog-invoice.c:2071 gnucash/gnome/dialog-payment.c:1358
 #: gnucash/gtkbuilder/dialog-invoice.glade:976
 #: gnucash/report/reports/standard/invoice.scm:780
-#: libgnucash/engine/gncInvoice.c:1104
+#: libgnucash/engine/gncInvoice.c:1103
 msgid "Credit Note"
 msgstr "Kreditnota"
 
@@ -3356,7 +3361,7 @@ msgstr "Find faktura"
 #: gnucash/gtkbuilder/dialog-transfer.glade:102
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:53
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:67
-#: gnucash/import-export/import-main-matcher.cpp:1592
+#: gnucash/import-export/import-main-matcher.cpp:1594
 #: gnucash/import-export/import-match-picker.cpp:314
 #: gnucash/import-export/import-match-picker.cpp:354
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:3844
@@ -4157,7 +4162,7 @@ msgstr "Find leverandør"
 #: gnucash/report/reports/standard/net-charts.scm:332
 #: gnucash/report/reports/standard/net-charts.scm:401
 #: gnucash/report/report-utilities.scm:205 libgnucash/engine/Account.cpp:176
-#: libgnucash/engine/Account.cpp:4414
+#: libgnucash/engine/Account.cpp:4280
 msgid "Income"
 msgstr "Indtægt"
 
@@ -4185,7 +4190,7 @@ msgstr "Overfør"
 msgid "Remaining to Budget"
 msgstr "Åbn et eksisterende budget"
 
-#: gnucash/gnome/gnc-budget-view.c:1598 gnucash/gnome/window-reconcile.cpp:1168
+#: gnucash/gnome/gnc-budget-view.c:1598 gnucash/gnome/window-reconcile.cpp:1172
 #: gnucash/gnome-utils/gnc-tree-view-account.c:906
 #: gnucash/report/html-acct-table.scm:789
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:279
@@ -5621,7 +5626,7 @@ msgstr "Standardorden"
 msgid "Date of Entry"
 msgstr "Indtastningsdato"
 
-#: gnucash/gnome/gnc-split-reg.c:660 gnucash/gnome/window-reconcile.cpp:2044
+#: gnucash/gnome/gnc-split-reg.c:660 gnucash/gnome/window-reconcile.cpp:2048
 msgid "Statement Date"
 msgstr "Udskriftsdato"
 
@@ -6099,17 +6104,17 @@ msgstr "Indtast rentebetal_ing …"
 msgid "Enter _Interest Charge…"
 msgstr "Indtast renteopkrævn_ing…"
 
-#: gnucash/gnome/window-reconcile.cpp:1391
+#: gnucash/gnome/window-reconcile.cpp:1395
 msgid "Are you sure you want to delete the selected transaction?"
 msgstr "Er du sikker på, at du vil slette den valgte transaktion?"
 
-#: gnucash/gnome/window-reconcile.cpp:1942
+#: gnucash/gnome/window-reconcile.cpp:1946
 msgid ""
 "WARNING! Account contains splits whose reconcile date is after statement "
 "date. Reconciliation may be difficult."
 msgstr ""
 
-#: gnucash/gnome/window-reconcile.cpp:1946
+#: gnucash/gnome/window-reconcile.cpp:1950
 msgid ""
 "This account has splits whose Reconciled Date is after this reconciliation "
 "statement date. These splits may make reconciliation difficult. If this is "
@@ -6117,25 +6122,25 @@ msgid ""
 "reconcile."
 msgstr ""
 
-#: gnucash/gnome/window-reconcile.cpp:2054
+#: gnucash/gnome/window-reconcile.cpp:2058
 #: gnucash/gtkbuilder/window-reconcile.glade:106
 msgid "Starting Balance"
 msgstr "Startsaldo"
 
-#: gnucash/gnome/window-reconcile.cpp:2064
+#: gnucash/gnome/window-reconcile.cpp:2068
 msgid "Ending Balance"
 msgstr "Slutsaldo"
 
-#: gnucash/gnome/window-reconcile.cpp:2074
+#: gnucash/gnome/window-reconcile.cpp:2078
 msgid "Reconciled Balance"
 msgstr "Afstemt saldo"
 
-#: gnucash/gnome/window-reconcile.cpp:2084
+#: gnucash/gnome/window-reconcile.cpp:2088
 #: gnucash/report/reports/standard/cash-flow.scm:305
 msgid "Difference"
 msgstr "Difference"
 
-#: gnucash/gnome/window-reconcile.cpp:2197
+#: gnucash/gnome/window-reconcile.cpp:2201
 msgid ""
 "You have made changes to this reconcile window. Are you sure you want to "
 "cancel?"
@@ -6143,11 +6148,11 @@ msgstr ""
 "Du har lavet ændringer i dette afstemningsvindue. Er du sikker på, at du vil "
 "annullere?"
 
-#: gnucash/gnome/window-reconcile.cpp:2307
+#: gnucash/gnome/window-reconcile.cpp:2311
 msgid "The account is not balanced. Are you sure you want to finish?"
 msgstr "Kontoen er ikke i balance. Er du sikker på, at du vil afslutte?"
 
-#: gnucash/gnome/window-reconcile.cpp:2367
+#: gnucash/gnome/window-reconcile.cpp:2371
 msgid "Do you want to postpone this reconciliation and finish it later?"
 msgstr "Vil du udsætte denne afstemning og afslutte den senere?"
 
@@ -6813,7 +6818,7 @@ msgstr "Va_luta"
 #: gnucash/gtkbuilder/dialog-transfer.glade:418
 #: gnucash/gtkbuilder/dialog-transfer.glade:431
 #: gnucash/gtkbuilder/dialog-vendor.glade:502
-#: gnucash/report/trep-engine.scm:110 libgnucash/engine/Account.cpp:4413
+#: gnucash/report/trep-engine.scm:110 libgnucash/engine/Account.cpp:4279
 msgid "Currency"
 msgstr "Valuta"
 
@@ -7005,7 +7010,7 @@ msgid "Select a folder"
 msgstr "Vælg et budget"
 
 #: gnucash/gnome-utils/dialog-preferences.c:1458
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1533
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1534
 #: gnucash/gtkbuilder/dialog-fincalc.glade:270
 #: gnucash/gtkbuilder/dialog-fincalc.glade:285
 #: gnucash/gtkbuilder/dialog-fincalc.glade:300
@@ -7942,79 +7947,79 @@ msgstr ""
 msgid "Visit the GnuCash website."
 msgstr ""
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:992
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1236
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:993
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1237
 msgid "Select All"
 msgstr "Vælg alt"
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:994
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:995
 msgid "Select all accounts."
 msgstr "Vælg alle konti."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:999
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1243
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1000
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1244
 msgid "Clear All"
 msgstr "Tøm alt"
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1001
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1002
 msgid "Clear the selection and unselect all accounts."
 msgstr "Ryd markeringen og fravælg alle konti."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1006
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1007
 msgid "Select Children"
 msgstr "Vælg underkonti"
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1008
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1009
 msgid "Select all descendents of selected account."
 msgstr "Vælg alle underkonti for den valgte konto."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1014
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1250
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1015
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1251
 msgid "Select Default"
 msgstr "Vælg standard"
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1016
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1017
 msgid "Select the default account selection."
 msgstr "Sæt standarden for kontovalg."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1033
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1034
 msgid "Show Hidden Accounts"
 msgstr "Vis skjulte konti"
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1035
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1036
 #: gnucash/gtkbuilder/dialog-account.glade:972
 msgid "Show accounts that have been marked hidden."
 msgstr "Vis konti som er blevet markeret som skjult."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1238
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1239
 msgid "Select all entries."
 msgstr "Vælg alle poster."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1245
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1246
 msgid "Clear the selection and unselect all entries."
 msgstr "Ryd markeringen og fravælg alle poster."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1252
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1253
 msgid "Select the default selection."
 msgstr "Vælg standardmarkeringen."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1534
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1535
 msgid "Clear any selected image file."
 msgstr "Ryd alle valgte billedfiler."
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1535
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1536
 msgid "Select image"
 msgstr "Vælg billede"
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1537
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1538
 msgid "Select an image file."
 msgstr "Vælg en billedfil"
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1750
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1751
 msgid "Pixels"
 msgstr ""
 
-#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1751
+#: gnucash/gnome-utils/gnc-option-gtk-ui.cpp:1752
 msgid "Percent"
 msgstr "Procent"
 
@@ -8080,8 +8085,8 @@ msgstr "Ny topniveaukonto"
 
 #: gnucash/gnome-utils/gnc-tree-view-account.c:788
 #: gnucash/gtkbuilder/assistant-csv-trans-import.glade:983
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:360
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:384
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:365
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:389
 #: gnucash/import-export/csv-exp/csv-tree-export.cpp:60
 #: gnucash/report/reports/locale-specific/de_DE/taxtxf.scm:276
 #: gnucash/report/reports/standard/general-ledger.scm:72
@@ -8902,7 +8907,7 @@ msgstr ""
 "forretningsfunktioner også vist. Eller vises de ikke."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.business.gschema.xml.in:132
-#: libgnucash/engine/gnc-optiondb.cpp:1331
+#: libgnucash/engine/gnc-optiondb.cpp:1332
 msgid "The invoice report to be used for printing."
 msgstr "Fakturarapporten der skal bruges til udskrivning."
 
@@ -12830,7 +12835,7 @@ msgstr ""
 #: gnucash/register/ledger-core/gncEntryLedgerLoad.c:130
 #: gnucash/register/ledger-core/gncEntryLedgerModel.c:530
 #: gnucash/register/ledger-core/gncEntryLedgerModel.c:1090
-#: gnucash/report/report-utilities.scm:198 libgnucash/engine/Account.cpp:4407
+#: gnucash/report/report-utilities.scm:198 libgnucash/engine/Account.cpp:4273
 msgid "Cash"
 msgstr "Kontant"
 
@@ -13295,7 +13300,7 @@ msgstr ""
 #: gnucash/gtkbuilder/dialog-sx.glade:803
 #: gnucash/gtkbuilder/dialog-sx.glade:1494
 #: gnucash/gtkbuilder/dialog-vendor.glade:47
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2150
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2151
 #: gnucash/ui/gnc-main-window.ui:492 gnucash/ui/gnc-reconcile-window.ui:85
 #: gnucash/ui/gnc-reconcile-window.ui:88
 msgid "_Help"
@@ -13461,8 +13466,9 @@ msgid "<b>Initial Balance Transfer</b>"
 msgstr ""
 
 #: gnucash/gtkbuilder/dialog-account.glade:1837
-#: gnucash/ui/gnc-reconcile-window.ui:58 gnucash/ui/gnc-reconcile-window.ui:98
-#: gnucash/ui/gnc-reconcile-window.ui:129
+#, fuzzy
+#| msgid "_Balance"
+msgctxt "field label"
 msgid "_Balance"
 msgstr "_Balance"
 
@@ -17822,20 +17828,20 @@ msgstr "Eksporter til PDF-fil"
 
 #. Translators: Strings are 1. Bank code, 2. Bank name,
 #. 3. Account Number, 4. Subaccount ID
-#: gnucash/import-export/aqb/assistant-ab-initial.c:480
+#: gnucash/import-export/aqb/assistant-ab-initial.c:481
 #, c-format
 msgid "Bank code %s (%s), Account %s (%s)"
 msgstr ""
 
-#: gnucash/import-export/aqb/assistant-ab-initial.c:772
+#: gnucash/import-export/aqb/assistant-ab-initial.c:773
 msgid "Online Banking Account Name"
 msgstr "Netbank-kontonavn"
 
-#: gnucash/import-export/aqb/assistant-ab-initial.c:777
+#: gnucash/import-export/aqb/assistant-ab-initial.c:778
 msgid "GnuCash Account Name"
 msgstr "GnuCash-kontonavn"
 
-#: gnucash/import-export/aqb/assistant-ab-initial.c:783
+#: gnucash/import-export/aqb/assistant-ab-initial.c:784
 #: gnucash/import-export/qif-imp/assistant-qif-import.c:591
 #: gnucash/import-export/qif-imp/dialog-account-picker.c:452
 msgid "New?"
@@ -18622,7 +18628,7 @@ msgid "Unspecified"
 msgstr "Uspecificeret"
 
 #: gnucash/import-export/aqb/gnc-ab-utils.c:478
-#: gnucash/report/report-utilities.scm:197 libgnucash/engine/Account.cpp:4406
+#: gnucash/report/report-utilities.scm:197 libgnucash/engine/Account.cpp:4272
 msgid "Bank"
 msgstr "Bank"
 
@@ -18733,7 +18739,7 @@ msgstr ""
 msgid "Select a file to import"
 msgstr "Vælg en fil der skal indlæses"
 
-#: gnucash/import-export/aqb/gnc-gwen-gui.c:1092
+#: gnucash/import-export/aqb/gnc-gwen-gui.c:1093
 #, c-format
 msgid ""
 "The PIN needs to be at least %d characters\n"
@@ -18742,7 +18748,7 @@ msgstr ""
 "Koden skal være på mindst %d tegn.\n"
 "Ønsker du at forsøge igen?"
 
-#: gnucash/import-export/aqb/gnc-gwen-gui.c:1637
+#: gnucash/import-export/aqb/gnc-gwen-gui.c:1638
 msgid ""
 "The Online Banking job is still running; are you sure you want to cancel?"
 msgstr ""
@@ -19237,72 +19243,72 @@ msgid "File exported successfully!\n"
 msgstr ""
 
 #: gnucash/import-export/csv-exp/csv-transactions-export.cpp:135
-#: gnucash/import-export/import-main-matcher.cpp:1891
+#: gnucash/import-export/import-main-matcher.cpp:1893
 #: gnucash/report/reports/standard/register.scm:217
 #: libgnucash/engine/Split.cpp:1611 libgnucash/engine/Split.cpp:1628
 msgid "-- Split Transaction --"
 msgstr "-- Opdelt transaktion --"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:363
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:368
 #, fuzzy
 msgid "Full Category Path"
 msgstr "QIF-kategorinavn"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:365
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:385
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:370
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:390
 #, fuzzy
 msgid "Amount With Sym"
 msgstr "Til med sym"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:366
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:386
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:371
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:391
 #, fuzzy
 msgid "Amount Num."
 msgstr "Forfalden beløb"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:367
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:387
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:372
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:392
 #, fuzzy
 msgid "Value With Sym"
 msgstr "Til med sym"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:368
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:388
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:373
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:393
 #, fuzzy
 #| msgid "Value $"
 msgid "Value Num."
 msgstr "Værdi $"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:369
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:391
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:374
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:396
 #, fuzzy
 msgid "Rate/Price"
 msgstr "Til kurs/pris"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:375
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:380
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:58
 #, fuzzy
 msgid "Transaction ID"
 msgstr "Transaktion"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:379
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:384
 #, fuzzy
 msgid "Commodity/Currency"
 msgstr "Fælles valuta"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:380
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:385
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:64
 #, fuzzy
 msgid "Void Reason"
 msgstr "Kun ikoner"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:383
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:388
 #: gnucash/import-export/csv-exp/csv-tree-export.cpp:60
 #, fuzzy
 msgid "Full Account Name"
 msgstr "Benyt fulde kontonavn"
 
-#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:390
+#: gnucash/import-export/csv-exp/csv-transactions-export.cpp:395
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:74
 #, fuzzy
 msgid "Reconcile Date"
@@ -19352,68 +19358,68 @@ msgid ""
 "The number of Accounts added was %u and %u were updated.\n"
 msgstr ""
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:885
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:858
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:881
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:859
 msgid ""
 "There were problems reading some saved settings, continuing to load.\n"
 "Please review and save again."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:908
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:881
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:904
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:882
 #, fuzzy
 msgid "Delete the Import Settings."
 msgstr "Vælg eksportopsætning"
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:942
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:915
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:938
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:916
 msgid "Setting name already exists, overwrite?"
 msgstr ""
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:956
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:929
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:952
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:930
 #, fuzzy
 msgid "The settings have been saved."
 msgstr "Nogle tegn er blevet fjernet"
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:981
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:954
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:977
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:955
 #, fuzzy
 msgid "There was a problem saving the settings, please try again."
 msgstr "Der opstod et problem med indlæsningen."
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1152
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1128
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1148
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1129
 msgid "Invalid encoding selected"
 msgstr "Ugyldig kodning valgt"
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1313
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1238
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1309
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1239
 msgid "Merge with column on _left"
 msgstr "Flet med ko_lonne til venstre"
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1317
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1242
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1313
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1243
 msgid "Merge with column on _right"
 msgstr "Flet med kolonnen til høj_re"
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1322
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1247
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1318
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1248
 msgid "_Split this column"
 msgstr "_Opdel denne kolonne"
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1327
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1252
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1323
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1253
 msgid "_Widen this column"
 msgstr "_Udvid denne kolonne"
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1331
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1256
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1327
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1257
 msgid "_Narrow this column"
 msgstr "Gør de_nne kolonne smallere"
 
 #. Translators: This is a ngettext(3) message, %d is the number of prices added
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1928
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1924
 #, fuzzy, c-format
 msgid "%d added price"
 msgid_plural "%d added prices"
@@ -19421,7 +19427,7 @@ msgstr[0] "Tilføj en ny pris."
 msgstr[1] "Tilføj en ny pris."
 
 #. Translators: This is a ngettext(3) message, %d is the number of duplicate prices
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1933
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1929
 #, fuzzy, c-format
 msgid "%d duplicate price"
 msgid_plural "%d duplicate prices"
@@ -19429,14 +19435,14 @@ msgstr[0] "_Dupliker faktura"
 msgstr[1] "_Dupliker faktura"
 
 #. Translators: This is a ngettext(3) message, %d is the number of replaced prices
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1938
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1934
 #, fuzzy, c-format
 msgid "%d replaced price"
 msgid_plural "%d replaced prices"
 msgstr[0] "De registrerede pristilbud."
 msgstr[1] "De registrerede pristilbud."
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1943
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1939
 #, fuzzy, c-format
 msgid ""
 "The prices were imported from file '%s'.\n"
@@ -19447,7 +19453,7 @@ msgid ""
 "- %s"
 msgstr "Der opstod en fejl under tolkning af filen %s."
 
-#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1988
+#: gnucash/import-export/csv-imp/assistant-csv-price-import.cpp:1984
 #, c-format
 msgid ""
 "An unexpected error has occurred while creating prices. Please report this "
@@ -19457,16 +19463,16 @@ msgid ""
 "%s"
 msgstr ""
 
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1432
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1433
 msgid "This line has the following parse issues:"
 msgstr ""
 
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1783
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:1784
 #, fuzzy
 msgid "No Linked Account"
 msgstr "Ny konto"
 
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2136
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2137
 #, c-format
 msgid ""
 "An unexpected error has occurred while creating transactions. Please report "
@@ -19476,12 +19482,12 @@ msgid ""
 "%s"
 msgstr ""
 
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2145
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2146
 msgid "Double click on rows to change, then click on Apply to Import"
 msgstr ""
 
 #. Translators: {1} will be replaced with a filename
-#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2210
+#: gnucash/import-export/csv-imp/assistant-csv-trans-import.cpp:2211
 #, fuzzy, c++-format
 msgid "The transactions were imported from file '{1}'."
 msgstr "Der opstod en fejl under tolkning af filen %s."
@@ -19668,7 +19674,7 @@ msgid "Value can't be parsed into a number using the selected currency format."
 msgstr ""
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:124
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:219
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:220
 #, fuzzy
 msgid "Value can't be parsed into a valid commodity."
 msgstr "Beregn prisen på denne vare."
@@ -19700,9 +19706,9 @@ msgstr ""
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:237
 #: gnucash/import-export/csv-imp/gnc-imp-props-price.cpp:245
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:290
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:549
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:629
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:291
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:550
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:630
 #, c++-format
 msgid "{1}: {2}"
 msgstr ""
@@ -19782,64 +19788,64 @@ msgstr "Sidste afstemningsdato"
 msgid "Value can't be parsed into a valid reconcile state."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:245
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:246
 msgid "Date field can not be empty if 'Multi-split' option is unset.\n"
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:261
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:262
 msgid "Description field can not be empty if 'Multi-split' option is unset.\n"
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:311
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:312
 #, fuzzy
 #| msgid "Invalid Transactions"
 msgid "No valid date."
 msgstr "Ugyldige transaktioner"
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:314
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:315
 #, fuzzy
 #| msgid "Sort by description."
 msgid "No valid description."
 msgstr "Sorter efter beskrivelse."
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:447
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:448
 msgid "Account value can't be empty."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:452
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:453
 msgid "Account value can't be mapped back to an account."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:458
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:459
 msgid "Transfer account value can't be empty."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:464
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:465
 msgid "Transfer account value can't be mapped back to an account."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:641
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:642
 #, fuzzy
 msgid "No amount or negated amount column."
 msgstr "Ingen datokolonne."
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:644
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:645
 msgid "Split is reconciled but reconcile date column is missing or invalid."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:647
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:648
 msgid ""
 "Transfer split is reconciled but transfer reconcile date column is missing "
 "or invalid."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:662
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:663
 msgid ""
 "Choice of accounts makes this a multi-currency transaction but price or "
 "(negated) value column is missing or invalid."
 msgstr ""
 
-#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:665
+#: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:666
 msgid ""
 "Choice of accounts makes this a multi-currency transaction but price, "
 "(negated) value or (negated) transfer amount column is missing or invalid."
@@ -19972,134 +19978,134 @@ msgstr "å/m/d"
 msgid "y/d/m"
 msgstr "å/d/m"
 
-#: gnucash/import-export/import-main-matcher.cpp:502
+#: gnucash/import-export/import-main-matcher.cpp:503
 #, fuzzy
 msgid "No new transactions were found in this import."
 msgstr "Lav transaktionsrapport for denne konto"
 
-#: gnucash/import-export/import-main-matcher.cpp:774
+#: gnucash/import-export/import-main-matcher.cpp:775
 msgid "Destination account for the auto-balance split."
 msgstr ""
 
-#: gnucash/import-export/import-main-matcher.cpp:1003
+#: gnucash/import-export/import-main-matcher.cpp:1004
 msgid "Click Edit to modify"
 msgstr ""
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1418
+#: gnucash/import-export/import-main-matcher.cpp:1419
 #, fuzzy
 #| msgid "_Select transfer account"
 msgid "_Assign transfer account"
 msgstr "_Vælg overførselskonto"
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1423
+#: gnucash/import-export/import-main-matcher.cpp:1424
 #, fuzzy
 #| msgid "Exchange rate"
 msgid "Assign e_xchange rate"
 msgstr "Vekselkurs"
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1428
+#: gnucash/import-export/import-main-matcher.cpp:1429
 #, fuzzy
 #| msgid "Description, Notes, or Memo"
 msgid "_Edit description, notes, or memo"
 msgstr "Beskrivelse, bemærkning eller note"
 
 #. Translators: Menu entry, no full stop
-#: gnucash/import-export/import-main-matcher.cpp:1433
+#: gnucash/import-export/import-main-matcher.cpp:1434
 #, fuzzy
 #| msgid "Reset defaults"
 msgid "_Reset all edits"
 msgstr "Nulstil standarder"
 
-#: gnucash/import-export/import-main-matcher.cpp:1595
+#: gnucash/import-export/import-main-matcher.cpp:1597
 msgctxt "Column header for 'Adding transaction'"
 msgid "A"
 msgstr ""
 
-#: gnucash/import-export/import-main-matcher.cpp:1599
+#: gnucash/import-export/import-main-matcher.cpp:1601
 #, fuzzy
 #| msgid "UTC"
 msgctxt "Column header for 'Updating plus Clearing transaction'"
 msgid "U+C"
 msgstr "UTC"
 
-#: gnucash/import-export/import-main-matcher.cpp:1603
+#: gnucash/import-export/import-main-matcher.cpp:1605
 msgctxt "Column header for 'Clearing transaction'"
 msgid "C"
 msgstr ""
 
-#: gnucash/import-export/import-main-matcher.cpp:1610
+#: gnucash/import-export/import-main-matcher.cpp:1612
 msgid "Info"
 msgstr "Info"
 
-#: gnucash/import-export/import-main-matcher.cpp:1617
+#: gnucash/import-export/import-main-matcher.cpp:1619
 #: gnucash/report/stylesheets/head-or-tail.scm:91
 #, fuzzy
 msgid "Additional Comments"
 msgstr "Ekstra på kortet:"
 
-#: gnucash/import-export/import-main-matcher.cpp:2002
+#: gnucash/import-export/import-main-matcher.cpp:2004
 msgid "New, already balanced"
 msgstr ""
 
 #. Translators: %1$s is the amount to be transferred,
 #. %2$s the destination account.
-#: gnucash/import-export/import-main-matcher.cpp:2024
+#: gnucash/import-export/import-main-matcher.cpp:2026
 #, c-format
 msgid "New, transfer %s to (manual) \"%s\""
 msgstr "Ny, overfør %s til (manuelt) »%s«"
 
 #. Translators: %1$s is the amount to be transferred,
 #. %2$s the destination account.
-#: gnucash/import-export/import-main-matcher.cpp:2032
+#: gnucash/import-export/import-main-matcher.cpp:2034
 #, c-format
 msgid "New, transfer %s to (auto) \"%s\""
 msgstr "Ny, overfør %s til (automatisk) »%s«"
 
 #. Translators: %s is the amount to be transferred.
-#: gnucash/import-export/import-main-matcher.cpp:2045
+#: gnucash/import-export/import-main-matcher.cpp:2047
 #, c-format
 msgid "New, UNBALANCED (need price to transfer %s to acct %s)!"
 msgstr ""
 
 #. Translators: %s is the amount to be transferred.
-#: gnucash/import-export/import-main-matcher.cpp:2061
+#: gnucash/import-export/import-main-matcher.cpp:2063
 #, c-format
 msgid "New, UNBALANCED (need acct to transfer %s)!"
 msgstr ""
 
-#: gnucash/import-export/import-main-matcher.cpp:2079
+#: gnucash/import-export/import-main-matcher.cpp:2081
 #, fuzzy, c-format
 #| msgid "Reconcile (manual) match"
 msgid "Reconcile (manual) match to %s"
 msgstr "Afstem (manuelt) ens"
 
-#: gnucash/import-export/import-main-matcher.cpp:2084
+#: gnucash/import-export/import-main-matcher.cpp:2086
 #, fuzzy, c-format
 #| msgid "Reconcile (auto) match"
 msgid "Reconcile (auto) match to %s"
 msgstr "Afstem (auto) ens"
 
-#: gnucash/import-export/import-main-matcher.cpp:2093
-#: gnucash/import-export/import-main-matcher.cpp:2122
+#: gnucash/import-export/import-main-matcher.cpp:2095
+#: gnucash/import-export/import-main-matcher.cpp:2124
 msgid "Match missing!"
 msgstr "Ingen ens!"
 
-#: gnucash/import-export/import-main-matcher.cpp:2108
+#: gnucash/import-export/import-main-matcher.cpp:2110
 #, fuzzy, c-format
 #| msgid "Update and reconcile (manual) match"
 msgid "Update and reconcile (manual) match to %s"
 msgstr "Opdater og afstem (manuelt) match"
 
-#: gnucash/import-export/import-main-matcher.cpp:2113
+#: gnucash/import-export/import-main-matcher.cpp:2115
 #, fuzzy, c-format
 #| msgid "Update and reconcile (auto) match"
 msgid "Update and reconcile (auto) match to %s"
 msgstr "Opdater og afstem (auto) match"
 
-#: gnucash/import-export/import-main-matcher.cpp:2130
+#: gnucash/import-export/import-main-matcher.cpp:2132
 msgid "Do not import (no action selected)"
 msgstr "Importer ikke (ingen handling valgt)"
 
@@ -20462,7 +20468,7 @@ msgstr "Kapitalgevinst (kort sigt)"
 #: gnucash/report/reports/standard/balance-sheet.scm:468
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1051
 #: gnucash/report/reports/standard/budget-balance-sheet.scm:685
-#: libgnucash/app-utils/gnc-ui-util.cpp:637 libgnucash/engine/Account.cpp:4416
+#: libgnucash/app-utils/gnc-ui-util.cpp:637 libgnucash/engine/Account.cpp:4282
 msgid "Equity"
 msgstr "Udligning"
 
@@ -21277,56 +21283,56 @@ msgstr "Kortsigtet gevinst"
 msgid "Dist"
 msgstr "Udlod"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:76
+#: gnucash/register/ledger-core/split-register-control.cpp:79
 msgid ""
 "This transaction cannot be balanced: The imbalance is a fraction smaller "
 "than the commodity allows."
 msgstr ""
 
-#: gnucash/register/ledger-core/split-register-control.cpp:90
+#: gnucash/register/ledger-core/split-register-control.cpp:93
 msgid "Rebalance Transaction"
 msgstr "Genbalancér transaktion"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:91
+#: gnucash/register/ledger-core/split-register-control.cpp:94
 msgid "The current transaction is not balanced."
 msgstr "Den nuværende transaktion balancerer ikke."
 
-#: gnucash/register/ledger-core/split-register-control.cpp:172
+#: gnucash/register/ledger-core/split-register-control.cpp:176
 msgid "Balance it _manually"
 msgstr "Balancer den _manuelt"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:174
+#: gnucash/register/ledger-core/split-register-control.cpp:178
 msgid "Let GnuCash _add an adjusting split"
 msgstr "Lad GnuCash _tilføje en justerende opdeling"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:179
+#: gnucash/register/ledger-core/split-register-control.cpp:183
 msgid "Adjust current account _split total"
 msgstr "Juster aktuel konto_opdelingstotal"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:185
+#: gnucash/register/ledger-core/split-register-control.cpp:189
 msgid "Adjust _other account split total"
 msgstr "Juster _anden kontoopdelingstotal"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:196
+#: gnucash/register/ledger-core/split-register-control.cpp:199
 msgid "_Rebalance"
 msgstr "_Rebalancere"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1347
-#: gnucash/register/ledger-core/split-register-control.cpp:1360
+#: gnucash/register/ledger-core/split-register-control.cpp:1346
+#: gnucash/register/ledger-core/split-register-control.cpp:1359
 msgid "This register does not support editing exchange rates."
 msgstr "Denne kassekladde understøtter ikke redigering af valutakurser."
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1386
+#: gnucash/register/ledger-core/split-register-control.cpp:1385
 msgid "You need to select a split in order to modify its exchange rate."
 msgstr ""
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1401
-#: gnucash/register/ledger-core/split-register-control.cpp:1476
+#: gnucash/register/ledger-core/split-register-control.cpp:1400
+#: gnucash/register/ledger-core/split-register-control.cpp:1475
 msgid ""
 "You need to expand the transaction in order to modify its exchange rates."
 msgstr "Du skal udvide transaktionen for at ændre dens valutakurser."
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1413
+#: gnucash/register/ledger-core/split-register-control.cpp:1412
 #, fuzzy
 msgid "The entered account could not be found."
 msgstr ""
@@ -21334,8 +21340,8 @@ msgstr ""
 "    %s\n"
 "kunne ikke findes."
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1448
-#: gnucash/register/ledger-core/split-register-control.cpp:1461
+#: gnucash/register/ledger-core/split-register-control.cpp:1447
+#: gnucash/register/ledger-core/split-register-control.cpp:1460
 msgid "The two currencies involved equal each other."
 msgstr ""
 
@@ -21368,11 +21374,11 @@ msgstr "Bekræft ændringer"
 msgid "_Record Changes"
 msgstr "Bekræft ændringer"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1865
+#: gnucash/register/ledger-core/split-register-control.cpp:1866
 msgid "Mark split as unreconciled?"
 msgstr ""
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1867
+#: gnucash/register/ledger-core/split-register-control.cpp:1868
 #, fuzzy
 msgid ""
 "You are about to mark a reconciled split as unreconciled. Doing so might "
@@ -21381,7 +21387,7 @@ msgstr ""
 "Vil du virkelig markere denne transaktion som ikke-afstemt?\n"
 "Hvis du gør det kan fremtidige afstemninger blive svære!"
 
-#: gnucash/register/ledger-core/split-register-control.cpp:1884
+#: gnucash/register/ledger-core/split-register-control.cpp:1885
 #, fuzzy
 msgid "_Unreconcile"
 msgstr "_Afstem"
@@ -24216,12 +24222,12 @@ msgid "Total For "
 msgstr "Total for "
 
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1044
-#: libgnucash/engine/Account.cpp:4408
+#: libgnucash/engine/Account.cpp:4274
 msgid "Asset"
 msgstr "Aktiv"
 
 #: gnucash/report/reports/standard/balsheet-pnl.scm:1047
-#: libgnucash/engine/Account.cpp:4410
+#: libgnucash/engine/Account.cpp:4276
 msgid "Liability"
 msgstr "Passiv"
 
@@ -24253,8 +24259,8 @@ msgstr "%s til %s"
 #: gnucash/report/reports/standard/customer-summary.scm:286
 #: gnucash/report/reports/standard/net-charts.scm:353
 #: gnucash/report/reports/standard/net-charts.scm:401
-#: libgnucash/engine/Account.cpp:157 libgnucash/engine/Account.cpp:4415
-#: libgnucash/engine/gncInvoice.c:1100
+#: libgnucash/engine/Account.cpp:157 libgnucash/engine/Account.cpp:4281
+#: libgnucash/engine/gncInvoice.c:1099
 msgid "Expense"
 msgstr "Omkostning"
 
@@ -25548,7 +25554,7 @@ msgid ""
 msgstr "Hvorvidt der skal inkluderes en linje som indikerer samlet indtægt"
 
 #: gnucash/report/reports/standard/income-statement.scm:477
-#: libgnucash/engine/Account.cpp:4420 libgnucash/engine/Scrub.cpp:532
+#: libgnucash/engine/Account.cpp:4286 libgnucash/engine/Scrub.cpp:532
 msgid "Trading"
 msgstr "Handel"
 
@@ -30960,6 +30966,14 @@ msgstr "_Udsæt"
 msgid "_Open Account"
 msgstr "_Åbn konto"
 
+#: gnucash/ui/gnc-reconcile-window.ui:58 gnucash/ui/gnc-reconcile-window.ui:98
+#: gnucash/ui/gnc-reconcile-window.ui:129
+#, fuzzy
+#| msgid "_Balance"
+msgctxt "reconcile menu"
+msgid "_Balance"
+msgstr "_Balance"
+
 #: gnucash/ui/gnc-reconcile-window.ui:68 gnucash/ui/gnc-reconcile-window.ui:106
 msgid "_Reconcile Selection"
 msgstr "_Afstem markering"
@@ -31440,46 +31454,381 @@ msgstr ""
 "Nedenfor kan du se listen over ugyldige kontonavne:\n"
 "%s"
 
-#: libgnucash/engine/Account.cpp:4409
+#: libgnucash/engine/Account.cpp:4275
 msgid "Credit Card"
 msgstr "Kreditkort"
 
-#: libgnucash/engine/Account.cpp:4411
+#: libgnucash/engine/Account.cpp:4277
 msgid "Stock"
 msgstr "Aktie"
 
-#: libgnucash/engine/Account.cpp:4412
+#: libgnucash/engine/Account.cpp:4278
 msgid "Mutual Fund"
 msgstr "Investeringsbevis"
 
-#: libgnucash/engine/Account.cpp:4417
+#: libgnucash/engine/Account.cpp:4283
 msgid "A/Receivable"
 msgstr "A/Tilgodehavende"
 
-#: libgnucash/engine/Account.cpp:4418
+#: libgnucash/engine/Account.cpp:4284
 msgid "A/Payable"
 msgstr "A/Kreditor"
 
-#: libgnucash/engine/Account.cpp:4419
+#: libgnucash/engine/Account.cpp:4285
 msgid "Root"
 msgstr "Rod"
 
-#: libgnucash/engine/Account.cpp:5123
+#: libgnucash/engine/Account.cpp:4725
 msgid "Orphaned Gains"
 msgstr "Forældreløse gevinster"
 
-#: libgnucash/engine/Account.cpp:5137 libgnucash/engine/cap-gains.cpp:804
+#: libgnucash/engine/Account.cpp:4739 libgnucash/engine/cap-gains.cpp:804
 #: libgnucash/engine/cap-gains.cpp:809 libgnucash/engine/cap-gains.cpp:810
 msgid "Realized Gain/Loss"
 msgstr "Realiseret overskud/tab"
 
-#: libgnucash/engine/Account.cpp:5139
+#: libgnucash/engine/Account.cpp:4741
 msgid ""
 "Realized Gains or Losses from Commodity or Trading Accounts that haven't "
 "been recorded elsewhere."
 msgstr ""
 "Realiserede gevinster eller tab fra vare- eller handelskonti, som ikke er "
 "blevet registreret et andet sted"
+
+#: libgnucash/engine/gnc-commodity.cpp:191
+msgctxt "FQ Source"
+msgid "Alphavantage"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:192
+msgctxt "FQ Source"
+msgid "Amsterdam Euronext eXchange, NL"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:193
+msgctxt "FQ Source"
+msgid "Association of Mutual Funds in India"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:194
+msgctxt "FQ Source"
+msgid "Athens Exchange Group, GR"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:195
+msgctxt "FQ Source"
+msgid "Australian Stock Exchange, AU"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:196
+#, fuzzy
+#| msgid "Bill number"
+msgctxt "FQ Source"
+msgid "Bloomberg"
+msgstr "Regningsnummer"
+
+#: libgnucash/engine/gnc-commodity.cpp:197
+msgctxt "FQ Source"
+msgid "Italian Stock Exchange, IT"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:198
+msgctxt "FQ Source"
+msgid "BSE India, IN"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:199
+msgctxt "FQ Source"
+msgid "Bucharest Stock Exchange, RO"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:200
+msgctxt "FQ Source"
+msgid "Colombo Stock Exchange, LK"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:201
+msgctxt "FQ Source"
+msgid "comdirect, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:202
+msgctxt "FQ Source"
+msgid "Consors Bank, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:203
+#, fuzzy
+#| msgid "Investments"
+msgctxt "FQ Source"
+msgid "Deka Investments, DE"
+msgstr "Investeringer"
+
+#: libgnucash/engine/gnc-commodity.cpp:204
+msgctxt "FQ Source"
+msgid "DWS, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:205
+msgctxt "FQ Source"
+msgid "Financial Times Funds service, GB"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:206
+msgctxt "FQ Source"
+msgid "Finanzpartner, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:207
+msgctxt "FQ Source"
+msgid "FondsWeb, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:208
+msgctxt "FQ Source"
+msgid "GoldMoney precious metals"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:209
+msgctxt "FQ Source"
+msgid "Google Web, US Stocks"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:210
+msgctxt "FQ Source"
+msgid "IEX (Investors Exchange), US"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:211
+msgctxt "FQ Source"
+msgid "Market Watch"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:212
+msgctxt "FQ Source"
+msgid "Morningstar, AU"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:213
+msgctxt "FQ Source"
+msgid "Morningstar, CH"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:214
+msgctxt "FQ Source"
+msgid "Morningstar, GB"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:215
+msgctxt "FQ Source"
+msgid "Morningstar, JP"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:216
+msgctxt "FQ Source"
+msgid "Motley Fool"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:217
+msgctxt "FQ Source"
+msgid "New Zealand stock eXchange, NZ"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:218
+msgctxt "FQ Source"
+msgid "NSE (National Stock Exchange), IN"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:219
+msgctxt "FQ Source"
+msgid "OnVista, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:220
+msgctxt "FQ Source"
+msgid "Paris Stock Exchange/Boursorama, FR"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:221
+msgctxt "FQ Source"
+msgid "S-Investor, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:222
+msgctxt "FQ Source"
+msgid "Sharenet, ZA"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:223
+#, fuzzy
+#| msgid "Show Exchange Rates"
+msgctxt "FQ Source"
+msgid "SIX Swiss Exchange shares, CH"
+msgstr "Vis vekselkurser"
+
+#: libgnucash/engine/gnc-commodity.cpp:224
+msgctxt "FQ Source"
+msgid "Skandinaviska Enskilda Banken, SE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:225
+#, fuzzy
+#| msgid "Stock"
+msgctxt "FQ Source"
+msgid "StockData"
+msgstr "Aktie"
+
+#: libgnucash/engine/gnc-commodity.cpp:226
+msgctxt "FQ Source"
+msgid "Stooq, PL"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:227
+msgctxt "FQ Source"
+msgid "T. Rowe Price, US"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:228
+msgctxt "FQ Source"
+msgid "Tesouro Direto bonds, BR"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:229
+msgctxt "FQ Source"
+msgid "TIAA-CREF, US"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:230
+msgctxt "FQ Source"
+msgid "Toronto Stock eXchange, CA"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:231
+msgctxt "FQ Source"
+msgid "Tradegate, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:232
+msgctxt "FQ Source"
+msgid "Treasury Direct bonds, US"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:233
+msgctxt "FQ Source"
+msgid "Twelve Data"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:234
+#, fuzzy
+#| msgid "Investments"
+msgctxt "FQ Source"
+msgid "Union Investment, DE"
+msgstr "Investeringer"
+
+#: libgnucash/engine/gnc-commodity.cpp:235
+msgctxt "FQ Source"
+msgid "US Govt. Thrift Savings Plan"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:236
+msgctxt "FQ Source"
+msgid "XETRA, DE"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:237
+msgctxt "FQ Source"
+msgid "Yahoo as JSON"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:238
+msgctxt "FQ Source"
+msgid "Yahoo Web"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:239
+msgctxt "FQ Source"
+msgid "YH Finance (FinanceAPI)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:244
+msgctxt "FQ Source"
+msgid "Australia (ASX)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:245
+msgctxt "FQ Source"
+msgid "Australia Funds (MorningstarAU)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:246
+msgctxt "FQ Source"
+msgid "Canada (Alphavantage, TMX)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:247
+msgctxt "FQ Source"
+msgid "Dutch (AEX)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:248
+msgctxt "FQ Source"
+msgid "Europe (ASEGR, Bourso, …)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:249
+msgctxt "FQ Source"
+msgid "France (Bourso)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:250
+msgctxt "FQ Source"
+msgid "Greece (ASEGR)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:251
+msgctxt "FQ Source"
+msgid "India (BSEIndia, NSEIndia)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:252
+msgctxt "FQ Source"
+msgid "India Mutual (AMFI)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:253
+msgctxt "FQ Source"
+msgid "Nasdaq (Alphavantage, FinanceAPI, …)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:254
+msgctxt "FQ Source"
+msgid "NYSE (Alphavantage, FinanceAPI, …)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:255
+msgctxt "FQ Source"
+msgid "Poland (Stooq)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:256
+msgctxt "FQ Source"
+msgid "Romania (BVB)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:257
+msgctxt "FQ Source"
+msgid "South Africa (Sharenet)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:258
+msgctxt "FQ Source"
+msgid "U.K. Funds (FTfunds, MorningstarUK)"
+msgstr ""
+
+#: libgnucash/engine/gnc-commodity.cpp:259
+msgctxt "FQ Source"
+msgid "USA (Alphavantage, FinanceAPI, …)"
+msgstr ""
 
 #: libgnucash/engine/gnc-commodity.h:110
 #, fuzzy
@@ -31547,15 +31896,15 @@ msgstr ""
 "version af GnuCash. Du er nødt til at bruge en nyere version af GnuCash for "
 "at understøtte de følgende funktioner:"
 
-#: libgnucash/engine/gncInvoice.c:1728
+#: libgnucash/engine/gncInvoice.c:1727
 msgid "Extra to Charge Card"
 msgstr "Ekstra på kreditkortet"
 
-#: libgnucash/engine/gncInvoice.c:1768
+#: libgnucash/engine/gncInvoice.c:1767
 msgid "Generated from an invoice. Try unposting the invoice."
 msgstr "Oprettet fra en faktura. Prøv at åbne denne faktura."
 
-#: libgnucash/engine/gncInvoice.c:2198
+#: libgnucash/engine/gncInvoice.c:2197
 msgid " (posted)"
 msgstr " (bogført)"
 
@@ -31687,11 +32036,11 @@ msgstr "Slutning af næste år"
 msgid "Last day of the next calendar year."
 msgstr "Sidste dag i det næste kalenderår."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1201
+#: libgnucash/engine/gnc-optiondb.cpp:1202
 msgid "Counters"
 msgstr "Tællere"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1208
+#: libgnucash/engine/gnc-optiondb.cpp:1209
 msgid ""
 "Choose the number of days after which transactions will be read-only and "
 "cannot be edited anymore. This threshold is marked by a red line in the "
@@ -31703,7 +32052,7 @@ msgstr ""
 "kassekladdevinduet. Hvis nul, kan alle transaktioner redigeres og ingen er "
 "skrivebeskyttet."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1213
+#: libgnucash/engine/gnc-optiondb.cpp:1214
 msgid ""
 "Check to have split action field used in registers for 'Num' field in place "
 "of transaction number; transaction number shown as 'T-Num' on second line of "
@@ -31715,7 +32064,7 @@ msgstr ""
 "Num« på den anden linje af kladden. Har tilsvarende effekt på "
 "forrentingsfunktioner, rapportering og import/eksport."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1217
+#: libgnucash/engine/gnc-optiondb.cpp:1218
 msgid ""
 "Check to have trading accounts used for transactions involving more than one "
 "currency or commodity."
@@ -31723,15 +32072,15 @@ msgstr ""
 "Afkryds for at handelskonti bruges til transaktioner, der involverer mere "
 "end en valuta eller vare."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1224
+#: libgnucash/engine/gnc-optiondb.cpp:1225
 msgid "Budget to be used when none has been otherwise specified."
 msgstr "Budget som bruges når et budget ellers ikke er specificeret."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1230
+#: libgnucash/engine/gnc-optiondb.cpp:1231
 msgid "Customer number"
 msgstr "Kundenummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1231
+#: libgnucash/engine/gnc-optiondb.cpp:1232
 msgid ""
 "The previous customer number generated. This number will be incremented to "
 "generate the next customer number."
@@ -31739,11 +32088,11 @@ msgstr ""
 "Det forrige oprettet kundenummer. Dette nummer vil blive trinvist øget for "
 "at oprette det næste kundenummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1234
+#: libgnucash/engine/gnc-optiondb.cpp:1235
 msgid "Customer number format"
 msgstr "Kundenummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1236
+#: libgnucash/engine/gnc-optiondb.cpp:1237
 msgid ""
 "The format string to use for generating customer numbers. This is a printf-"
 "style format string."
@@ -31751,11 +32100,11 @@ msgstr ""
 "Formatstreng der anvendes ved oprettelse af kundenumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1239
+#: libgnucash/engine/gnc-optiondb.cpp:1240
 msgid "Employee number"
 msgstr "Medarbejdernummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1240
+#: libgnucash/engine/gnc-optiondb.cpp:1241
 msgid ""
 "The previous employee number generated. This number will be incremented to "
 "generate the next employee number."
@@ -31763,11 +32112,11 @@ msgstr ""
 "Det forrige oprettet medarbejdernummer. Dette nummer vil blive trinvist øget "
 "for at oprette det næste medarbejdernummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1243
+#: libgnucash/engine/gnc-optiondb.cpp:1244
 msgid "Employee number format"
 msgstr "Medarbejdernummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1245
+#: libgnucash/engine/gnc-optiondb.cpp:1246
 msgid ""
 "The format string to use for generating employee numbers. This is a printf-"
 "style format string."
@@ -31775,11 +32124,11 @@ msgstr ""
 "Formatstreng der anvendes ved oprettelse af medarbejdernumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1248
+#: libgnucash/engine/gnc-optiondb.cpp:1249
 msgid "Invoice number"
 msgstr "Fakturanummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1249
+#: libgnucash/engine/gnc-optiondb.cpp:1250
 msgid ""
 "The previous invoice number generated. This number will be incremented to "
 "generate the next invoice number."
@@ -31787,11 +32136,11 @@ msgstr ""
 "Det forrige oprettet fakturanummer. Dette nummer vil blive trinvist øget for "
 "at oprette det næste fakturanummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1252
+#: libgnucash/engine/gnc-optiondb.cpp:1253
 msgid "Invoice number format"
 msgstr "Fakturanummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1254
+#: libgnucash/engine/gnc-optiondb.cpp:1255
 msgid ""
 "The format string to use for generating invoice numbers. This is a printf-"
 "style format string."
@@ -31799,11 +32148,11 @@ msgstr ""
 "Formatstreng der anvendes ved oprettelse af fakturanumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1257
+#: libgnucash/engine/gnc-optiondb.cpp:1258
 msgid "Bill number"
 msgstr "Regningsnummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1258
+#: libgnucash/engine/gnc-optiondb.cpp:1259
 msgid ""
 "The previous bill number generated. This number will be incremented to "
 "generate the next bill number."
@@ -31811,11 +32160,11 @@ msgstr ""
 "Det forrige oprettet regningsnummer. Dette nummer vil blive trinvist øget "
 "for at oprette det næste regningsnummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1261
+#: libgnucash/engine/gnc-optiondb.cpp:1262
 msgid "Bill number format"
 msgstr "Regningsnummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1262
+#: libgnucash/engine/gnc-optiondb.cpp:1263
 msgid ""
 "The format string to use for generating bill numbers. This is a printf-style "
 "format string."
@@ -31823,11 +32172,11 @@ msgstr ""
 "Formatstreng der anvendes ved oprettelse af regningsnumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1265
+#: libgnucash/engine/gnc-optiondb.cpp:1266
 msgid "Expense voucher number"
 msgstr "Udgiftsbilagsnummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1266
+#: libgnucash/engine/gnc-optiondb.cpp:1267
 msgid ""
 "The previous expense voucher number generated. This number will be "
 "incremented to generate the next voucher number."
@@ -31835,11 +32184,11 @@ msgstr ""
 "Det forrige oprettet udgiftsbilagsnummer. Dette nummer vil blive trinvist "
 "øget for at oprette det næste bilagsnummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1269
+#: libgnucash/engine/gnc-optiondb.cpp:1270
 msgid "Expense voucher number format"
 msgstr "Udgiftsbilagsnummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1271
+#: libgnucash/engine/gnc-optiondb.cpp:1272
 msgid ""
 "The format string to use for generating expense voucher numbers. This is a "
 "printf-style format string."
@@ -31847,11 +32196,11 @@ msgstr ""
 "Formatstreng er anvendes ved oprettelse af udgiftsbilagsnumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1274
+#: libgnucash/engine/gnc-optiondb.cpp:1275
 msgid "Job number"
 msgstr "Jobnummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1275
+#: libgnucash/engine/gnc-optiondb.cpp:1276
 msgid ""
 "The previous job number generated. This number will be incremented to "
 "generate the next job number."
@@ -31859,11 +32208,11 @@ msgstr ""
 "Det forrige oprettet jobnummer. Dette nummer vil blive trinvist øget for at "
 "oprette det næste jobnummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1278
+#: libgnucash/engine/gnc-optiondb.cpp:1279
 msgid "Job number format"
 msgstr "Jobnummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1279
+#: libgnucash/engine/gnc-optiondb.cpp:1280
 msgid ""
 "The format string to use for generating job numbers. This is a printf-style "
 "format string."
@@ -31871,11 +32220,11 @@ msgstr ""
 "Formatstreng der anvendes ved oprettelse af jobnumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1282
+#: libgnucash/engine/gnc-optiondb.cpp:1283
 msgid "Order number"
 msgstr "Ordrenummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1283
+#: libgnucash/engine/gnc-optiondb.cpp:1284
 msgid ""
 "The previous order number generated. This number will be incremented to "
 "generate the next order number."
@@ -31883,11 +32232,11 @@ msgstr ""
 "Det forrige oprettet ordrenummer. Dette nummer vil blive trinvist øget for "
 "at oprette det næste ordrenummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1286
+#: libgnucash/engine/gnc-optiondb.cpp:1287
 msgid "Order number format"
 msgstr "Ordrenummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1287
+#: libgnucash/engine/gnc-optiondb.cpp:1288
 msgid ""
 "The format string to use for generating order numbers. This is a printf-"
 "style format string."
@@ -31895,11 +32244,11 @@ msgstr ""
 "Formatstregn der anvendes ved oprettelse af ordrenumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1290
+#: libgnucash/engine/gnc-optiondb.cpp:1291
 msgid "Vendor number"
 msgstr "Leverandørnummer"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1291
+#: libgnucash/engine/gnc-optiondb.cpp:1292
 msgid ""
 "The previous vendor number generated. This number will be incremented to "
 "generate the next vendor number."
@@ -31907,11 +32256,11 @@ msgstr ""
 "Det forrige oprettet leverandørnummer. Dette nummer vil blive trinvist øget "
 "for at oprette det næste leverandørnummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1294
+#: libgnucash/engine/gnc-optiondb.cpp:1295
 msgid "Vendor number format"
 msgstr "Leverandørnummerformat"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1295
+#: libgnucash/engine/gnc-optiondb.cpp:1296
 msgid ""
 "The format string to use for generating vendor numbers. This is a printf-"
 "style format string."
@@ -31919,64 +32268,64 @@ msgstr ""
 "Formatstreng er anvendes ved oprettelse af leverandørnumre. Dette er en "
 "formatstreng i printf-stil."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1301
+#: libgnucash/engine/gnc-optiondb.cpp:1302
 msgid "The name of your business."
 msgstr "Din forretnings navn."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1304
+#: libgnucash/engine/gnc-optiondb.cpp:1305
 msgid "The address of your business."
 msgstr "Din forretnings adresse."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1308
-#: libgnucash/engine/gnc-optiondb.cpp:1312
+#: libgnucash/engine/gnc-optiondb.cpp:1309
+#: libgnucash/engine/gnc-optiondb.cpp:1313
 msgid "The contact person to print on invoices."
 msgstr "Den kontaktperson der skal anføres på fakturaer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1316
+#: libgnucash/engine/gnc-optiondb.cpp:1317
 msgid "The fax number of your business."
 msgstr "Din forretnings faxnummer."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1320
+#: libgnucash/engine/gnc-optiondb.cpp:1321
 msgid "The email address of your business."
 msgstr "Din forretnings e-postadresse."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1324
+#: libgnucash/engine/gnc-optiondb.cpp:1325
 msgid "The URL address of your website."
 msgstr "Din internetsides URL-adresse."
 
 # ' forkert på engelsk?
-#: libgnucash/engine/gnc-optiondb.cpp:1327
+#: libgnucash/engine/gnc-optiondb.cpp:1328
 msgid "The ID for your company (eg 'Tax-ID: 00-000000)."
 msgstr "Dit firmas id (f.eks. tax-id: 00-000000)."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1335
+#: libgnucash/engine/gnc-optiondb.cpp:1336
 msgid ""
 "Length of time to change the used invoice report. A value of 0 means "
 "disabled."
 msgstr ""
 
-#: libgnucash/engine/gnc-optiondb.cpp:1338
+#: libgnucash/engine/gnc-optiondb.cpp:1339
 msgid "Default Customer TaxTable"
 msgstr "Standard for kundeskattetabel"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1339
+#: libgnucash/engine/gnc-optiondb.cpp:1340
 msgid "The default tax table to apply to customers."
 msgstr "Standardskattetabellen som bruges på kunder."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1342
+#: libgnucash/engine/gnc-optiondb.cpp:1343
 msgid "Default Vendor TaxTable"
 msgstr "Standardskattetabel for leverandør"
 
-#: libgnucash/engine/gnc-optiondb.cpp:1343
+#: libgnucash/engine/gnc-optiondb.cpp:1344
 msgid "The default tax table to apply to vendors."
 msgstr "Standardskattetabel til anvendelse på leverandører."
 
-#: libgnucash/engine/gnc-optiondb.cpp:1348
+#: libgnucash/engine/gnc-optiondb.cpp:1349
 msgid "The default date format used for fancy printed dates."
 msgstr "Standarddatoformatet brugt til smarte udskrevne datoer."
 
 # Din forretnings elektroniske skattenummer
-#: libgnucash/engine/gnc-optiondb.cpp:1354
+#: libgnucash/engine/gnc-optiondb.cpp:1355
 msgid "The electronic tax number of your business"
 msgstr "Det elektroniske skattenummer på din forretning"
 
