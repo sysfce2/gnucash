@@ -4,17 +4,17 @@
 # The last version has some new strings translated and some mistakes fixed.
 # Yuri Syrota <rasta@renome.rovno.ua>, 2000.
 # Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2007.
-# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2018, 2019, 2020, 2021, 2022, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Maksym Kobieliev <maximaximums@gmail.com>, 2013.
 # Artem <artem@molotov.work>, 2022.
 # Dan <denqwerta@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 5.9\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
-"product=GnuCash&component=Translations\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
+"cgi?product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2024-10-17 17:12+0200\n"
-"PO-Revision-Date: 2023-08-03 22:45+0000\n"
+"PO-Revision-Date: 2024-11-25 11:00+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnucash/"
 "gnucash/uk/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.9-dev\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "X-Project-Style: default\n"
 
@@ -1013,6 +1013,8 @@ msgid ""
 "You can assign or modify keyboard shortcuts for many GnuCash actions. See "
 "https://wiki.gnucash.org/wiki/Keyboard_Shortcuts."
 msgstr ""
+"Ви можете призначати або змінювати клавіатурні скорочення для багатьох дій у "
+"GnuCash. Див. https://wiki.gnucash.org/wiki/Keyboard_Shortcuts."
 
 #: doc/tip_of_the_day.list.c:132
 msgid ""
@@ -1447,6 +1449,10 @@ msgid ""
 "If you are unable to calculate capital gains you can enter a placeholder "
 "amount and correct it in the transaction later."
 msgstr ""
+"Довгий продаж активів і записування прибутку/збитку.\n"
+"\n"
+"Якщо ви не можете обчислити рух капіталу, ви можете ввести суму-замінник і "
+"виправити її у записів операції пізніше."
 
 #. Translators: this is a stock transaction describing
 #. dividends issued to holder
@@ -1536,15 +1542,6 @@ msgid "Stock split"
 msgstr "Частини паперів"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:271
-#, fuzzy
-#| msgid ""
-#| "Company redeems units, thereby increasing the stock price by a multiple, "
-#| "while keeping the total monetary value of the overall investment "
-#| "constant.\n"
-#| "\n"
-#| "If the reverse split results in a cash in lieu for remainder units, "
-#| "please record the sale using the Stock Transaction Assistant first, then "
-#| "record the reverse split."
 msgid ""
 "Company issues additional units, thereby reducing the stock price by a "
 "divisor , while keeping the total monetary value of the overall investment "
@@ -1553,12 +1550,13 @@ msgid ""
 "If the split results in a cash in lieu for remainder units, please record "
 "the sale using the Stock Transaction Assistant first, then record the split."
 msgstr ""
-"Компанія викуповує одиниці, отже, збільшує курсову вартість на множник, "
-"зберігаючи загальну грошову вартість загальної сталої інвестування.\n"
+"Компанією випущено додаткові одиниці, отже, зменшено курсову вартість на "
+"дільник, зберігаючи загальну грошову вартість загальної сталої інвестування."
 "\n"
-"Якщо зворотне дроблення призводить до отримання грошової суми для рештки "
-"одиниць, будь ласка, спочатку запишіть продаж за допомогою помічника "
-"транзакцій акцій, потім запишіть зворотне дроблення."
+"\n"
+"Якщо дроблення призводить до отримання грошової суми для рештки одиниць, "
+"будь ласка, спочатку запишіть продаж за допомогою помічника транзакцій "
+"акцій, потім запишіть дроблення."
 
 #. Translators: this is a stock transaction describing a reverse split
 #. Translators: this is a stock transaction describing a
@@ -1607,6 +1605,10 @@ msgid ""
 "If you are unable to calculate capital gains you can enter a placeholder "
 "amount and correct it in the transaction later."
 msgstr ""
+"Викуп активів для закриття короткої позиції і записування прибутку/збитку.\n"
+"\n"
+"Якщо ви не можете обчислити рух капіталу, ви можете ввести суму-замінник і "
+"виправити її у записів операції пізніше."
 
 #. Translators: this is a stock transaction describing
 #. dividends retrieved from holder when shorting stock
@@ -1646,14 +1648,6 @@ msgid "Compensatory return of capital (reclassification)"
 msgstr "Компенсаторне повернення капіталу (перекласифікація)"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:352
-#, fuzzy
-#| msgid ""
-#| "Company returns capital, and the short stock holder must make a "
-#| "compensatory payment for the returned capital. This reduces the cost "
-#| "basis (less negative, towards 0.00 value) without affecting # units. A "
-#| "distribution previously recorded as a compensatory dividend is "
-#| "reclassified to compensatory return of capital, often due to end-of-year "
-#| "tax information."
 msgid ""
 "Company returns capital, and the short stock holder must make a compensatory "
 "payment for the returned capital. This reduces the cost basis (less "
@@ -1662,8 +1656,8 @@ msgid ""
 "compensatory return of capital,often due to end-of-year tax information."
 msgstr ""
 "Компанія повертає капітал і держатель коротких акцій має здійснити "
-"компенсаційну виплату для поверненого капіталу. Це зменшує базову вартість "
-"(зменшення у напрямку 0.00) без зміни кількості одиниць. Розподіл, який "
+"компенсаційну виплату для поверненого капіталу. Це зменшує базову вартість ("
+"зменшення у напрямку 0.00) без зміни кількості одиниць. Розподіл, який "
 "раніше було записано як компенсаційний дивіденд, перекласифіковано як "
 "компенсаційне повернення капіталу, часто через річні дані щодо податків."
 
@@ -1706,15 +1700,6 @@ msgstr ""
 "0.00) без впливу на кількість одиниць."
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:397
-#, fuzzy
-#| msgid ""
-#| "Company redeems units, thereby increasing the stock price by a multiple, "
-#| "while keeping the total monetary value of the overall investment "
-#| "constant.\n"
-#| "\n"
-#| "If the reverse split results in a cash in lieu for remainder units, "
-#| "please record the cover buy using the Stock Transaction Assistant first, "
-#| "then record the reverse split."
 msgid ""
 "Company issues additional units, thereby reducing the stock price by a "
 "divisor, while keeping the total monetary value of the overall investment "
@@ -1724,12 +1709,12 @@ msgid ""
 "the cover buy using the Stock Transaction Assistant first, then record the "
 "split."
 msgstr ""
-"Компанія викуповує одиниці, отже, збільшує курсову вартість на множник, "
-"зберігаючи загальну грошову вартість загальної сталої інвестування.\n"
+"Компанією випущено доддаткові одиниці, отже, зменшено курсову вартість на "
+"дільник, зі збереженням загальної грошової вартості сталої інвестування.\n"
 "\n"
-"Якщо зворотне дроблення призводить до отримання грошової суми для рештки "
-"одиниць, будь ласка, спочатку запишіть купівлю на покриття за допомогою "
-"помічника транзакцій акцій, потім запишіть зворотне дроблення."
+"Якщо дроблення призводить до отримання грошової суми для рештки одиниць, "
+"будь ласка, спочатку запишіть купівлю на покриття за допомогою помічника "
+"транзакцій акцій, потім запишіть дроблення."
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:411
 msgid ""
@@ -1786,10 +1771,9 @@ msgstr "Сума для %s має бути додатною."
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:705
 #: gnucash/gnome/assistant-stock-transaction.cpp:1055
-#, fuzzy, c-format
-#| msgid "Include sub-accounts of all selected accounts."
+#, c-format
 msgid "The %s amount has no associated account."
-msgstr "Включити субрахунки всіх позначених рахунків."
+msgstr "Із сумою %s не пов'язано жодного рахунку."
 
 #. Translators: "N/A" here means that a commodity doesn't have a valid price.
 #: gnucash/gnome/assistant-stock-transaction.cpp:771
@@ -1825,36 +1809,26 @@ msgid "Cannot cover buy more units than owed."
 msgstr "Не можна купити у покриття більше одиниць, ніж є."
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1129
-#, fuzzy
-#| msgid "Stock"
 msgctxt "Stock Assistant: Page name"
 msgid "Stock"
 msgstr "Акція"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1131
-#, fuzzy
-#| msgid "Cash"
 msgctxt "Stock Assistant: Page name"
 msgid "Cash"
 msgstr "Готівка"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1133
-#, fuzzy
-#| msgid "Fees"
 msgctxt "Stock Assistant: Page name"
 msgid "Fees"
 msgstr "Мита"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1135
-#, fuzzy
-#| msgid "Dividend"
 msgctxt "Stock Assistant: Page name"
 msgid "Dividend"
 msgstr "Дивіденд"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1137
-#, fuzzy
-#| msgid "Capital Gains"
 msgctxt "Stock Assistant: Page name"
 msgid "Capital Gains"
 msgstr "Збільшення капіталу"
@@ -2137,16 +2111,12 @@ msgstr ""
 "нижче."
 
 #: gnucash/gnome/dialog-commodities.cpp:183
-#, fuzzy
-#| msgid ""
-#| "That commodity is currently used by at least one of your accounts. You "
-#| "may not delete it."
 msgid ""
 "This commodity is currently used by the following accounts. You may not "
 "delete it.\n"
 msgstr ""
-"Цей товар зараз використовується у принаймні одному з ваших рахунків. Його "
-"запис не можна вилучати."
+"Цей товар зараз використовується у вказаних нижче рахунках. Його запис не "
+"можна вилучати.\n"
 
 #: gnucash/gnome/dialog-commodities.cpp:201
 msgid ""
@@ -4051,11 +4021,11 @@ msgstr[3] ""
 
 #: gnucash/gnome/dialog-sx-since-last-run.c:1266
 msgid "Highlight a date first to sort by occurrence date."
-msgstr ""
+msgstr "Для впорядкування за датою, спочатку підсвітіть дату."
 
 #: gnucash/gnome/dialog-sx-since-last-run.c:1267
 msgid "Highlight a schedule first to sort by schedule name."
-msgstr ""
+msgstr "Для впорядкування за назвою розкладу спочатку підсвітіть розклад."
 
 #: gnucash/gnome/dialog-sx-since-last-run.c:1379
 #: gnucash/gnome-search/dialog-search.c:1105
@@ -5439,24 +5409,18 @@ msgstr "Гарний рахунок-фактура"
 
 #: gnucash/gnome/gnc-plugin-page-sx-list.cpp:399
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:53
-#, fuzzy
-#| msgid "_Schedule"
 msgid "_New Schedule"
-msgstr "_Запланувати"
+msgstr "С_творити розклад"
 
 #: gnucash/gnome/gnc-plugin-page-sx-list.cpp:405
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:59
-#, fuzzy
-#| msgid "_Schedule"
 msgid "_Edit Schedule"
-msgstr "_Запланувати"
+msgstr "_Редагувати розклад"
 
 #: gnucash/gnome/gnc-plugin-page-sx-list.cpp:411
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:65
-#, fuzzy
-#| msgid "_Schedule"
 msgid "_Delete Schedule"
-msgstr "_Запланувати"
+msgstr "Ви_лучити розклад"
 
 #: gnucash/gnome/gnc-plugin-page-sx-list.cpp:493
 #: gnucash/gtkbuilder/dialog-account.glade:553
@@ -5468,15 +5432,12 @@ msgid "Upcoming Transactions"
 msgstr "Майбутні транзакції"
 
 #: gnucash/gnome/gnc-plugin-page-sx-list.cpp:933
-#, fuzzy
-#| msgid "Do you really want to delete this scheduled transaction?"
-#| msgid_plural "Do you really want to delete %d scheduled transactions?"
 msgid "Do you really want to delete this scheduled transaction?"
 msgid_plural "Do you really want to delete these scheduled transactions?"
-msgstr[0] "Ви справді хочете вилучити вибрану %d заплановану транзакцію?"
-msgstr[1] "Ви справді хочете вилучити вибрані %d заплановані транзакції?"
-msgstr[2] "Ви справді хочете вилучити вибрані %d запланованих транзакцій?"
-msgstr[3] "Ви справді хочете вилучити вибрану заплановану транзакцію?"
+msgstr[0] "Ви справді хочете вилучити заплановані транзакції?"
+msgstr[1] "Ви справді хочете вилучити заплановані транзакції?"
+msgstr[2] "Ви справді хочете вилучити заплановані транзакції?"
+msgstr[3] "Ви справді хочете вилучити заплановану транзакцію?"
 
 #: gnucash/gnome/gnc-plugin-report-system.c:163
 #: gnucash/report/reports/standard/view-column.scm:95
@@ -7079,10 +7040,9 @@ msgid "Account is already at Auto-Clear Balance."
 msgstr "Рахунок вже перебуває у списку автоузгодження балансу."
 
 #: gnucash/gnome-utils/gnc-autoclear.c:157
-#, fuzzy, c-format
-#| msgid "Too many uncleared splits"
+#, c-format
 msgid "No uncleared splits found."
-msgstr "Забагато неузгоджених поділів"
+msgstr "Неузгоджених поділів не знайдено."
 
 #: gnucash/gnome-utils/gnc-autoclear.c:173
 #, c-format
@@ -9542,55 +9502,33 @@ msgstr ""
 "транзакції» у діалоговому вікні «З моменту останнього запуску»."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:32
-#, fuzzy
-#| msgid ""
-#| "Set 'Review created transactions' as the default in the \"since last "
-#| "run\" dialog."
 msgid "Set the sort column in the \"since last run\" dialog."
 msgstr ""
-"Типово встановити режим «Перевіряти створені транзакції» у вікні «З моменту "
+"Встановити стовпчик для упорядковування записів у вікні «З моменту "
 "останнього запуску»."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:33
-#, fuzzy
-#| msgid ""
-#| "Set 'Review created transactions' as the default in the \"since last "
-#| "run\" dialog."
 msgid "This settings sets the sort column in the \"since last run\" dialog."
 msgstr ""
-"Типово встановити режим «Перевіряти створені транзакції» у вікні «З моменту "
-"останнього запуску»."
+"Ці параметри визначають стовпчик впорядкування у вікні «З моменту останнього "
+"запуску»."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:37
-#, fuzzy
-#| msgid ""
-#| "Set 'Review created transactions' as the default in the \"since last "
-#| "run\" dialog."
 msgid "Set the sort direction in the \"since last run\" dialog."
 msgstr ""
-"Типово встановити режим «Перевіряти створені транзакції» у вікні «З моменту "
-"останнього запуску»."
+"Встановити напрямок впорядковування у вікні «З моменту останнього запуску»."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:38
-#, fuzzy
-#| msgid ""
-#| "This setting controls whether as default the \"review created "
-#| "transactions\" is set for the \"since last run\" dialog."
 msgid "This settings sets the sort direction in the \"since last run\" dialog."
 msgstr ""
-"Цей параметр визначає, чи буде типово встановлено режим «Перевіряти створені "
-"транзакції» у діалоговому вікні «З моменту останнього запуску»."
+"Ці параметри встановлюють напрямок впорядковування у діалоговому вікні «З "
+"моменту останнього запуску»."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:42
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:43
-#, fuzzy
-#| msgid ""
-#| "Set 'Review created transactions' as the default in the \"since last "
-#| "run\" dialog."
 msgid "The depth used in the tree to sort in the \"since last run\" dialog."
 msgstr ""
-"Типово встановити режим «Перевіряти створені транзакції» у вікні «З моменту "
-"останнього запуску»."
+"Глибина ієрархії впорядковування у вікні «З моменту останнього запуску»."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:49
 msgid "Set the \"auto create\" flag by default"
@@ -9615,17 +9553,13 @@ msgstr "За скільки днів попереджувати користув
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:59
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:60
-#, fuzzy
-#| msgid "The number of payments cannot be zero."
 msgid "The number of months to be shown in editor."
-msgstr "Число платежів не може бути нульовим."
+msgstr "Кількість місяців, дані щодо яких має бути показано у редакторі."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:64
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:65
-#, fuzzy
-#| msgid "Position of the vertical pane divider."
 msgid "The horizontal position of the editor divider."
-msgstr "Розташування вертикального роздільника панелей."
+msgstr "Розташування роздільника панелей у редакторі за горизонталлю."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.dialogs.sxs.gschema.xml.in:76
 msgid "Set the \"notify\" flag by default"
@@ -9680,11 +9614,14 @@ msgid ""
 "by registering for a free account at the Alpha Vantage website, https://www."
 "alphavantage.co/support/#api-key."
 msgstr ""
+"Для використання служби Alpha Vantage потрібен ключ до програмного "
+"інтерфейсу. Отримати ключ можна шляхом реєстрації безкоштовного облікового "
+"запису на сайті Alpha Vantage, https://www.alphavantage.co/support/#api-key."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.general.finance-quote.gschema.xml.in:10
 #: gnucash/gtkbuilder/dialog-preferences.glade:3687
 msgid "YH Finance (FinanceAPI) API key"
-msgstr ""
+msgstr "Ключ до програмного інтерфейсу YH Finance (FinanceAPI)"
 
 #: gnucash/gschemas/org.gnucash.GnuCash.general.finance-quote.gschema.xml.in:11
 #: gnucash/gtkbuilder/dialog-preferences.glade:3686
@@ -9694,6 +9631,9 @@ msgid ""
 "obtain a key by registering for a free account at the YH Finance website, "
 "https://financeapi.net/pricing."
 msgstr ""
+"Для використання служби FinanceAPI потрібен ключ до програмного інтерфейсу "
+"YH Finance. Отримати такий ключ можна шляхом реєстрації безкоштовного "
+"облікового запису на сайті YH Finance, https://financeapi.net/pricing."
 
 #: gnucash/gschemas/org.gnucash.GnuCash.gschema.xml.in:10
 msgid "The version of these settings"
@@ -11760,33 +11700,6 @@ msgid "CSV Transaction Import"
 msgstr "Імпортування транзакцій у CSV"
 
 #: gnucash/gtkbuilder/assistant-csv-trans-import.glade:44
-#, fuzzy
-#| msgid ""
-#| "This assistant will help you import a delimited file containing a list of "
-#| "transactions. It supports both token separated files (such as comma "
-#| "separated or semi-colon separated) and fixed width data.\n"
-#| "\n"
-#| "For a successful import three columns have to be available in the import "
-#| "data:\n"
-#| "• a Date column\n"
-#| "• a Description column\n"
-#| "• a Deposit or Withdrawal column\n"
-#| "\n"
-#| "If there is no Account data available, a base account can be selected to "
-#| "which all data will be imported.\n"
-#| "\n"
-#| "Apart from a choice of delimiter, there are several options to tweak the "
-#| "importer. For example a number of lines can be skipped at the start or "
-#| "the end of the data, as well as odd rows. Several date and number formats "
-#| "are supported. The file encoding can be defined.\n"
-#| "\n"
-#| "The importer can handle files where transactions are split over multiple "
-#| "lines, with each line representing one split.\n"
-#| "\n"
-#| "Lastly, for repeated imports the preview page has buttons to Load and "
-#| "Save the settings. You can save your adjusted settings to reuse them on "
-#| "later imports. After loading your settings you can also tweak them again "
-#| "for similar imports and save them under another name."
 msgid ""
 "This assistant will help you import a delimited file containing a list of "
 "transactions. It supports both token separated files (such as comma "
@@ -11826,7 +11739,7 @@ msgstr ""
 "Для успішного імпортування в імпортованих даних має бути три стовпчики:\n"
 "• стовпчик дати\n"
 "• стовпчик опису\n"
-"• стовпчик депонування або відкликання\n"
+"• стовпчик суми або суми зі знаком\n"
 "\n"
 "Якщо не вказано даних рахунку, можна вибрати базовий рахунок, до запису "
 "якого буде імпортовано дані.\n"
@@ -11838,7 +11751,11 @@ msgstr ""
 "чисел. Можна визначити кодування файла.\n"
 "\n"
 "Засіб імпортування може працювати із файлами, у яких записи транзакцій "
-"розбито на декілька рядків, кожен з яких відповідає одному дробленню.\n"
+"розбито на декілька рядків, кожен з яких відповідає одному дробленню. Нову "
+"транзакцію буде започатковано кожного разу, коли значення пов'язаних із "
+"транзакціями стовпчиків відрізнятиметься від попереднього, непорожнього "
+"значення. Такими стовпчиками є стовпчики ідентифікатора транзакції, дати, "
+"номера, опису, нотаток, товару транзакції та причини спорожнення.\n"
 "\n"
 "Нарешті, для регулярного імпортування даних із однаковим форматуванням на "
 "сторінці попереднього перегляду передбачено кнопки для завантаження та "
@@ -13010,11 +12927,6 @@ msgid "Stock Transaction Assistant"
 msgstr "Помічник операцій з акціями"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:22
-#, fuzzy
-#| msgid ""
-#| "This assistant will help you record a stock transaction. The transaction "
-#| "type (purchase, sale, dividend, distribution, return of capital, stock "
-#| "split) will determine the transaction splits involved in the transaction."
 msgid ""
 "This assistant will help you record a stock transaction. The transaction "
 "type (purchase, sale, dividend, distribution, return of capital, stock "
@@ -13026,7 +12938,10 @@ msgid ""
 msgstr ""
 "За допомогою цього помічника ви зможете записати операцію з акціями. Тип "
 "операції (придбання, продаж, розподіл, повернення капіталу, дроблення акцій) "
-"визначить дроблення транзакції, які включено до операції."
+"визначить дроблення транзакції, які включено до операції. Зауважте, що "
+"валютою транзакції буде валюта рахунку акцій, і що підтримки багатовалютних "
+"транзакцій не передбачено: програма пропонуватиме лише рахунки у валюті "
+"транзакцій для готівки, збільшення капіталу, дивідендів та мит."
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:45
 msgid "Select the date and description for your records."
@@ -20149,10 +20064,6 @@ msgstr ""
 "стовпчик ціни або значення (зі знаком) або вкзаано некоректні значення."
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:665
-#, fuzzy
-#| msgid ""
-#| "Choice of account makes this a multi-currency transaction but price, "
-#| "(negated) value or (negated) transfer column is missing or invalid."
 msgid ""
 "Choice of accounts makes this a multi-currency transaction but price, "
 "(negated) value or (negated) transfer amount column is missing or invalid."
@@ -20478,10 +20389,8 @@ msgid "Unknown OFX investment account"
 msgstr "Невідомий інвестиційний рахунок OFX"
 
 #: gnucash/import-export/ofx/gnc-ofx-import.cpp:1308
-#, fuzzy
-#| msgid "Finding duplicate transactions"
 msgid "Removing duplicate transactions…"
-msgstr "Шукаємо дублікати транзакцій"
+msgstr "Вилучаємо дублікати транзакцій…"
 
 #: gnucash/import-export/ofx/gnc-ofx-import.cpp:1362
 #, c-format
@@ -20817,10 +20726,8 @@ msgid "Ignoring security line"
 msgstr "Ігноруємо рядок цінних паперів"
 
 #: gnucash/import-export/qif-imp/qif-file.scm:532
-#, fuzzy
-#| msgid "Could not create opening balance."
 msgid "Could not parse price line"
-msgstr "Не створювати початкове сальдо."
+msgstr "Не вдалося обробити рядок ціни"
 
 #: gnucash/import-export/qif-imp/qif-file.scm:540
 msgid "File does not appear to be in QIF format"
@@ -20883,10 +20790,8 @@ msgid "Parsing accounts"
 msgstr "Обробка рахунків"
 
 #: gnucash/import-export/qif-imp/qif-file.scm:816
-#, fuzzy
-#| msgid "Parsing categories"
 msgid "Parsing prices"
-msgstr "Обробка категорій"
+msgstr "Обробляємо ціни"
 
 #: gnucash/import-export/qif-imp/qif-file.scm:849
 msgid "Parsing transactions"
@@ -20953,33 +20858,25 @@ msgid "Converting"
 msgstr "Перетворення"
 
 #: gnucash/import-export/qif-imp/qif-to-gnc.scm:486
-#, fuzzy
-#| msgid "%d duplicate price"
-#| msgid_plural "%d duplicate prices"
 msgid "Discarding duplicate prices"
-msgstr "%d дублікат ціни"
+msgstr "Відкидаємо дублікати цін"
 
 #: gnucash/import-export/qif-imp/qif-to-gnc.scm:516
-#, fuzzy
-#| msgid "Add a new price."
 msgid "Adding prices"
-msgstr "Додати нову ціну."
+msgstr "Додаємо ціни"
 
 #: gnucash/import-export/qif-imp/qif-to-gnc.scm:589
 msgid "Missing transaction date."
 msgstr "Не вказано дати транзакції."
 
 #: gnucash/import-export/qif-imp/qif-to-gnc.scm:741
-#, fuzzy, scheme-format
-#| msgid "Missing transaction date."
+#, scheme-format
 msgid "Missing QIF investment action for transaction dated ~a."
-msgstr "Не вказано дати транзакції."
+msgstr "Не вказано дії з інвестування QIF для транзакції з датою ~a."
 
 #: gnucash/import-export/qif-imp/qif-to-gnc.scm:1426
-#, fuzzy
-#| msgid "Invalid Transactions"
 msgid "Invalid transaction date."
-msgstr "Некоректні транзакції"
+msgstr "Некоректна дата транзакції."
 
 #: gnucash/python/init.py:18
 msgid "Welcome to GnuCash"
@@ -21534,6 +21431,8 @@ msgid ""
 "This transaction cannot be balanced: The imbalance is a fraction smaller "
 "than the commodity allows."
 msgstr ""
+"Неможливо збалансувати транзакцію: нев'язка є часткою, яка менша за "
+"дозволену для товару."
 
 #: gnucash/register/ledger-core/split-register-control.cpp:90
 msgid "Rebalance Transaction"
@@ -27633,26 +27532,20 @@ msgid "Net Loss"
 msgstr "Читі збитки"
 
 #: gnucash/report/reports/standard/txn-columns.scm:33
-#, fuzzy
-#| msgid "Transaction Report"
 msgid "Transaction Breakdown Report"
-msgstr "Звіт про транзакції"
+msgstr "Звіт про розподіл транзакцій"
 
 #: gnucash/report/reports/standard/txn-columns.scm:37
-#, fuzzy
-#| msgid "Number of columns"
 msgid "Limit for number of columns"
-msgstr "Кількість колонок"
+msgstr "Обмеження на кількість стовпчиків"
 
 #: gnucash/report/reports/standard/txn-columns.scm:38
 msgid "Set the upper limit for number of columns"
-msgstr ""
+msgstr "Встановити верхню межу на кількість стовпчиків"
 
 #: gnucash/report/reports/standard/txn-columns.scm:154
-#, fuzzy
-#| msgid "Income summary accounts"
 msgid "Too many accounts"
-msgstr "Рахунки сумарного надходження"
+msgstr "Забагато рахунків"
 
 #: gnucash/report/reports/standard/txn-columns.scm:155
 msgid ""
@@ -27660,6 +27553,8 @@ msgid ""
 "Select a different subset of transactions, or increase the limit in the "
 "options."
 msgstr ""
+"Кількість рахунків, які пов'язано із транзакціями перевищує обмеження. "
+"Виберіть іншу підмножину транзакцій або збільште верхню межу у параметрах."
 
 #: gnucash/report/reports/standard/view-column.scm:45
 #: gnucash/report/reports/standard/view-column.scm:56
@@ -30050,10 +29945,8 @@ msgstr "Призначити сплатою…"
 #: gnucash/ui/gnc-plugin-page-register.ui:17
 #: gnucash/ui/gnc-plugin-page-register.ui:446
 #: gnucash/ui/gnc-plugin-page-register.ui:558
-#, fuzzy
-#| msgid "Assign the selected transaction as payment"
 msgid "Assign the selected transaction as payment."
-msgstr "Вказати, що позначена транзакція є сплатою"
+msgstr "Вказати, що позначена транзакція є сплатою."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:22
 #: gnucash/ui/gnc-plugin-page-register.ui:450
@@ -30064,37 +29957,27 @@ msgstr "Редагувати сплату…"
 #: gnucash/ui/gnc-plugin-page-register.ui:24
 #: gnucash/ui/gnc-plugin-page-register.ui:452
 #: gnucash/ui/gnc-plugin-page-register.ui:564
-#, fuzzy
-#| msgid "Edit the payment this transaction is a part of"
 msgid "Edit the payment this transaction is a part of."
-msgstr "Редагувати сплату, частиною якої є ця транзакція"
+msgstr "Редагувати сплату, частиною якої є ця транзакція."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:35
-#, fuzzy
-#| msgid "Edit the selected account"
 msgid "Edit the selected account."
-msgstr "Змінити параметри обраного рахунку"
+msgstr "Змінити параметри обраного рахунку."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:42
-#, fuzzy
-#| msgid "Find an account"
 msgid "Find an account."
-msgstr "Знайти рахунок"
+msgstr "Знайти рахунок."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:52
-#, fuzzy
-#| msgid "Find transactions with a search"
 msgid "Find transactions with a search."
-msgstr "Пошук транзакцій"
+msgstr "Пошук транзакцій."
 
 #. Translators: currently implemented are, US: income tax and DE: VAT, So adjust this string
 #: gnucash/ui/gnc-plugin-page-register.ui:63
-#, fuzzy
-#| msgid "Setup relevant accounts for tax reports, e.g. US income tax"
 msgid "Setup relevant accounts for tax reports, e.g. US income tax."
 msgstr ""
 "Налаштувати відповідні рахунки для звітів щодо податків, наприклад, податку "
-"з прибутку у США"
+"з прибутку у США."
 
 #. Translators: This is a menu item in the View menu
 #: gnucash/ui/gnc-plugin-page-register.ui:71
@@ -30102,10 +29985,8 @@ msgid "_Basic Ledger"
 msgstr "_Основна книга"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:74
-#, fuzzy
-#| msgid "Show transactions on one or two lines"
 msgid "Show transactions on one or two lines."
-msgstr "Показувати транзакції на одній або двох сторонах"
+msgstr "Показувати транзакції на одній або двох сторонах."
 
 #. Translators: This is a menu item in the View menu
 #: gnucash/ui/gnc-plugin-page-register.ui:79
@@ -30113,18 +29994,13 @@ msgid "_Auto-Split Ledger"
 msgstr "_Автоматично розбивати журнал"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:82
-#, fuzzy
-#| msgid ""
-#| "Show transactions on one or two lines and expand the current transaction"
 msgid ""
 "Show transactions on one or two lines and expand the current transaction."
-msgstr "Показати транзакції на одному чи двох рядках з додатковою інформацією"
+msgstr "Показати транзакції на одному чи двох рядках з додатковою інформацією."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:90
-#, fuzzy
-#| msgid "Show expanded transactions with all splits"
 msgid "Show expanded transactions with all splits."
-msgstr "Показати розширені транзакції з усіма частинами"
+msgstr "Показати розширені транзакції з усіма частинами."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:107
 #: gnucash/ui/gnc-plugin-page-register.ui:349
@@ -30133,177 +30009,132 @@ msgid "_Sort By…"
 msgstr "_Критерій упорядковування…"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:123
-#, fuzzy
-#| msgid "Refresh this window"
 msgid "Refresh this window."
-msgstr "Оновити вікно"
+msgstr "Освіжити вміст цього вікна."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:132
-#, fuzzy
-#| msgid "Cut the selected transaction into clipboard"
 msgid "Cut the selected transaction into clipboard."
-msgstr "Вирізати поточну транзакцію у буфер обміну"
+msgstr "Вирізати поточну транзакцію у буфер обміну."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:138
-#, fuzzy
-#| msgid "Copy the selected transaction into clipboard"
 msgid "Copy the selected transaction into clipboard."
-msgstr "Копіювати виділену транзакцію у буфер обміну"
+msgstr "Копіювати виділену транзакцію у буфер обміну."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:144
-#, fuzzy
-#| msgid "Paste the transaction from the clipboard"
 msgid "Paste the transaction from the clipboard."
-msgstr "Вставити транзакцію з буферу обміну"
+msgstr "Вставити транзакцію з буферу обміну."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:150
 #: gnucash/ui/gnc-plugin-page-register.ui:366
 #: gnucash/ui/gnc-plugin-page-register.ui:576
-#, fuzzy
-#| msgid "Make a copy of the current transaction"
 msgid "Make a copy of the current transaction."
-msgstr "Зробити копію поточної транзакції"
+msgstr "Зробити копію поточної транзакції."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:156
 #: gnucash/ui/gnc-plugin-page-register.ui:371
 #: gnucash/ui/gnc-plugin-page-register.ui:581
-#, fuzzy
-#| msgid "Delete the current transaction"
 msgid "Delete the current transaction."
-msgstr "Вилучити поточну транзакцію"
+msgstr "Вилучити поточну транзакцію."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:162
 #: gnucash/ui/gnc-plugin-page-register.ui:376
 #: gnucash/ui/gnc-plugin-page-register.ui:488
 #: gnucash/ui/gnc-plugin-page-register.ui:586
 #: gnucash/ui/gnc-plugin-page-register.ui:625
-#, fuzzy
-#| msgid "Remove all splits in the current transaction"
 msgid "Remove all splits in the current transaction."
-msgstr "Вилучити усі частини поточної транзакції"
+msgstr "Вилучити усі частини поточної транзакції."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:171
 #: gnucash/ui/gnc-plugin-page-register.ui:383
 #: gnucash/ui/gnc-plugin-page-register.ui:495
 #: gnucash/ui/gnc-plugin-page-register.ui:593
 #: gnucash/ui/gnc-plugin-page-register.ui:632
-#, fuzzy
-#| msgid "Record the current transaction"
 msgid "Record the current transaction."
-msgstr "Записати поточну транзакцію"
+msgstr "Записати поточну транзакцію."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:177
 #: gnucash/ui/gnc-plugin-page-register.ui:388
 #: gnucash/ui/gnc-plugin-page-register.ui:500
 #: gnucash/ui/gnc-plugin-page-register.ui:598
 #: gnucash/ui/gnc-plugin-page-register.ui:637
-#, fuzzy
-#| msgid "Cancel the current transaction"
 msgid "Cancel the current transaction."
-msgstr "Скасувати поточну транзакцію"
+msgstr "Скасувати поточну транзакцію."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:184
 msgid "_Void Transaction"
 msgstr "_Очистити Транзакцію"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:186
-#, fuzzy
-#| msgid "Void the current transaction"
 msgid "Void the current transaction."
-msgstr "Спорожнити поточну транзакцію"
+msgstr "Спорожнити поточну транзакцію."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:190
 msgid "_Unvoid Transaction"
 msgstr "_Скасувати очищення Транзакції"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:192
-#, fuzzy
-#| msgid "Unvoid the current transaction"
 msgid "Unvoid the current transaction."
-msgstr "Скасувати спорожнення поточної транзакції"
+msgstr "Скасувати спорожнення поточної транзакції."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:196
 msgid "Add _Reversing Transaction"
 msgstr "Додати _зворотню транзакцію"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:198
-#, fuzzy
-#| msgid "Add a reversing transaction"
 msgid "Add a reversing transaction."
-msgstr "Додати зворотню транзакцію"
+msgstr "Додати зворотню транзакцію."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:207
 #: gnucash/ui/gnc-plugin-page-register.ui:395
 #: gnucash/ui/gnc-plugin-page-register.ui:507
-#, fuzzy
-#| msgid ""
-#| "Add, change, or unlink the document linked with the current transaction"
 msgid ""
 "Add, change, or unlink the document linked with the current transaction."
 msgstr ""
 "Додати, змінити або відв'язати документ, який пов'язано із поточною "
-"транзакцією"
+"транзакцією."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:213
 #: gnucash/ui/gnc-plugin-page-register.ui:400
 #: gnucash/ui/gnc-plugin-page-register.ui:512
-#, fuzzy
-#| msgid "Open the linked document for the current transaction"
 msgid "Open the linked document for the current transaction."
-msgstr "Відкрити пов'язаний із поточною транзакцією документ"
+msgstr "Відкрити пов'язаний із поточною транзакцією документ."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:222
 #: gnucash/ui/gnc-plugin-page-register.ui:407
 #: gnucash/ui/gnc-plugin-page-register.ui:519
-#, fuzzy
-#| msgid "Jump to the linked bill, invoice, or voucher"
 msgid "Jump to the linked bill, invoice, or voucher."
-msgstr "Перейти до пов'язаного рахунка, рахунка-фактури або розписки"
+msgstr "Перейти до пов'язаного рахунка, рахунка-фактури або розписки."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:232
-#, fuzzy
-#| msgid "Transfer funds from one account to another"
 msgid "Transfer funds from one account to another."
-msgstr "Передати фонди з одного рахунку на інший"
+msgstr "Передати фонди з одного рахунку на інший."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:238
-#, fuzzy
-#| msgid "Reconcile the selected account"
 msgid "Reconcile the selected account."
-msgstr "Узгодити вибраний рахунок"
+msgstr "Узгодити вибраний рахунок."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:244
-#, fuzzy
-#| msgid ""
-#| "Automatically clear individual transactions, so as to reach a certain "
-#| "cleared amount"
 msgid ""
 "Automatically clear individual transactions, so as to reach a certain "
 "cleared amount."
 msgstr ""
-"Автоматично перевірити окремі транзакції так, щоб досягти перевіреної суми"
+"Автоматично перевірити окремі транзакції так, щоб досягти перевіреної суми."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:256
-#, fuzzy
-#| msgid "Record a stock split or a stock merger"
 msgid "Record a stock split or a stock merger."
-msgstr "Записати розділення або об'єднання паперів"
+msgstr "Записати розділення або об'єднання паперів."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:262
-#, fuzzy
-#| msgid "Bring up the lot viewer/editor window"
 msgid "Bring up the lot viewer/editor window."
-msgstr "Відкрити вікно засобу перегляду і редагування лотів"
+msgstr "Відкрити вікно засобу перегляду і редагування лотів."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:272
 #: gnucash/ui/gnc-plugin-page-register.ui:414
 #: gnucash/ui/gnc-plugin-page-register.ui:526
 #: gnucash/ui/gnc-plugin-page-register.ui:605
 #: gnucash/ui/gnc-plugin-page-register.ui:644
-#, fuzzy
-#| msgid "Move to the blank transaction in the register"
 msgid "Move to the blank transaction in the register."
-msgstr "Перейти до порожньої транзакції у списку"
+msgstr "Перейти до порожньої транзакції у списку."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:276
 #: gnucash/ui/gnc-plugin-page-register.ui:417
@@ -30314,10 +30145,8 @@ msgstr "П_ерейти до дати"
 #: gnucash/ui/gnc-plugin-page-register.ui:279
 #: gnucash/ui/gnc-plugin-page-register.ui:419
 #: gnucash/ui/gnc-plugin-page-register.ui:531
-#, fuzzy
-#| msgid "Move to the split at the specified date"
 msgid "Move to the split at the specified date."
-msgstr "Перейти до поділу на вказану дату"
+msgstr "Перейти до поділу на вказану дату."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:283
 #: gnucash/ui/gnc-plugin-page-register.ui:422
@@ -30329,10 +30158,8 @@ msgstr "_Показати частини транзакції"
 #: gnucash/ui/gnc-plugin-page-register.ui:285
 #: gnucash/ui/gnc-plugin-page-register.ui:424
 #: gnucash/ui/gnc-plugin-page-register.ui:536
-#, fuzzy
-#| msgid "Show all splits in the current transaction"
 msgid "Show all splits in the current transaction."
-msgstr "Показати всі частини поточної транзакції"
+msgstr "Показати всі частини поточної транзакції."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:289
 #: gnucash/ui/gnc-plugin-page-register.ui:427
@@ -30343,10 +30170,8 @@ msgstr "Змінити _курс обміну"
 #: gnucash/ui/gnc-plugin-page-register.ui:291
 #: gnucash/ui/gnc-plugin-page-register.ui:429
 #: gnucash/ui/gnc-plugin-page-register.ui:541
-#, fuzzy
-#| msgid "Edit the exchange rate for the current transaction"
 msgid "Edit the exchange rate for the current transaction."
-msgstr "Змінити курс обміну для поточної частини"
+msgstr "Змінити курс обміну для поточної частини."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:295
 #: gnucash/ui/gnc-plugin-page-register.ui:432
@@ -30359,15 +30184,13 @@ msgstr "За_планувати…"
 #: gnucash/ui/gnc-plugin-page-register.ui:434
 #: gnucash/ui/gnc-plugin-page-register.ui:546
 #: gnucash/ui/gnc-plugin-page-register.ui:849
-#, fuzzy
-#| msgid ""
-#| "Create a Scheduled Transaction with the current transaction as a template"
 msgid ""
 "Create a Scheduled Transaction with the current transaction as a template or "
 "edit the Scheduled Transaction that current transaction was created by."
 msgstr ""
-"Створити заплановану транзакцію, використовуючи поточну транзакцію у якості "
-"шаблону"
+"Створити заплановану транзакцію, використовуючи поточну транзакцію як шаблон "
+"або редагувати заплановану транзакцію, на основі якої було створено поточну "
+"транзакцію."
 
 #. Translators: This is a menu item that will open a register tab for the
 #. account of the first other account in the current transaction's split list
@@ -30382,15 +30205,11 @@ msgstr "П_ерейти до іншого рахунка"
 #: gnucash/ui/gnc-plugin-page-register.ui:306
 #: gnucash/ui/gnc-plugin-page-register.ui:439
 #: gnucash/ui/gnc-plugin-page-register.ui:551
-#, fuzzy
-#| msgid ""
-#| "Open a new register tab for the other account with focus on this "
-#| "transaction"
 msgid ""
 "Open a new register tab for the other account with focus on this transaction."
 msgstr ""
 "Відкрити нову вкладку бухгалтерської книги для іншого рахунка із фокусом на "
-"цій транзакції"
+"цій транзакції."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:318
 msgid "All Transactions"
@@ -30405,41 +30224,31 @@ msgid "Account Report"
 msgstr "Звіт по _рахунку"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:334
-#, fuzzy
-#| msgid "Open a register report for this Account"
 msgid "Open a register report for this Account."
-msgstr "Відкрити звіт по журналу для цього рахунку"
+msgstr "Відкрити звіт по журналу для цього рахунку."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:338
 msgid "Account Report - Single Transaction"
 msgstr "Звіт щодо рахунку — окрема транзакція"
 
 #: gnucash/ui/gnc-plugin-page-register.ui:340
-#, fuzzy
-#| msgid "Open a register report for the selected Transaction"
 msgid "Open a register report for the selected Transaction."
-msgstr "Відкрити звіт по журналу для вибраної транзакції"
+msgstr "Відкрити звіт по журналу для вибраної транзакції."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:359
 #: gnucash/ui/gnc-plugin-page-register.ui:471
-#, fuzzy
-#| msgid "Rename this page"
 msgid "Rename this page."
-msgstr "Перейменувати сторінку"
+msgstr "Перейменувати сторінку."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:478
 #: gnucash/ui/gnc-plugin-page-register.ui:615
-#, fuzzy
-#| msgid "Make a copy of the current split"
 msgid "Make a copy of the current split."
-msgstr "Зробити копію поточної частини"
+msgstr "Зробити копію поточної частини."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:483
 #: gnucash/ui/gnc-plugin-page-register.ui:620
-#, fuzzy
-#| msgid "Delete the current split"
 msgid "Delete the current split."
-msgstr "Вилучити поточну частину"
+msgstr "Вилучити поточну частину."
 
 #: gnucash/ui/gnc-plugin-page-register.ui:804
 msgid "Move to the blank transaction in the register"
@@ -30547,11 +30356,11 @@ msgstr "Експортувати _звіт"
 
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:37
 msgid "_Save layout as default"
-msgstr ""
+msgstr "_Зберегти компонування як типове"
 
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:39
 msgid "Save current layout as default"
-msgstr ""
+msgstr "Зберегти поточне компонування як типове"
 
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:55
 #: gnucash/ui/gnc-plugin-page-sx-list.ui:155
@@ -30792,7 +30601,7 @@ msgstr "Не вдалося обробити результат, який пов
 #: libgnucash/app-utils/gnc-quotes.cpp:761
 #: libgnucash/app-utils/gnc-quotes.cpp:776
 msgid "Result:"
-msgstr ""
+msgstr "Результат:"
 
 #. Translators: This is the error message reported by the Online Quotes processing code.
 #: libgnucash/app-utils/gnc-quotes.cpp:771
@@ -31739,16 +31548,14 @@ msgid "Checking business splits in account %s: %u of %u"
 msgstr "Перевіряємо бізнес-дроблення у рахунку %s: %u з %u"
 
 #: libgnucash/engine/Scrub.cpp:146
-#, fuzzy, c-format
-#| msgid "Looking for orphans in transaction: %u of %u"
+#, c-format
 msgid "Looking for orphans in transaction: %u of %zu"
-msgstr "Шукаємо осиротілі записи у транзакції: %u з %u"
+msgstr "Шукаємо осиротілі записи у транзакції: %u з %zu"
 
 #: libgnucash/engine/Scrub.cpp:357
-#, fuzzy, c-format
-#| msgid "Looking for imbalances in transaction date %s: %u of %u"
+#, c-format
 msgid "Looking for imbalances in transaction date %s: %u of %zu"
-msgstr "Шукаємо дизбаланси на дату транзакції %s: %u з %u"
+msgstr "Шукаємо дизбаланси на дату транзакції %s: %u з %zu"
 
 #: libgnucash/engine/Split.cpp:1644
 msgctxt ""
