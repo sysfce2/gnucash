@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 5.9\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
-"product=GnuCash&component=Translations\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
+"cgi?product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2024-10-17 17:12+0200\n"
-"PO-Revision-Date: 2024-10-14 07:16+0000\n"
+"PO-Revision-Date: 2024-11-09 09:00+0000\n"
 "Last-Translator: Pedro Albuquerque <pmra@protonmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnucash/"
 "gnucash/pt/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.8.2\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 
 #: bindings/guile/date-utilities.scm:173
@@ -2104,16 +2104,12 @@ msgstr ""
 "fornecedor abaixo."
 
 #: gnucash/gnome/dialog-commodities.cpp:183
-#, fuzzy
-#| msgid ""
-#| "That commodity is currently used by at least one of your accounts. You "
-#| "may not delete it."
 msgid ""
 "This commodity is currently used by the following accounts. You may not "
 "delete it.\n"
 msgstr ""
-"Esta mercadoria está actualmente a ser usada por pelo menos uma conta. Não "
-"pode eliminá-la."
+"Esta mercadoria está actualmente a ser usada pelas contas seguintes. Não "
+"pode eliminá-la.\n"
 
 #: gnucash/gnome/dialog-commodities.cpp:201
 msgid ""
@@ -21188,6 +21184,8 @@ msgid ""
 "This transaction cannot be balanced: The imbalance is a fraction smaller "
 "than the commodity allows."
 msgstr ""
+"Impossível saldar esta transacção: o desequilíbrio é menor do que a "
+"mercadoria permite."
 
 #: gnucash/register/ledger-core/split-register-control.cpp:90
 msgid "Rebalance Transaction"
