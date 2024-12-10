@@ -40,12 +40,14 @@
 #include "numcell.h"
 #include "gnc-engine.h"
 
+static const QofLogModule log_module = G_LOG_DOMAIN;
 
 /* This static indicates the debugging module that this .o belongs to. */
 /* static short module = MOD_REGISTER; */
 
 static void gnc_num_cell_init (NumCell *cell);
-
+static gboolean gnc_num_cell_enter (BasicCell *cell, int *cursor_position,
+                                    int *start_selection, int *end_selection);
 
 /* Parses the string value and returns true if it is a
  * number. In that case, *num is set to the value parsed. */
@@ -237,4 +239,16 @@ gnc_num_cell_init (NumCell *cell)
 
     cell->cell.modify_verify = gnc_num_cell_modify_verify;
     cell->cell.set_value = gnc_num_cell_set_value_internal;
+    cell->cell.enter_cell = gnc_num_cell_enter;
+}
+
+static gboolean
+gnc_num_cell_enter (BasicCell *cell, int *cursor_position,
+                    int *start_selection, int *end_selection)
+{
+    DEBUG("%d, %d, %d", *cursor_position, *start_selection, *end_selection);
+    *cursor_position = -1;
+    *start_selection = 0;
+    *end_selection   = -1;
+    return TRUE;
 }
