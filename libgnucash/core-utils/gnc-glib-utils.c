@@ -23,7 +23,6 @@
 
 #include <config.h>
 #include <errno.h>
-#include <mach/arm/boolean.h>
 #include <stdio.h>
 #include <signal.h>
 #include <string.h>
