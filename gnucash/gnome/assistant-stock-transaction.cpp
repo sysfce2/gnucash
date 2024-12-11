@@ -188,7 +188,7 @@ static const TxnTypeVec long_types
     },
     {
         FieldMask::ENABLED_CREDIT | FieldMask::AMOUNT_CREDIT,         // stock_amt
-        FieldMask::ENABLED_DEBIT,          // cash_amt
+        FieldMask::ENABLED_DEBIT | FieldMask::ALLOW_ZERO,          // cash_amt
         FieldMask::ENABLED_DEBIT | FieldMask::ALLOW_ZERO,          // fees_amt
         FieldMask::DISABLED,               // dividend_amt
         FieldMask::ENABLED_CREDIT | FieldMask::ALLOW_ZERO | FieldMask::ALLOW_NEGATIVE | FieldMask::CAPGAINS_IN_STOCK, // capgains_amt
@@ -303,7 +303,7 @@ static const TxnTypeVec short_types
     },
     {
         FieldMask::ENABLED_DEBIT | FieldMask::AMOUNT_DEBIT,          // stock_amt
-        FieldMask::ENABLED_CREDIT,         // cash_amt
+        FieldMask::ENABLED_CREDIT | FieldMask::ALLOW_ZERO,         // cash_amt
         FieldMask::ENABLED_DEBIT | FieldMask::ALLOW_ZERO,          // fees_amt
         FieldMask::DISABLED,               // dividend_amt
         FieldMask::ENABLED_CREDIT | FieldMask::ALLOW_ZERO | FieldMask::ALLOW_NEGATIVE | FieldMask::CAPGAINS_IN_STOCK,          // capg_amt
