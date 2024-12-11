@@ -586,6 +586,11 @@ gnc_plugin_page_sx_list_create_widget (GncPluginPage *plugin_page)
 
         /* Set number of months from preference, default 12 */
         auto num_months = gnc_prefs_get_int (GNC_PREFS_GROUP_SXED, GNC_PREF_NUM_OF_MONTHS);
+        if (num_months == 0)
+        {
+            PWARN ("Got invalid value '0' for number of months to display. This suggests a gsettings configuration issue. Continuing with a default value of 12 instead.");
+            num_months = 12;
+        }
         gnc_dense_cal_set_num_months (priv->gdcal, num_months);
 
         gtk_container_add (GTK_CONTAINER(swin), GTK_WIDGET(priv->gdcal));
