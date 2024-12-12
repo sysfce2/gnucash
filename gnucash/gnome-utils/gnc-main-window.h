@@ -410,7 +410,6 @@ gboolean gnc_main_window_button_press_cb (GtkWidget *whatever,
         GdkEventButton *event,
         GncPluginPage *page);
 
-
 /** Callback function invoked when the user requests that Gnucash
  *  popup the contextual menu via the keyboard context-menu request
  *  key combination (Shift-F10 by default).
