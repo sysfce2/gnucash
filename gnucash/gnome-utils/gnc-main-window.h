@@ -63,12 +63,7 @@ typedef struct
 } GncMenuUpdate;
 
 /** The instance data structure for a main window object. */
-typedef struct GncMainWindow
-{
-    GtkApplicationWindow gtk_application_window;  /**< The parent object for a main window. */
-    gboolean window_quitting;                     /**< Set to TRUE when quitting from this window. */
-    gboolean just_plugin_prefs;                   /**< Just remove preferences only from plugins */
-} GncMainWindow;
+typedef struct _GncMainWindow GncMainWindow;
 
 /** The class data structure for a main window object. */
 typedef struct
@@ -544,6 +539,8 @@ void gnc_main_window_update_menu_and_toolbar (GncMainWindow *window,
  * Shows all main windows.
  **/
 void gnc_main_window_show_all_windows(void);
+
+gboolean gnc_main_window_just_plugin_prefs (GncMainWindow* window);
 
 /**
  * Opens the Book Options dialog.
