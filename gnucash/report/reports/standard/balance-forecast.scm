@@ -291,10 +291,6 @@ date point, a projected minimum balance including scheduled transactions."))
         (gnc:html-chart-set-currency-symbol!
          chart (gnc-commodity-get-nice-symbol currency))
 
-        ;; Allow tooltip in whole chartarea
-        (gnc:html-chart-set! chart '(options tooltips mode) "index")
-        (gnc:html-chart-set! chart '(options tooltips intersect) #f)
-
         ;; We're done!
         (gnc:html-document-add-object! document chart)
         (gnc:report-finished))))

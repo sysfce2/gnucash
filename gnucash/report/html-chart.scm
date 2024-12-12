@@ -212,6 +212,8 @@
                                      (cons 'point (list
                                                    (cons 'pointStyle #f)))))
                     (cons 'tooltips (list
+                                     (cons 'mode 'index)
+                                     (cons 'intersect #f)
                                      (cons 'callbacks (list
                                                        (cons 'label #f)))))
 
