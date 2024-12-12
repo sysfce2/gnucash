@@ -54,12 +54,12 @@
       <summary>How many days in advance to notify the user.</summary>
       <description>How many days in advance to notify the user.</description>
     </key>
-    <key name="number-of-months" type="s">
-      <default>'12'</default>
+    <key name="number-of-months" type="i">
+      <default>12</default>
       <summary>The number of months to be shown in editor.</summary>
       <description>The number of months to be shown in editor.</description>
     </key>
-    <key name="divider-position" type="d">
+    <key name="divider-position" type="i">
       <default>160</default>
       <summary>The horizontal position of the editor divider.</summary>
       <description>The horizontal position of the editor divider.</description>
