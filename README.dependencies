@@ -54,7 +54,7 @@ Libraries/Deps
   required              Version
   --------              _______
   gcc or clang          8.0 (gcc)/6.0(clang)    C++17 C/C++ compiler
-  cmake                 3.10                    Build system manager
+  cmake                 3.14.5                  Build system manager
   glib2                 2.56.1
   gtk+3                 3.22.30
   guile                 3.0, 2.2 or 2.0.9       Must be built with regex
