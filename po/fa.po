@@ -7776,8 +7776,9 @@ msgstr "حسابداری برای امور مالی شخصی و کسب و کار
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"علی‌اکبر نجفیا <s.ali.najafian@chmail.ir>، ۲۰۱۲، ۲۰۱۳هدایت وطن‌خواه <hedayat."
-"fwd@gmail.com>، ۲۰۱۷حمیدرضا جعفری <hamidrjafari@gmail.com>، ۲۰۱۸"
+"Hamidreza Jafari: 2018, 2019; Hedayat Vatankhah: 2017;"
+"Seyed Ali Akbar Najafia: 2012, 2013; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

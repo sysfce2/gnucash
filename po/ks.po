@@ -7783,7 +7783,9 @@ msgstr "- GnuCash ज़ॊती तॊ सुमाल बिज़नस फ�
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Neha Aphale, C-DAC, GIST, Pune, India, 2014"
+msgstr ""
+"Neha Aphale: 2014; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

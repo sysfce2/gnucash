@@ -7670,6 +7670,9 @@ msgstr ""
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
+"Jyri-Petteri Paloposki: 2021; Marko Kohtala: 2020, 2023;"
+"Tuomo Hartikainen: 2017; Tuomo Kohvakka: 2008; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

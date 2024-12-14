@@ -7696,7 +7696,9 @@ msgstr "- GnuCash वैयक्तिक आणि ल्हान व्य�
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Rahul Borade, C-DAC, GIST, Pune, India, 2014"
+msgstr ""
+"Rahul Borade: 2014; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

@@ -7869,9 +7869,8 @@ msgstr "– GnuCash asmeninių ir smulkaus verslo finansų valdymas"
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Tadas Masiulionis\n"
-"Mantas Kriaučiūnas <mantas@akl.lt>\n"
-"Aurimas Fišeras <aurimas@members.fsf.org>"
+"Tadas Masiulionis: 2009, 2023; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

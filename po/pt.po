@@ -7708,7 +7708,10 @@ msgstr "Contabilidade de finanças pessoais e micro empresas."
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Pedro Albuquerque <pmra@gmx.com>, 2024"
+msgstr ""
+"Hugo Carvalho: 2023;"
+"Pedro Albuquerque: 2015-2021, 2021, 2022, 2023, 2024, 2024; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

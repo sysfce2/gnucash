@@ -7707,13 +7707,10 @@ msgstr "Bokföring för privat bruk och småföretag."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Översättning av\n"
-"Dennis Björklund <dennisb@cs.chalmers.se>, 2000\n"
-"Martin Norbäck <d95mback@dtek.chalmers.se>, 2001\n"
-"Christian Rose <menthos@menthos.com>, 2001, 2002\n"
-"Jonas Norling <norling@lysator.liu.se>, 2004, 2006\n"
-"Erik Johansson <erik@ejohansson.se>, 2014, 2016\n"
-"Arve Eriksson <031299870@telia.com>, 2021"
+"Arve Eriksson: 2021, 2022, 2023, 2024; Christian Rose: 2001, 2002;"
+"Erik Johansson: 2014, 2016; Jonas Norling: 2004, 2006;"
+"Luna Jernberg: 2022, 2023; bittin1ddc447d824349b2: 2023, 2024; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

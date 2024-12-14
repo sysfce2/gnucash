@@ -7763,7 +7763,10 @@ msgstr "- GnuCash व्यक्तिगत और लघु व्यवस�
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Parimal Khade, C-DAC, GIST, Pune, India, 2014"
+msgstr ""
+"Hemanshu Kumar: 2022; Hindi and Sanskrit Speaker: 2021;"
+"Parimal Khade: 2014; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

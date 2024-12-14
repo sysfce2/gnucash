@@ -7826,7 +7826,9 @@ msgstr ""
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Росица Димова <pocu_at_bk.ru>"
+msgstr ""
+"Rosi Dimova: 2010, 2011; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

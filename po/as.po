@@ -7783,7 +7783,9 @@ msgstr "- GnuCash ব্যক্তি আৰু ক্ষুদ্ৰ ব্�
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Parimal Khade <parimalk@cdac.in>, 2014"
+msgstr ""
+"Itsmechinmoy: 2024; Parimal Khade: 2014; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

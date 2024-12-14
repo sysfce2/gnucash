@@ -7678,7 +7678,9 @@ msgstr "Računovodstveni program, namijenjen pojedincima i malim poduzećima."
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Milo Ivir <mail@milotype.de>"
+msgstr ""
+"Milo Ivir: 2019; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

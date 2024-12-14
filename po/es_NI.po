@@ -8008,7 +8008,9 @@ msgstr ""
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Georg Lehner, Juan Manuel García, 2001"
+msgstr ""
+"Francisco Serrador: 2022; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

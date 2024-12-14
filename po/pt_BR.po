@@ -7769,11 +7769,8 @@ msgstr "Contabilidade de finanças pessoais e para pequenas empresas."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
-"Jose Carlos Nascimento <joseca@psabs.com>\n"
-"Goedson Teixeira Paixão <goedson@debian.org>\n"
-"Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
-"Cleber Cassol <ccassol@gmail.com>"
+"Jon Lapham: 2003,2004; Jose Carlos Nascimento: 2001; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

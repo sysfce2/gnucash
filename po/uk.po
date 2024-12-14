@@ -7796,8 +7796,11 @@ msgstr "Облік особистих фінансів та коштів мал�
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Максим Дзюманенко <dziumanenko@gmail.com>\n"
-"Юрій Чорноіван <yurchor@ukr.net>"
+"Artem: 2022; Dan: 2023; Maksym Kobieliev: 2013;"
+"Maxim V. Dziumanenko: 2007;"
+"Yuri Chornoivan: 2011, 2018, 2019, 2020, 2021, 2022, 2023, 2024;"
+"Yuri Syrota: 2000; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

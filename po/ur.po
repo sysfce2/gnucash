@@ -7786,7 +7786,10 @@ msgstr "- GnuCash ذاتی اور چھوٹے کاروبار کے فائنانس 
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Atiur Rahman Khan, C-DAC, GIST, Pune, India, 2014"
+msgstr ""
+"Abdul Quddos: 2022; Adil Ishaq: 2024, 2024; Atiur Rahman Khan: 2014;"
+"Frank H. Ellenberger: 2021; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

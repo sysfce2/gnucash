@@ -7809,7 +7809,9 @@ msgstr ""
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Ritu Panwar <ritup@cdac.in>, 2014"
+msgstr ""
+"Ritu Panwar: 2014; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

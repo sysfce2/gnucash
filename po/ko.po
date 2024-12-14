@@ -7525,8 +7525,8 @@ msgstr "개인 및 소기업 금융에 대한 회계입니다."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Jin-Hwan Jeong, 2009\n"
-"이정희 <daemul72@gmail.com>, 2022"
+"Taehun Yun: 2022; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

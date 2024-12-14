@@ -7816,13 +7816,10 @@ msgstr "Управление финансами для частных лиц и 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Валек Филиппов\n"
-"Виталий Липатов\n"
-"Владимир Турбаевский\n"
-"Сергей Беляшов\n"
-"Дмитрий Павлов <zeldigas@gmail.com>\n"
-"ashed <craysy@gmail.com>\n"
-"Дмитрий Мангул <dimang.freetime@gmail.com>"
+"Artem: 2021; Dmitriy Mangul: 2017, 2018; Dmitry Pavlov: 2014;"
+"Sergey Belyashov: 2009, 2011; Val Saven: 2021; Valek Filippov: 2000;"
+"Vitaly Lipatov: 2002, 2003, 2004; Vladimir Turbaevsky: 2006; ashed: 2017;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

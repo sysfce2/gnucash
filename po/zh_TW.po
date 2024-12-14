@@ -7512,11 +7512,11 @@ msgstr "個人及小企業的會計軟體。"
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Chao-Hsiung Liao <pesder.liao@msa.hinet.net>, 2003.\n"
-"Kuang-che Wu <kcwu@csie.org>, 2007, 2011-2013.\n"
-"Barlos Lee <barlos.lee@gmail.com>, 2010.\n"
-"Tryneeds (http://tryneeds.westart.tw/tryneeds/) team, 2011-2012.\n"
-"Brian Hsu <brianhsu.hsu@gmail.com>, 2021."
+"Barlos Lee: 2010; Brian Hsu: 2021, 2023; Chao-Hsiung Liao: 2003;"
+"Kuang-che Wu: 2007, 2011-2013; Newson Parker: 2023;"
+"Ricky From Hong Kong: 2024; cjh: 2021; hanyang cheng: 2024;"
+"toddchou: 2024; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

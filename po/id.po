@@ -7741,8 +7741,10 @@ msgstr "Program akuntansi untuk mengelola keuangan personal dan usaha kecil."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Triyan W. Nugroho <triyan.wn@gmail.com>, 2020\n"
-"Sarekashi <sarekashi@tuta.io>, 2022"
+"Andika Triwidada: 2023; Azhar Pusparadhian: 2022;"
+"Ferdinand Tampubolon: 2021; Reza Almanda: 2021; Sarekashi: 2022;"
+"Sucipto: 2023; Syahmin Sukhairi: 2021; Triyan W. Nugroho: 2020; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

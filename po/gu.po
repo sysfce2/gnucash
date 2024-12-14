@@ -7763,7 +7763,9 @@ msgstr ""
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Ronak Shah <ronaks@cdac.in>, 2014"
+msgstr ""
+"KULDIP PIPALIYA: 2023; Ronak Shah: 2014; ;"
+"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."
