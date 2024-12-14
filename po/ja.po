@@ -21,10 +21,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 5.10\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
-"product=GnuCash&component=Translations\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
+"cgi?product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2024-12-08 11:07-0800\n"
-"PO-Revision-Date: 2024-05-26 09:09+0000\n"
+"PO-Revision-Date: 2024-12-14 21:00+0000\n"
 "Last-Translator: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnucash/gnucash/"
 "ja/>\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.9-rc\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 
 #: bindings/guile/date-utilities.scm:173
@@ -724,18 +724,13 @@ msgstr ""
 "https://wiki.gnucash.org/wiki/Mailing_Lists"
 
 #: doc/tip_of_the_day.list.c:11
-#, fuzzy
-#| msgid ""
-#| "The GnuCash developers are easy to contact. As well as several mailing "
-#| "lists, you can chat to them live on IRC! Join them on #gnucash at irc."
-#| "gnome.org"
 msgid ""
 "The GnuCash developers are easy to contact. As well as several mailing "
 "lists, you can chat to them live on IRC! Join them on #gnucash at irc.gimp."
 "net"
 msgstr ""
-"GnuCash の開発者には簡単に連絡ができます。メーリングリストはもちろん、IRC で"
-"生チャットもできます! irc.gnome.org の #gnucash で開発者に加わってください。"
+"GnuCash の開発者には簡単に連絡ができます。メーリングリストはもちろん、IRC "
+"で生チャットもできます! irc.gimp.net の #gnucash で開発者に加わってください。"
 
 #: doc/tip_of_the_day.list.c:15
 msgid ""
@@ -1367,26 +1362,22 @@ msgstr "残高の存在する株式勘定科目は一つもありません!"
 #. Translators: this is a stock transaction describing an
 #. Initial stock long purchase
 #: gnucash/gnome/assistant-stock-transaction.cpp:160
-#, fuzzy
-#| msgid "Open"
 msgid "Open buy"
-msgstr "開く"
+msgstr "初期購入"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:161
 msgid "Initial stock long purchase."
-msgstr ""
+msgstr "初回の株式購入です。"
 
 #. Translators: this is a stock transaction describing an
 #. initial stock short sale
 #: gnucash/gnome/assistant-stock-transaction.cpp:171
-#, fuzzy
-#| msgid "Open _Folder"
 msgid "Open short"
-msgstr "フォルダーを開く(_F)"
+msgstr "初期売却"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:172
 msgid "Initial stock short sale."
-msgstr ""
+msgstr "初回の株式空売りです。"
 
 #. Translators: this is a stock transaction describing
 #. new purchase of stock.
@@ -1406,7 +1397,7 @@ msgstr "購入"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:187
 msgid "Buying stock long."
-msgstr ""
+msgstr "株式を購入します。"
 
 #. Translators: this is a stock transaction describing new
 #. sale of stock, and recording capital gain/loss
@@ -1431,6 +1422,10 @@ msgid ""
 "If you are unable to calculate capital gains you can enter a placeholder "
 "amount and correct it in the transaction later."
 msgstr ""
+"株式を売却し、資本利得・損失を記録します。\n"
+"\n"
+"資本利得を計算できない場合はプレースホルダー金額を入力しておき、後で取引のそ"
+"の部分を修正することができます。"
 
 #. Translators: this is a stock transaction describing
 #. dividends issued to holder
@@ -1448,27 +1443,26 @@ msgid ""
 "Any dividend being reinvested must be subsequently recorded as a regular "
 "stock purchase."
 msgstr ""
+"企業が株主に配当を出します。\n"
+"\n"
+"配当を再投資する場合は必ずこれに続けて通常の株式購入として記録してください。"
 
 #. Translators: this is a stock transaction describing return
 #. of capital
 #: gnucash/gnome/assistant-stock-transaction.cpp:222
-#, fuzzy
-#| msgid "Decrease in capital"
 msgid "Return of capital"
-msgstr "減資"
+msgstr "資本の払戻し"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:223
 msgid ""
 "Company returns capital, reducing the cost basis without affecting # units."
-msgstr ""
+msgstr "企業が資本を払戻しし、原価が下がり単位数には影響しません。"
 
 #. Translators: this is a stock transaction describing return
 #. of capital, reclassifying a dividend into return of capital
 #: gnucash/gnome/assistant-stock-transaction.cpp:233
-#, fuzzy
-#| msgid "Decrease in capital"
 msgid "Return of capital (reclassification)"
-msgstr "減資"
+msgstr "資本の払戻し (再分類)"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:234
 msgid ""
@@ -1476,6 +1470,9 @@ msgid ""
 "A distribution previously recorded as a dividend is reclassified to return "
 "of capital, often due to end-of-year tax information."
 msgstr ""
+"企業が資本を払戻しし、原価が下がり単位数には影響しません。以前は配当として記"
+"録していた分配を資本の払戻しに再分類します。年末の税金情報により行われること"
+"が多いです。"
 
 #. Translators: this is a stock transaction describing a
 #. notional distribution recorded as dividend
@@ -1509,8 +1506,6 @@ msgstr ""
 #. split when shorting stock
 #: gnucash/gnome/assistant-stock-transaction.cpp:270
 #: gnucash/gnome/assistant-stock-transaction.cpp:396
-#, fuzzy
-#| msgid "Stock Split"
 msgid "Stock split"
 msgstr "株式分割"
 
@@ -1523,16 +1518,19 @@ msgid ""
 "If the split results in a cash in lieu for remainder units, please record "
 "the sale using the Stock Transaction Assistant first, then record the split."
 msgstr ""
+"企業が追加の株式を発行し、これにより株価が除算され下がりますが、投資全体での"
+"金銭的価値合計は変わりません。\n"
+"\n"
+"もしこの分割により株式数が端数となり現金の分配がある場合は、その売却を株式取"
+"引アシスタントでまず記録してから、この分割を記録してください。"
 
 #. Translators: this is a stock transaction describing a reverse split
 #. Translators: this is a stock transaction describing a
 #. reverse split when shorting stock.
 #: gnucash/gnome/assistant-stock-transaction.cpp:283
 #: gnucash/gnome/assistant-stock-transaction.cpp:410
-#, fuzzy
-#| msgid "_Review cleared splits"
 msgid "Reverse split"
-msgstr "清算済取引を確認する(_R)"
+msgstr "株式併合"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:284
 msgid ""
@@ -1543,24 +1541,27 @@ msgid ""
 "record the sale using the Stock Transaction Assistant first, then record the "
 "reverse split."
 msgstr ""
+"企業が株式を買い戻し、これにより株価が乗算され上がりますが、投資全体での金銭"
+"的価値合計は変わりません。\n"
+"\n"
+"もしこの併合により株式数が端数となり現金の分配がある場合は、その売却を株式取"
+"引アシスタントでまず記録してから、この併合を記録してください。"
 
 #. Translators: this is a stock transaction describing
 #. shorting of stock.
 #: gnucash/gnome/assistant-stock-transaction.cpp:301
-#, fuzzy
-#| msgid "Sort Order"
 msgid "Short sell"
-msgstr "ソート順"
+msgstr "空売り"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:302
 msgid "Selling stock short."
-msgstr ""
+msgstr "株式を空売りします。"
 
 #. Translators: this is a stock transaction describing cover
 #. buying stock, and recording capital gain/loss
 #: gnucash/gnome/assistant-stock-transaction.cpp:312
 msgid "Buy to cover short"
-msgstr ""
+msgstr "空売りの買い戻し"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:313
 msgid ""
@@ -1569,6 +1570,10 @@ msgid ""
 "If you are unable to calculate capital gains you can enter a placeholder "
 "amount and correct it in the transaction later."
 msgstr ""
+"株式を買い戻して空売りを解消し、資本利得・損失を記録します。\n"
+"\n"
+"資本利得を計算できない場合はプレースホルダー金額を入力しておき、後で取引のそ"
+"の部分を修正することができます。"
 
 #. Translators: this is a stock transaction describing
 #. dividends retrieved from holder when shorting stock
@@ -1664,21 +1669,15 @@ msgstr ""
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:503
 msgid "No errors found. Click Apply to create transaction."
-msgstr ""
+msgstr "エラーはありません。適用をクリックすると取引を作成します。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:508
-#, fuzzy
-#| msgid "The following vendor document is due:"
-#| msgid_plural "The following %d vendor documents are due:"
 msgid "The following errors must be fixed:"
-msgstr "次の %d 個の仕入先向け文書は期限が来ています:"
+msgstr "次のエラーの修正が必要です:"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:513
-#, fuzzy
-#| msgid "The following vendor document is due:"
-#| msgid_plural "The following %d vendor documents are due:"
 msgid "The following warnings exist:"
-msgstr "次の %d 個の仕入先向け文書は期限が来ています:"
+msgstr "次の警告があります:"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:655
 #: gnucash/gnome/assistant-stock-transaction.cpp:716
@@ -1690,26 +1689,25 @@ msgstr "不明"
 #: gnucash/gnome/assistant-stock-transaction.cpp:1044
 #, c-format
 msgid "Amount for %s is missing."
-msgstr ""
+msgstr "%s の金額が不明です。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:699
 #: gnucash/gnome/assistant-stock-transaction.cpp:1049
 #, c-format
 msgid "Amount for %s must not be negative."
-msgstr ""
+msgstr "%s の金額は負の値であってはなりません。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:702
 #: gnucash/gnome/assistant-stock-transaction.cpp:1052
 #, c-format
 msgid "Amount for %s must be positive."
-msgstr ""
+msgstr "%s の金額は正の値にしてください。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:705
 #: gnucash/gnome/assistant-stock-transaction.cpp:1055
-#, fuzzy, c-format
-#| msgid "Include sub-accounts of all selected accounts."
+#, c-format
 msgid "The %s amount has no associated account."
-msgstr "選択されたすべての勘定科目の子勘定科目を含めます。"
+msgstr "%s の金額はどの勘定科目にも関連付けられていません。"
 
 #. Translators: "N/A" here means that a commodity doesn't have a valid price.
 #: gnucash/gnome/assistant-stock-transaction.cpp:771
@@ -1717,51 +1715,39 @@ msgid "N/A"
 msgstr ""
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:863
-#, fuzzy
-#| msgid "Accounts in %s"
 msgid "Amount for stock value is missing."
-msgstr "%s 内の勘定科目"
+msgstr "株式価値の数量が不明です。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:875
-#, fuzzy
-#| msgid "Invalid option value"
 msgid "Invalid stock new balance."
-msgstr "無効なオプションの値"
+msgstr "株式の新しい残高が無効です。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:877
 msgid "New balance must be higher than old balance."
-msgstr ""
+msgstr "新しい残高は古い残高より高くしてください。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:879
-#, fuzzy
-#| msgid "Start date must be earlier than End date"
 msgid "New balance must be lower than old balance."
-msgstr "開始日付は終了日付より前にしてください。"
+msgstr "新しい残高は古い残高より低くしてください。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:886
-#, fuzzy
-#| msgid "Stock Accounts to report on."
 msgid "Stock amount must be positive."
-msgstr "帳票に含める株式の勘定科目です。"
+msgstr "株式数は正の値にしてください。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:890
 msgid "Cannot sell more units than owned."
-msgstr ""
+msgstr "保有単位数よりも多く売却することはできません。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:892
 msgid "Cannot cover buy more units than owed."
-msgstr ""
+msgstr "借入単位数よりも多く買い戻すことはできません。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1129
-#, fuzzy
-#| msgid "Stock"
 msgctxt "Stock Assistant: Page name"
 msgid "Stock"
 msgstr "株式"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1131
-#, fuzzy
-#| msgid "Cash"
 msgctxt "Stock Assistant: Page name"
 msgid "Cash"
 msgstr "現金"
@@ -1769,21 +1755,17 @@ msgstr "現金"
 #: gnucash/gnome/assistant-stock-transaction.cpp:1133
 msgctxt "Stock Assistant: Page name"
 msgid "Fees"
-msgstr ""
+msgstr "手数料"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1135
-#, fuzzy
-#| msgid "Dividend"
 msgctxt "Stock Assistant: Page name"
 msgid "Dividend"
 msgstr "配当"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1137
-#, fuzzy
-#| msgid "Capital"
 msgctxt "Stock Assistant: Page name"
 msgid "Capital Gains"
-msgstr "純資産金"
+msgstr "資本利得"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1300
 #, c-format
@@ -1793,28 +1775,31 @@ msgid ""
 "and therefore capital gains, of transactions dated after the new entry. "
 "Please review all transactions to ensure proper recording."
 msgstr ""
+"取引を日付 %s で入力していますが、これはこの勘定科目にある最新の取引、日付 "
+"%s よりも前になっています。そうすると新しい項目より後の日付の取引の原価、そし"
+"てそれにより資本利得にも影響するかもしれません。全取引を見直して正しく記録さ"
+"れているか確認してください。"
 
 #. Translators: %s refer to: stock mnemonic, broker currency,
 #. date of transaction.
 #: gnucash/gnome/assistant-stock-transaction.cpp:1341
 #, c-format
 msgid "A price of 1 %s = %s on %s will be recorded."
-msgstr ""
+msgstr "価格 1 %s = %s を %s に記録します。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1411
 #, c-format
 msgid "Transaction can't balance, %s is error value %s"
-msgstr ""
+msgstr "取引が貸借一致できません、%s がエラー値 %s です"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1417
 #, c-format
 msgid "Total Debits of %s does not balance with total Credits of %s."
-msgstr ""
+msgstr "借方合計の %s が貸方合計の %s と一致していません。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1922
-#, fuzzy
 msgid "Ne_w Balance"
-msgstr "残高を取得(_B)"
+msgstr "新たな残高(_W)"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1922
 #: gnucash/gtkbuilder/assistant-stock-split.glade:129
@@ -1825,29 +1810,22 @@ msgid "_Shares"
 msgstr "株式数・持分(_S)"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1925
-#, fuzzy
-#| msgid "_Rotation"
 msgid "Ratio"
-msgstr "回転(_R)"
+msgstr "割合"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1925
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:277
-#, fuzzy
 msgid "Next Balance"
-msgstr "残高を取得(_B)"
+msgstr "以後の残高"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1929
-#, fuzzy
-#| msgid "Enter the value of shares bought or sold"
 msgid "Enter the new balance of shares after the stock split."
-msgstr "購入または売却した株の価値を入力します。"
+msgstr "株式分割後の新しい株式残高を入力してください。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:1930
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:212
-#, fuzzy
-#| msgid "Enter the number of shares bought or sold"
 msgid "Enter the number of shares you gained or lost in the transaction."
-msgstr "購入または売却した株数を入力します。"
+msgstr "取引で得たまたは失った株式数を入力してください。"
 
 #: gnucash/gnome/assistant-stock-transaction.cpp:2331
 #: gnucash/gnome/dialog-find-transactions.c:153
@@ -6318,11 +6296,11 @@ msgstr "商品を選択してください。"
 
 #: gnucash/gnome-utils/dialog-account.c:1039
 msgid "Balance limits must be different unless they are both zero."
-msgstr ""
+msgstr "貸借残高限界は両方ゼロにしない場合は異なる値にしてください。"
 
 #: gnucash/gnome-utils/dialog-account.c:1046
 msgid "The lower balance limit must be less than the higher limit."
-msgstr ""
+msgstr "貸借残高下限は貸借残高上限より小さくしてください。"
 
 #: gnucash/gnome-utils/dialog-account.c:1102
 msgid "You must enter a valid opening balance or leave it blank."
@@ -6848,20 +6826,16 @@ msgid "Don't tell me again this _session."
 msgstr "このセッションでは今後報告しない(_S)。"
 
 #: gnucash/gnome-utils/gnc-account-sel.c:521
-#, fuzzy
-#| msgid "Selected Accounts"
 msgid "Hide _Placeholder Accounts"
-msgstr "選択した勘定科目"
+msgstr "プレースホルダー勘定科目を隠す(_P)"
 
 #: gnucash/gnome-utils/gnc-account-sel.c:523
-#, fuzzy
-#| msgid "Show Hidden Accounts"
 msgid "Hide _Hidden Accounts"
-msgstr "隠し勘定科目を表示する"
+msgstr "隠し勘定科目を隠す(_H)"
 
 #: gnucash/gnome-utils/gnc-account-sel.c:700
 msgid "Set the visibility of placeholder and hidden accounts."
-msgstr ""
+msgstr "プレースホルダーおよび隠し勘定科目を表示するかどうかを設定します。"
 
 #. Translators: This is a button label displayed in the account selector
 #. * control used in several dialogs. When pressed it opens the New Account
@@ -7814,20 +7788,15 @@ msgid "Account Color"
 msgstr "勘定科目色"
 
 #: gnucash/gnome-utils/gnc-tree-view-account.c:944
-#, fuzzy
-#| msgctxt "Column header for 'Document Link'"
-#| msgid "L"
 msgctxt "Column header for 'Balance Limit'"
 msgid "L"
-msgstr "リ"
+msgstr "限"
 
 #: gnucash/gnome-utils/gnc-tree-view-account.c:953
 #: gnucash/gnome-utils/gnc-tree-view-account.c:956
 #: gnucash/gtkbuilder/dialog-account.glade:1705
-#, fuzzy
-#| msgid "Balance"
 msgid "Balance Limit"
-msgstr "貸借残高"
+msgstr "貸借残高限界"
 
 #: gnucash/gnome-utils/gnc-tree-view-account.c:966
 #: gnucash/import-export/csv-exp/csv-tree-export.cpp:63
@@ -9378,11 +9347,14 @@ msgid ""
 "by registering for a free account at the Alpha Vantage website, https://www."
 "alphavantage.co/support/#api-key."
 msgstr ""
+"Alpha Vantage のサービスを使うには API キーが必要です。無料アカウントを "
+"Alpha Vantage のウェブサイト、https://www.alphavantage.co/support/#api-key "
+"で登録するとキーを取得できます。"
 
 #: gnucash/gschemas/org.gnucash.GnuCash.general.finance-quote.gschema.xml.in:10
 #: gnucash/gtkbuilder/dialog-preferences.glade:3687
 msgid "YH Finance (FinanceAPI) API key"
-msgstr ""
+msgstr "YH Finance (FinanceAPI) の API キー"
 
 #: gnucash/gschemas/org.gnucash.GnuCash.general.finance-quote.gschema.xml.in:11
 #: gnucash/gtkbuilder/dialog-preferences.glade:3686
@@ -9392,6 +9364,9 @@ msgid ""
 "obtain a key by registering for a free account at the YH Finance website, "
 "https://financeapi.net/pricing."
 msgstr ""
+"YH Finance の FinanceAPI サービスを使うには API キーが必要です。"
+"無料アカウントを YH Finance のウェブサイト、https://financeapi.net/pricing "
+"で登録するとキーを取得できます。"
 
 #: gnucash/gschemas/org.gnucash.GnuCash.gschema.xml.in:10
 msgid "The version of these settings"
@@ -11273,33 +11248,6 @@ msgid "CSV Transaction Import"
 msgstr "CSV 取引インポート"
 
 #: gnucash/gtkbuilder/assistant-csv-trans-import.glade:44
-#, fuzzy
-#| msgid ""
-#| "This assistant will help you import a delimited file containing a list of "
-#| "transactions. It supports both token separated files (such as comma "
-#| "separated or semi-colon separated) and fixed width data.\n"
-#| "\n"
-#| "For a successful import three columns have to be available in the import "
-#| "data:\n"
-#| "• a Date column\n"
-#| "• a Description column\n"
-#| "• a Deposit or Withdrawal column\n"
-#| "\n"
-#| "If there is no Account data available, a base account can be selected to "
-#| "which all data will be imported.\n"
-#| "\n"
-#| "Apart from a choice of delimiter, there are several options to tweak the "
-#| "importer. For example a number of lines can be skipped at the start or "
-#| "the end of the data, as well as odd rows. Several date and number formats "
-#| "are supported. The file encoding can be defined.\n"
-#| "\n"
-#| "The importer can handle files where transactions are split over multiple "
-#| "lines, with each line representing one split.\n"
-#| "\n"
-#| "Lastly, for repeated imports the preview page has buttons to Load and "
-#| "Save the settings. You can save your adjusted settings to reuse them on "
-#| "later imports. After loading your settings you can also tweak them again "
-#| "for similar imports and save them under another name."
 msgid ""
 "This assistant will help you import a delimited file containing a list of "
 "transactions. It supports both token separated files (such as comma "
@@ -11334,22 +11282,24 @@ msgstr ""
 "いをします。（カンマ区切りやセミコロン区切りなど）トークンで区切られたファイ"
 "ルと固定幅データの両方をサポートします。\n"
 "\n"
-"うまくインポートするために、インポートするデータには 3 つの列が必要となりま"
-"す:\n"
+"うまくインポートするために、インポートするデータには 3 "
+"つの列が必要となります:\n"
 "• 日付の列\n"
 "• 説明の列\n"
-"• 入金もしくは出金の列\n"
+"• 金額もしくは金額 (符号反転) の列\n"
 "\n"
 "勘定科目の情報がない場合は、基本とする勘定科目を指定すればそこに全データをイ"
 "ンポートできます。\n"
 "\n"
 "区切り文字を選べるほか、このインポート機能ではいくつかのオプションを設定でき"
 "ます。例えば、データの先頭、末尾や奇数行を何行もスキップできます。様々な日付"
-"や数値の書式をサポートしています。ファイルのエンコーディングを指定できま"
-"す。\n"
+"や数値の書式をサポートしています。ファイルのエンコーディングを指定できます。"
+"\n"
 "\n"
 "このインポート機能は、各行が一つのスプリットを表す、複数行にまたがった取引を"
-"含むファイルを扱えます。\n"
+"含むファイルを扱えます。新たな取引は、取引関連列の値が一つ前の空でない行と異"
+"なるたびに開始されます。この列とは取引 "
+"ID、日付、番号、説明、備考、取引商品および無効理由のことです。\n"
 "\n"
 "最後に、繰り返しインポートしやすいように、プレビューページには設定の読み込み"
 "と保存ができるボタンがあります。調整した設定を保存すると後のインポート時に再"
@@ -12499,12 +12449,15 @@ msgid ""
 "transaction currency will be offered for cash, capital gains, dividends, and "
 "fees."
 msgstr ""
+"このアシスタントは株式取引を記録するお手伝いをします。取引の種類 "
+"(購入、売却、配当、資本の払戻し、株式分割) によってその取引に関連する取引スプ"
+"リットを決定します。なお取引の通貨はその株式勘定科目の通貨になり、複数通貨の"
+"取引には対応していません: 現金、資本利得、配当、および手数料については、取引"
+"の通貨の勘定科目のみが提案されます。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:45
-#, fuzzy
-#| msgid "Show the account description for subheadings?"
 msgid "Select the date and description for your records."
-msgstr "小見出しに勘定科目の説明を表示するかどうかを指定します。"
+msgstr "取引の日付と説明を入力してください。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:109
 #: gnucash/gtkbuilder/dialog-payment.glade:662
@@ -12518,41 +12471,33 @@ msgid ""
 "negative (i.e. when shorting stock). The type will determine the component "
 "splits."
 msgstr ""
+"記録したい株式関連の活動の種類を選択してください。利用できる種類は現在の株式"
+"の残高が正の値か、ゼロか、もしくは負の値 (つまり株式を空売りしているとき) "
+"かによって異なります。この種類によってスプリットの構成要素を決定します。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:195
-#, fuzzy
-#| msgid "Transaction"
 msgid "Transaction Type"
-msgstr "取引"
+msgstr "取引の種類"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:248
-#, fuzzy
 msgid "Previous Balance"
-msgstr "残高を取得(_B)"
+msgstr "以前の残高"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:312
-#, fuzzy
-#| msgid "To Amount"
 msgid "Stock Amount"
-msgstr "資金移動先合計"
+msgstr "株式数"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:329
-#, fuzzy
-#| msgid "Enter the name of the Customer"
 msgid "Enter the value of the shares."
-msgstr "得意先の名前を入力します。"
+msgstr "持分の価値を入力します。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:404
-#, fuzzy
-#| msgid "_Value"
 msgid "_Stock Value"
-msgstr "価値(_V)"
+msgstr "株式価値(_S)"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:425
-#, fuzzy
-#| msgid "Stock Split"
 msgid "Stock Value"
-msgstr "株式分割"
+msgstr "株式価値"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:442
 msgid ""
@@ -12560,6 +12505,9 @@ msgid ""
 "spent. It may differ from the stock value from the last page, if there are "
 "brokerage fees associated with this transaction."
 msgstr ""
+"このページでは、資産勘定科目、そして受け取った・使った金額を入力してください"
+"。この取引に関する取引手数料があるときは、前のページの株式価値と異なっていて"
+"構いません。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:493
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:538
@@ -12571,10 +12519,8 @@ msgid "Cash"
 msgstr "現金"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:516
-#, fuzzy
-#| msgid "Raise Accounts"
 msgid "Cash Account"
-msgstr "勘定科目を持ち上げる"
+msgstr "現金勘定科目"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:555
 msgid ""
@@ -12584,11 +12530,15 @@ msgid ""
 "expensed. If there are no fees involved in this transaction, it can be left "
 "blank."
 msgstr ""
+"このページでは、この取引で発生したあらゆる取引手数料を入力してください。この"
+"手数料は現金化されて資産勘定科目に入る、もしくは費用として取引手数料勘定科目"
+"に入るかもしれません。通常は購入時の手数料は現金化され、売却時の手数料は費用"
+"となります。手数料がこの取引で発生しない場合は、空白にして構いません。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:606
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:665
 msgid "Fees"
-msgstr ""
+msgstr "手数料"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:629
 #: gnucash/report/reports/standard/advanced-portfolio.scm:1065
@@ -12597,62 +12547,50 @@ msgstr "取引手数料"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:641
 msgid "Capitalize brokerage fees into stock account?"
-msgstr ""
+msgstr "取引手数料を現金化して株式勘定科目に入れますか?"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:682
 msgid "In this page, input any dividend income received in this transaction."
-msgstr ""
+msgstr "このページでは、この取引で受け取った配当収益を入力してください。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:756
-#, fuzzy
-#| msgid "Find Account"
 msgid "Dividend Account"
-msgstr "勘定科目を検索"
+msgstr "配当勘定科目"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:795
 msgid ""
 "In this page, input any capital gains or losses incurred, and the associated "
 "income account. Capital gains are positive, and capital losses are negative."
 msgstr ""
+"このページでは、発生したあらゆる資本利得または損失、および関連する収益勘定科"
+"目を入力してください。資本利得は正の値で、資本損失は負の値になります。"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:846
-#, fuzzy
-#| msgid "Capital"
 msgid "Capital Gain"
-msgstr "純資産金"
+msgstr "資本利得"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:869
-#, fuzzy
-#| msgid "Splits Account"
 msgid "Capital Gains Account"
-msgstr "スプリット勘定科目"
+msgstr "資本利得勘定科目"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:891
-#, fuzzy
-#| msgid "Capital"
 msgid "Capital Gains"
-msgstr "純資産金"
+msgstr "資本利得"
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:908
-#, fuzzy
-#| msgid ""
-#| "If you are finished creating the stock split or merger, press \"Apply\". "
-#| "You may also press \"Back\" to review your choices, or \"Cancel\" to quit "
-#| "without making any changes."
 msgid ""
 "A summary of splits is shown as follows. If the summary is correct, and "
 "there are no errors, please press \"Apply\". You may also press \"Back\" to "
 "review your choices, or \"Cancel\" to quit without making any changes. "
 msgstr ""
-"株式分割・併合の作成が終了したら、\"適用\" をクリックしてください。\"戻る\" "
-"をクリックすると、今までの選択項目を確認できます。\"キャンセル\" をクリックす"
-"るとすべての変更を破棄して終了します。"
+"スプリットの要約を以下に表示します。要約が正しければ、またエラーがなければ、"
+"\"適用\" をクリックしてください。\"戻る\" "
+"をクリックすると、今までの選択項目を確認できます。\"キャンセル\" "
+"をクリックするとすべての変更を破棄して終了します。 "
 
 #: gnucash/gtkbuilder/assistant-stock-transaction.glade:956
-#, fuzzy
-#| msgid "_Finish"
 msgid "Finish"
-msgstr "終了(_F)"
+msgstr "終了"
 
 #: gnucash/gtkbuilder/assistant-xml-encoding.glade:16
 msgid "Introduction placeholder"
@@ -13114,10 +13052,8 @@ msgstr ""
 "割り当ててください。"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1636
-#, fuzzy
-#| msgid "_Ending Balance"
 msgid "_Higher Balance Limit"
-msgstr "期末残高(_E)"
+msgstr "貸借残高上限(_H)"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1649
 msgid ""
@@ -13130,6 +13066,14 @@ msgid ""
 "\n"
 "Clear the entry to have no warning."
 msgstr ""
+"値が入っている場合、今日の残高がこの値より大きいときに勘定科目表に表示を出す"
+"ことができます。\n"
+"\n"
+"つまり\n"
+"今日の残高が -90 で、限界が -100 に設定されていたらアイコンを表示します。\n"
+"今日の残高が 100 で、限界が 90 に設定されていたらアイコンを表示します。\n"
+"\n"
+"入力を空にすると警告表示されなくなります。"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1670
 msgid ""
@@ -13142,12 +13086,18 @@ msgid ""
 "\n"
 "Clear the entry to have no warning."
 msgstr ""
+"値が入っている場合、今日の残高がこの値より小さいときに勘定科目表に表示を出す"
+"ことができます。\n"
+"\n"
+"つまり\n"
+"今日の残高が -100 で、限界が -90 に設定されていたらアイコンを表示します。\n"
+"今日の残高が 90 で、限界が 100 に設定されていたらアイコンを表示します。\n"
+"\n"
+"入力を空にすると警告表示されなくなります。"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1692
-#, fuzzy
-#| msgid "Show zero balance items"
 msgid "_Lower Balance Limit"
-msgstr "残高0の項目を表示"
+msgstr "貸借残高下限(_L)"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1718
 msgid "_Include sub accounts"
@@ -13166,11 +13116,9 @@ msgid "<b>Initial Balance Transfer</b>"
 msgstr "<b>初期残高移動</b>"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1837
-#, fuzzy
-#| msgid "_Balance"
 msgctxt "field label"
 msgid "_Balance"
-msgstr "残高調整(_B)"
+msgstr "残高(_B)"
 
 #: gnucash/gtkbuilder/dialog-account.glade:1862
 msgid "_Use equity 'Opening Balances' account"
@@ -15423,18 +15371,10 @@ msgid "Layout"
 msgstr "配置"
 
 #: gnucash/gtkbuilder/dialog-preferences.glade:2765
-#, fuzzy
-#| msgid "Number of _transactions"
 msgid "_Placement of future transactions"
-msgstr "取引数(_T)"
+msgstr "未来の取引の表示位置(_P)"
 
 #: gnucash/gtkbuilder/dialog-preferences.glade:2771
-#, fuzzy
-#| msgid ""
-#| "If checked, transactions with a date in the future will be displayed at "
-#| "the bottom of the register after the blank transaction. If clear, the "
-#| "blank transaction will be at the bottom of the register after all "
-#| "transactions."
 msgid ""
 "If checked, transactions with a date in the future will be displayed at the "
 "bottom of the register after the blank transaction unless in reverse sort "
@@ -15443,7 +15383,9 @@ msgid ""
 "transactions unless in reverse sort order when it will be at the top."
 msgstr ""
 "選択した場合、未来の日付の取引は記録簿の一番下、空白の取引よりも後に表示され"
-"ます。選択しない場合、空白の取引が記録簿の一番下、全取引の後に表示されます。"
+"ます。ただしソート順序を逆にしている場合は一番下、空白の取引よりも前になりま"
+"す。選択しない場合、空白の取引が記録簿の一番下、全取引の後に表示されます。た"
+"だしソート順序を逆にしている場合は一番上になります。"
 
 #: gnucash/gtkbuilder/dialog-preferences.glade:2811
 msgid "<b>Default Style</b>"
@@ -19366,23 +19308,19 @@ msgstr "値を有効な照合済状態に解析できませんでした。"
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:246
 msgid "Date field can not be empty if 'Multi-split' option is unset.\n"
-msgstr ""
+msgstr "'複数スプリット' オプションを指定していないときは日付の列を空にできません。\n"
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:262
 msgid "Description field can not be empty if 'Multi-split' option is unset.\n"
-msgstr ""
+msgstr "'複数スプリット' オプションを指定していないときは説明の列を空にできません。\n"
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:312
-#, fuzzy
-#| msgid "Invalid dates"
 msgid "No valid date."
-msgstr "無効な日付"
+msgstr "有効な日付がありません。"
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:315
-#, fuzzy
-#| msgid "Sort by description."
 msgid "No valid description."
-msgstr "説明順にソートします。"
+msgstr "有効な説明がありません。"
 
 #: gnucash/import-export/csv-imp/gnc-imp-props-tx.cpp:448
 msgid "Account value can't be empty."
