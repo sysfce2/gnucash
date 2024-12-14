@@ -16,7 +16,7 @@ if (POLICY CMP0167)
 endif()
 
 project (gnucash
-    VERSION 5.9
+    VERSION 5.10
 )
 
 enable_testing()
