@@ -7841,9 +7841,8 @@ msgstr "Comptabilitat per a finances personals o de petites empreses."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"David Planella Molas: 2007; Joan: 2007; Orestes Mas: 2003;"
-"Walter Garcia-Fontes: 2015,2021; ;"
-"
+"David Planella Molas: 2007; Joan: 2007; Orestes Mas: 2003"
+"Walter Garcia-Fontes: 2015,2021"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

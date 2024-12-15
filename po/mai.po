@@ -7743,7 +7743,8 @@ msgstr "- GnuCash व्यक्तिगत आओर लघु व्यव�
 #. contributors.
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
-msgstr "Sangeeta Kumari, 2015"
+msgstr ""
+"Copyright: 2015"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

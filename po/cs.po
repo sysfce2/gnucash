@@ -7804,8 +7804,8 @@ msgstr "Účetnictví pro osobní a malofiremní finance."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Miloslav Trmac: 2002, 2003, 2004, 2007; Petr Pisar: 2012; ;"
-"
+"Kryštof Černý: 2023; Miloslav Trmac: 2002, 2003, 2004, 2007"
+"Petr Pisar: 2012; Tomáš Václavík: 2022"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

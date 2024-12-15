@@ -7775,8 +7775,8 @@ msgstr ""
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Andrei Cipu: 2008; Danny Fischer: 2006; Nicolae Turcan: 2008; ;"
-"
+"Andrea Andre: 2023; Andrei Cipu: 2008; Dan Purice: 2021"
+"Daniel Șerbănescu: 2020; Danny Fischer: 2006; Nicolae Turcan: 2008"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

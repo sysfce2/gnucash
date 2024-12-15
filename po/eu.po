@@ -7935,10 +7935,9 @@ msgstr ""
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Enrique Ayesta Perojo: 2022;"
-"Hizkuntza Politikarako Sailburuordetza: 2005;"
-"Mikel Olasagasti Uranga: 2005; ;"
-"
+"Enrique Ayesta Perojo: 2022"
+"Hizkuntza Politikarako Sailburuordetza: 2005"
+"Mikel Olasagasti Uranga,: 2005"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

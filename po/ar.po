@@ -7815,10 +7815,10 @@ msgstr "- جنوكاش للإدارة المالية الشخصية والتجا
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Abdulla Alhosani: 2024; Aziz2013: 2013; BL: 2023; ButterflyOfFire: 2022;"
-"MOHTARIF_TEC: 2016; Sherif ElGamal: 2022; ashalash: 2013, 2017;"
-"ashalash1409: 2013; khadiramd: 2013; ltai0001: 2022; ;"
-"
+"Abdorhman Ayman: 2019; Abdulla Alhosani: 2024; Aziz2013: 2013; BL: 2023"
+"ButterflyOfFire: 2022; MOHTARIF_TEC: 2016; Sherif ElGamal: 2022"
+"ashalash: 2013, 2017; ashalash1409: 2013; khadiramd: 2013"
+"ltai0001: 2022"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

@@ -7905,10 +7905,7 @@ msgstr ""
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Michalis: 2021;"
-"Nikos Charonitakis: 2002, 2003, 2004, 2005, 2006, 2008, 2009, 2010;"
-"giorgos georgopoulakis: 2021; ta_panta_rei, 2003: 2006; ;"
-"
+"Gnucash: 2"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

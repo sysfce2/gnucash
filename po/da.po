@@ -7933,11 +7933,10 @@ msgstr "Finanshåndtering for personer og små virksomheder"
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Claus Hindsgaul: 2001;"
-"Joe Hansen: 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2018;"
-"Johnny Ernst Nielsen: 2001; Keld Simonsen: 2000-2002;"
-"Kenneth Christiansen: 2000; Ole Laursen: 2001; ;"
-"
+"Claus Hindsgaul: 2001"
+"Joe Hansen: 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2018"
+"Johnny Ernst Nielsen: 2001; Keld Simonsen: 2000-2002"
+"Kenneth Christiansen: 2000; Ole Laursen: 2001"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

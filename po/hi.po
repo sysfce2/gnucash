@@ -7764,9 +7764,8 @@ msgstr "- GnuCash व्यक्तिगत और लघु व्यवस�
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Hemanshu Kumar: 2022; Hindi and Sanskrit Speaker: 2021;"
-"Parimal Khade: 2014; ;"
-"
+"Carsten Hütter: 2023; Hemanshu Kumar: 2022"
+"Hindi and Sanskrit Speaker: 2021; Parimal Khade: 2014"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

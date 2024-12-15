@@ -7728,9 +7728,8 @@ msgstr ""
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Diggaj Upadhyay: 2022; Jyotshna Shrestha: 2006; Pawan Chitrakar: 2006;"
-"Shiva Prasad Pokharel: 2006; Shyam Krishna Bal: 2006; ;"
-"
+"Diggaj Upadhyay: 2022; Jyotshna Shrestha: 2006; Pawan Chitrakar: 2006"
+"Shiva Prasad Pokharel: 2006; Shyam Krishna Bal: 2006"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

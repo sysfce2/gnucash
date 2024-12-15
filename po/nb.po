@@ -7739,9 +7739,10 @@ msgstr "Regnskap for privat- og småbedriftsøkonomi."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"John Erling Blad: 2018, 2020; Kjartan Maraas: 2000;"
-"Sigve Indregard: 2006; Tor Harald Thorland: 2005-2006; ;"
-"
+"Allan Nordhøy: 2020, 2021, 2022, 2024; John Erling Blad: 2018, 2020"
+"Kjartan Maraas: 2000; Morten Cools: 2024"
+"Petter Reinholdtsen: 2022, 2023; Rune Osnes: 2023; Sigve Indregard: 2006"
+"Tor Berg: 2024; Tor Harald Thorland: 2005-2006"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

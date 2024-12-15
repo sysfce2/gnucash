@@ -7689,8 +7689,7 @@ msgstr "-gnuక్యాష్ వ్యక్తిగత మరియు చ�
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Ravi Kumar Ragam: 2014; ;"
-"
+"Ravi Kumar Ragam: 2014"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

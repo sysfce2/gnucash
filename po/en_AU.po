@@ -7687,10 +7687,9 @@ msgstr "Accounting for personal and small business finance."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Adithya K: 2021; John Ralls: 2023; Mike Evans: 2010, 2013;"
-"Neil Williams: 2006; Nigel Titley: 2002 - 2007;"
-"Simon Arlott: 2022, 2023, 2024, 2024; ;"
-"
+"Adithya K: 2021; John Ralls: 2023; Mike Evans: 2010, 2013"
+"Neil Williams: 2006; Nigel Titley: 2002 - 2007"
+"Simon Arlott: 2022, 2023, 2024, 2024"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

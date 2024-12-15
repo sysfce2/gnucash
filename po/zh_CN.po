@@ -7435,10 +7435,14 @@ msgstr "个人及小企业财务软件。"
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Aron Xu: 2010; Boyuan Yang: 2018, 2019, 2021; Charles Wang: 2008;"
-"Monson Shao: 2018; Roy Luo: 2009; Sean Guan: 2021; Tao Wang: 2010;"
-"TianXing_Yi: 2021; WPV: 2009; Yang Yi: 2002; zongyaotang: 2010; ;"
-"
+"Aron Xu: 2010; Boyuan Yang: 2018, 2019, 2021; Carlson Mak: 2023"
+"Charles Wang: 2008; Eric: 2021, 2022, 2022, 2022"
+"J0kWang: 2021, 2022, 2023; Monson Shao: 2018; Ral Hole: 2023"
+"Roy Luo: 2009; Sean Guan: 2021; Tao Wang: 2010; TianXing_Yi: 2021, 2021"
+"WPV: 2009; YTX: 2021, 2022, 2023; Yang Yi: 2002; Yu Hongbo: 2022"
+"Zhaoquan Huang: 2023, 2024; chokore: 2021; cjh: 2021, 2023; derxi: 2023"
+"fleefar: 2024; yu0A: 2023; yuht: 2023; zongyaotang: 2010"
+"峡州仙士: 2021; 帅是我2: 2022; 李元基: 2022"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

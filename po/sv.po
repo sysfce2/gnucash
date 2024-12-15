@@ -7707,10 +7707,9 @@ msgstr "Bokföring för privat bruk och småföretag."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Arve Eriksson: 2021, 2022, 2023, 2024; Christian Rose: 2001, 2002;"
-"Erik Johansson: 2014, 2016; Jonas Norling: 2004, 2006;"
-"Luna Jernberg: 2022, 2023; bittin1ddc447d824349b2: 2023, 2024; ;"
-"
+"Arve Eriksson: 2021, 2022, 2023, 2024; Christian Rose: 2001, 2002"
+"Erik Johansson: 2014, 2016; Jonas Norling: 2004, 2006"
+"Luna Jernberg: 2022, 2023; bittin1ddc447d824349b2: 2023, 2024"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

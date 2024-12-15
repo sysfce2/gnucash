@@ -7781,12 +7781,11 @@ msgstr "Boekhoudsoftware voor thuis en voor kleine ondernemingen."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Benno Schulenberg: 2007, 2010; Erwin Poeze: 2009;"
-"Frank H. Ellenberger: 2022; Geert Janssens: 2020, 2021, 2021;"
-"Hendrik-Jan Heins: 2003; Jan Willem Harmanny: 2002;"
-"Jeroen ten Berge: 2004; Mark Haanen: 2009-2017; Rene Lambers: 2023;"
-"Stephan Paternotte: 2023, 2024; Tom van Braeckel: 2010; ;"
-"
+"Benno Schulenberg: 2007, 2010; Erwin Poeze: 2009"
+"Frank H. Ellenberger: 2022; Geert Janssens: 2020, 2021, 2021"
+"Hendrik-Jan Heins: 2003; Jan Willem Harmanny: 2002"
+"Jeroen ten Berge: 2004; Mark Haanen: 2009-2017; Rene Lambers: 2023"
+"Stephan Paternotte: 2023, 2024; Tom van Braeckel: 2010"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

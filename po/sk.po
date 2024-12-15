@@ -7731,9 +7731,10 @@ msgstr "Účtovníctvo pre súkromné osoby a malé podniky."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Dullus: 2022; Juraj Korec: 2008;"
-": 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2018;"
-"
+"Dullus: 2022; Juraj Korec: 2008; Milan Šalka: 2023; Robert Zelnik: 2024"
+"ZdPo Ster: 2023"
+": 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2018"
+"Zdenko Podobný: 2022, 2023, 2024"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

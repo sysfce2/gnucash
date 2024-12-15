@@ -7921,9 +7921,13 @@ msgstr "Contabilidad financiara personal y pequeños negocios."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Carlos Manrique Enguita: 2021; Eneko Lacunza: 2003, 2004, 2006, 2008;"
-"Javier F. Serrador: 2018, 2021; ;"
-"
+"Adolfo Jayme Barrientos: 2021; Carlos Manrique Enguita: 2021; Cow: 2022"
+"Eduardo Malaspina: 2022; Eneko Lacunza: 2003, 2004, 2006, 2008"
+"Francisco: 2023; Francisco Serrador: 2021, 2022, 2023, 2024"
+"Guille: 2021; Guille Lopez: 2022, 2023, 2024"
+"Jaime Marquínez Ferrándiz: 2021, 2022, 2023"
+"Javier F. Serrador: 2018, 2021; Luis D. Lafaurie: 2022"
+"gallegonovato: 2023, 2024"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

@@ -7826,8 +7826,7 @@ msgstr "- GnuCash পর্সোনেল অমসুং অপীকপা �
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Chandrakant Dhutadmal: 2015; ;"
-"
+"Copyright: 2015"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

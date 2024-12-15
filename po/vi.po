@@ -7739,8 +7739,7 @@ msgstr ""
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Clytie Siddall: 2007; bruh: 2021; ;"
-"
+"Clytie Siddall: 2007; bruh: 2021"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

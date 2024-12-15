@@ -7764,8 +7764,7 @@ msgstr ""
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"KULDIP PIPALIYA: 2023; Ronak Shah: 2014; ;"
-"
+"KULDIP PIPALIYA: 2023; Ronak Shah: 2014"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

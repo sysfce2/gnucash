@@ -7779,8 +7779,7 @@ msgstr "GnuCash khasgi ani dhakttea vepar vrutacheo karbhar"
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Ravikumar Ragam: 2014; ;"
-"
+"Ravikumar Ragam: 2014"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

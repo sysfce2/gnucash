@@ -7658,8 +7658,7 @@ msgstr "தனிப்பட்ட மற்றும் சிறு வணி
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Shanmugam R.: 2014; ;"
-"
+"Shanmugam R.: 2014"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."

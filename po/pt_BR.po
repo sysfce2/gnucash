@@ -7769,8 +7769,13 @@ msgstr "Contabilidade de finanças pessoais e para pequenas empresas."
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Jon Lapham: 2003,2004; Jose Carlos Nascimento: 2001; ;"
-"
+"Carlos Cleber Pereira Cassol: 2007; Daniel Conrado: 2024"
+"Dorneles Treméa: 2011; Fábio Rodrigues Ribeiro: 2021"
+"Goedson Teixeira Paixão: 2007; Jon Lapham: 2003,2004"
+"Jose Carlos Nascimento: 2001; Jose Delvani: 2024; José Lemos Neto: 2021"
+"LL Magical: 2020; Leonardo Ferreira Fontenelle: 2007"
+"Leslie H. Watter: 2007; Miguel Rozsas: 2014"
+"Wellington Terumi Uemura: 2021, 2022, 2023, 2024"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."
