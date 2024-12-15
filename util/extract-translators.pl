@@ -1,10 +1,11 @@
 use strict;
 use warnings;
 use utf8;
+use Data::Dumper;
 
 my $start = 0;
 my $credits = 0;
-my $extract_re = qr{^# ([-[:alpha:]\d_., ]+)(?: [(<].*[)>])*, ([-\d, ]+)};
+my $extract_re = qr{^# ([-[:alpha:]\d_., ]+)(?: [(<].*[)>])*,? ([-\d, ]+).?$};
 my $credits_re = qr(^msgid "translator-credits"$);
 my %translators = ();
 my $infile = shift;
@@ -16,9 +17,6 @@ while (<$INFILE>) {
     if ($_ =~ $extract_re && $start < 1) {
         $start++;
     }
-    if ($start == 1 && $_ !~ $extract_re) {
-        $start++;
-    }
 
     if ($start == 1) {
         my $input = $_;
@@ -26,6 +24,7 @@ while (<$INFILE>) {
         $input =~ $extract_re;
         unless ($1) {
             print $OUTFILE $_;
+            $start++;
             next;
         }
         my $name = $1;
@@ -38,17 +37,18 @@ while (<$INFILE>) {
         }
     }
     if ($_ =~ $credits_re && %translators) {
-        my $translators_str;
         $credits++;
         print $OUTFILE $_;
         print $OUTFILE "msgstr \"\"\n";
+        my @translator_list = ();
         foreach my $translator (sort(keys(%translators))) {
             my $dates = join(", ", sort(@{$translators{$translator}}));
-            $translators_str .= "$translator: $dates; ";
+            push @translator_list, "$translator: $dates";
         }
+        my $translators_str = join("; ", @translator_list);
         if (defined $translators_str) {
-            print $OUTFILE "\"$_;\"\n" for map substr($_, 0, 72), $translators_str =~ m[(.{1,72})(?:; |$)]g;
-            print $OUTFILE "\"\n\n";
+            print $OUTFILE "\"$_\"\n" for map substr($_, 0, 72), $translators_str =~ m[(.{1,72})(?:; |$)]g;
+            print $OUTFILE "\n";
         }
     }
     $credits++ if ($credits && substr($_, 0, 1) eq "#");
