@@ -30,6 +30,7 @@
 #include <gncTaxTable.h>
 #include <gncInvoice.h>
 #include <gnc-pricedb.h>
+#include <TransLog.h>
 
 #include <algorithm>
 #include <cassert>
@@ -347,8 +348,10 @@ GncSqlBackend::load (QofBook* book, QofBackendLoadType loadType)
      * m_loading true prevents changes from being written back to the
      * database. Do that now.
      */
+    xaccLogDisable();
     auto transactions = qof_book_get_collection (book, GNC_ID_TRANS);
     qof_collection_foreach(transactions, scrub_txn_callback, nullptr);
+    xaccLogEnable();
 
     /* Mark the session as clean -- though it should never be marked
      * dirty with this backend
