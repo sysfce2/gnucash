@@ -561,8 +561,7 @@ get_filename_component(PERL_DIR ${PERL_EXECUTABLE} DIRECTORY)
 find_program(POD2MAN_EXECUTABLE pod2man HINTS ${PERL_DIR})
 
 #ICU
-pkg_check_modules (ICU4C REQUIRED icu-uc)
-pkg_check_modules (ICU4C_I18N REQUIRED icu-i18n)
+find_package(ICU REQUIRED COMPONENTS uc i18n)
 
 pkg_check_modules (LIBSECRET libsecret-1>=0.18)
 IF (LIBSECRET_FOUND)
