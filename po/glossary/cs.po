@@ -4,22 +4,23 @@
 # Automatically generated, 2023.
 #
 # Kryštof Černý <cleverline1mc@gmail.com>, 2023.
+# Deleted User <noreply+100824@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 5.6\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
-"product=GnuCash&component=Translations\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/"
+"enter_bug.cgi?product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2024-06-22 06:24+0200\n"
-"PO-Revision-Date: 2023-02-19 15:38+0000\n"
-"Last-Translator: Kryštof Černý <cleverline1mc@gmail.com>\n"
+"PO-Revision-Date: 2024-12-20 09:45+0000\n"
+"Last-Translator: Deleted User <noreply+100824@weblate.org>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnucash/glossary/"
 "cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.9.2-dev\n"
 
 #. "English Definition (Dear translators: This file will never be visible to normal users! It should only serve as a tool for translators. E.g. matching terms from this file are displayed in Weblate's Translation pages of other GnuCash components like the program.)"
 msgid "Term"
@@ -27,159 +28,159 @@ msgstr ""
 
 #. "Opening and closing quote symbols and optionally their key combos like [altgr]+[Y]/[X]. Define the preferred style of quotation, see https://en.wikipedia.org/wiki/Quotation_mark#Summary_table"
 msgid "\"\""
-msgstr ""
+msgstr "\"\""
 
 #. "A detailed record of money spent and received"
 msgid "account"
-msgstr ""
+msgstr "účet"
 
 #. "An alphanumerical code applied to accounts for sorting. Some jurisdictions mandate codes and some GnuCash book templates include codes as part of the tree structure. Account codes can be set and changed in the Edit Account dialog."
 msgid "account code"
-msgstr ""
+msgstr "kód účtu"
 
 #. "the tree view of all accounts"
 msgid "account hierarchy"
-msgstr ""
+msgstr "hierarchie účtů"
 
 #. "-"
 msgid "account name"
-msgstr ""
+msgstr "název účtu"
 
 #. "The grouping of accounts whose balance increases with a debit (left side of the balance sheet in T account form). Complement: Passive. See also: Report Form"
 msgid "account type: Active"
-msgstr ""
+msgstr "typ účtu: Aktivní"
 
 #. "A thing, esp. owned by a person or company, that has value and can be used or sold to pay debts. Dependent on the context you might use 'account type: Active' instead."
 msgid "account type: Asset"
-msgstr ""
+msgstr "typ účtu: Majetek"
 
 #. "in fact: 'Active & Passive', group aka 'Balance Sheet accounts'; complement of 'Profit & Loss'"
 msgid "account type: Assets & Liabilities"
-msgstr ""
+msgstr "typ účtu: Majetek a Závazky"
 
 #. "(esp. US) (Brit = current account) a bank account from which money can be withdrawn without previous notice"
 msgid "account type: checking"
-msgstr ""
+msgstr "typ účtu: běžný"
 
 #. "-"
 msgid "account type: currency"
-msgstr ""
+msgstr "typ účtu: měna"
 
 #. "see: Equity, but see also 'account type: Passive'"
 msgid "account type: Equity"
-msgstr ""
+msgstr "typ účtu: Vlastní kapitál"
 
 #. "-"
 msgid "account type: Expense"
-msgstr ""
+msgstr "typ účtu: Výdaj"
 
 #. "-"
 msgid "account type: Income"
-msgstr ""
+msgstr "typ účtu: Příjmy"
 
 #. "A debt, a financial obligation, but see also 'account type: Passive'"
 msgid "account type: Liability"
-msgstr ""
+msgstr "typ účtu: Odpovědnost"
 
 #. "-"
 msgid "account type: money-market"
-msgstr ""
+msgstr "typ účtu: peněžní trh"
 
 #. "-"
 msgid "account type: Mutual fund"
-msgstr ""
+msgstr "typ účtu: Podílový fond"
 
 #. "The right side of the balance sheet in T account form shows the source of funds and contains equity & liability. While not common in english, most languages would translate 'equity & liability' with 'passive'. Complement: Active. See also: Report Form Implementation: https://bugs.gnucash.org/show_bug.cgi?id=421766"
 msgid "account type: Passive"
-msgstr ""
+msgstr "typ účtu: Pasivní"
 
 #. "Group of accounts tracking your success, complement of 'Assets & Liabilities'"
 msgid "account type: Profit & Loss"
-msgstr ""
+msgstr "typ účtu: Zisk a ztráta"
 
 #. "1. (US) any type of account that earns interest 2. (Brit) any type of bank account that earns a higher level of interest than a current account or deposit account"
 msgid "account type: saving"
-msgstr ""
+msgstr "typ účtu: spořicí"
 
 #. "-"
 msgid "account type: Stock"
-msgstr ""
+msgstr "typ účtu: Sklad"
 
 #. "This account type is used when exchanging or trading amounts from one currency into another"
 msgid "account type: trading"
-msgstr ""
+msgstr "typ účtu: obchodní"
 
 #. "-"
 msgid "account: parent account"
-msgstr ""
+msgstr "účet: mateřský účet"
 
 #. "-"
 msgid "account: subaccount"
-msgstr ""
+msgstr "účet: podúčet"
 
 #. "-"
 msgid "account: top level account"
-msgstr ""
+msgstr "účet: účet nejvyšší úrovně"
 
 #. "The process of doing something that caused a transaction to happen"
 msgid "Action (register)"
-msgstr ""
+msgstr "Akce (registr)"
 
 #. "Automated teller machine"
 msgid "action: ATM"
-msgstr ""
+msgstr "akce: ATM"
 
 #. "Transaction was an auto deposit"
 msgid "action: autoDep"
-msgstr ""
+msgstr "akce: autoDep"
 
 #. "-"
 msgid "action: buy"
-msgstr ""
+msgstr "akce: koupit"
 
 #. "-"
 msgid "action: deposit"
-msgstr ""
+msgstr "akce: vklad"
 
 #. "When people can automatically deduct money straight from your account. The reverse of Direct Deposit."
 msgid "action: direct debit"
-msgstr ""
+msgstr "akce: přímé inkaso"
 
 #. "transaction is a distribution (???)"
 msgid "action: dist"
-msgstr ""
+msgstr "akce: dist"
 
 #. "transaction is a dividend"
 msgid "action: div"
-msgstr ""
+msgstr "akce: div"
 
 #. "-"
 msgid "action: fee"
-msgstr ""
+msgstr "akce: poplatek"
 
 #. "transaction comes from interest"
 msgid "action: int"
-msgstr ""
+msgstr "akce: int"
 
 #. "-"
 msgid "action: loan"
-msgstr ""
+msgstr "akce: půjčka"
 
 #. "see: payment 1."
 msgid "action: payment"
-msgstr ""
+msgstr "akce: platba"
 
 #. "Point of sale"
 msgid "action: POS"
-msgstr ""
+msgstr "akce: POS"
 
 #. "-"
 msgid "action: rebate"
-msgstr ""
+msgstr "akce: sleva"
 
 #. "-"
 msgid "action: sell"
-msgstr ""
+msgstr "akce: prodat"
 
 #. "-"
 msgid "action: Teller"
@@ -187,47 +188,47 @@ msgstr ""
 
 #. "see: transfer 2. (=credit transfer)"
 msgid "action: transfer"
-msgstr ""
+msgstr "akce: převod"
 
 #. "-"
 msgid "action: wire"
-msgstr ""
+msgstr "akce: drát"
 
 #. "-"
 msgid "action: withdraw"
-msgstr ""
+msgstr "akce: stažení"
 
 #. "As in: payable aging, or: receivable aging. The aging report categorizes payables or receivables based on time buckets. This gives an overview of which bills or invoices are overdue at which time in the future. "
 msgid "aging"
-msgstr ""
+msgstr "stárnutí"
 
 #. "A sum of money"
 msgid "amount"
-msgstr ""
+msgstr "částka"
 
 #. "The amount finally to pay, respecting discounts, billing terms…"
 msgid "amount due"
-msgstr ""
+msgstr "dlužná částka"
 
 #. "The result of adding several amounts together and then dividing this total by the number of amounts"
 msgid "average"
-msgstr ""
+msgstr "průměr"
 
 #. "The amount of money that is in one's account"
 msgid "balance (noun)"
-msgstr ""
+msgstr "balance (podstatné jméno)"
 
 #. "Balance brought forward - usually the first entry of an account statement containing the 'balance c/f' of the previous billing period or page"
 msgid "balance b/f"
-msgstr ""
+msgstr "zůstatek b/f"
 
 #. "Balance carried forward - usually the last entry of an account statement to be used as 'balance b/f' on the next billing period or page"
 msgid "balance c/f"
-msgstr ""
+msgstr "zůstatek c/f"
 
 #. "A written record of money received and paid out, showing the difference between the two total amounts"
 msgid "balance sheet"
-msgstr ""
+msgstr "rozvaha"
 
 #. "To arrange for income and spending to be equal"
 msgid "balance, to"
