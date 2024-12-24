@@ -434,7 +434,7 @@
             ;; there aren't at least 2 splits and that will cause a
             ;; UAF in xaccTransRecordPrice. See https://bugs.gnucash.org/show_bug.cgi?id=799420
             (let ((splits (qif-xtn:splits xtn)))
-              (if (not (or (qif-xtn:mark xtn) (or (null? splits) (null? (cdr splits)))))
+              (if (not (or (qif-xtn:mark xtn) (null? splits)))
                 ;; Convert into a GnuCash transaction.
                 (let ((gnc-xtn (xaccMallocTransaction
                                 (gnc-get-current-book))))
