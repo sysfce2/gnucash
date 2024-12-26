@@ -12,10 +12,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash 5.10\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
-"cgi?product=GnuCash&component=Translations\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/"
+"enter_bug.cgi?product=GnuCash&component=Translations\n"
 "POT-Creation-Date: 2024-12-08 11:07-0800\n"
-"PO-Revision-Date: 2024-12-08 23:00+0000\n"
+"PO-Revision-Date: 2024-12-23 23:00+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "gnucash/hu/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: bindings/guile/date-utilities.scm:173
 #: gnucash/report/reports/example/daily-reports.scm:260
@@ -7787,7 +7787,7 @@ msgstr "%s fájl betöltve. %s"
 #: gnucash/gnome-utils/gnc-main-window.cpp:2941
 msgctxt "lower case key for short cut to 'Accounts'"
 msgid "a"
-msgstr "a"
+msgstr "s"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:3028
 msgid "Unable to save to database."
@@ -7807,17 +7807,19 @@ msgid ""
 "The maximum number of window menu entries reached, no more entries will be "
 "added."
 msgstr ""
+"Elérte az ablak menübejegyzéseinek maximális számát, több bejegyzés nem "
+"adható hozzá."
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5227
 #: gnucash/gnucash-core-app.cpp:241
 msgid "(user modifiable)"
-msgstr ""
+msgstr "(felhasználó módosíthatja)"
 
 #. Translators: %s will be replaced with the current year
 #: gnucash/gnome-utils/gnc-main-window.cpp:5252
 #, c-format
 msgid "Copyright © 1997-%s The GnuCash contributors."
-msgstr ""
+msgstr "Szerzői jog: © 1997-%s A GnuCash közreműködői."
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5264
 #: gnucash/gnome-utils/gnc-splash.c:99
@@ -7827,7 +7829,7 @@ msgstr "Verzió"
 #: gnucash/gnome-utils/gnc-main-window.cpp:5265
 #: gnucash/gnome-utils/gnc-splash.c:100 gnucash/gnucash-core-app.cpp:257
 msgid "Build ID"
-msgstr ""
+msgstr "Összeállítási azonosító"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5273
 msgid "Accounting for personal and small business finance."
@@ -7840,8 +7842,9 @@ msgstr "Pénzügyi-számviteli program magánszemélyeknek és kisvállalkozáso
 #: gnucash/gnome-utils/gnc-main-window.cpp:5282
 msgid "translator-credits"
 msgstr ""
-"Geza Kiss: 2023; Kornel Tako: 2007; Kárász Attila: 2022, 2023"
-"Szia Tomi: 2022, 2023, 2024; mocsa: 2022, 2023, 2024; ovari: 2022, 2023"
+"SziaTomi (2022 ->); Molnár Csaba (2022-2023); ovari (2022-2023); Kárász "
+"Attila (2022); Tako Kornel (2007); Sulyok Péter (2003-2006); Hosszú Péter "
+"(2001-2003)"
 
 #: gnucash/gnome-utils/gnc-main-window.cpp:5285
 msgid "Visit the GnuCash website."
@@ -7966,7 +7969,7 @@ msgstr "'%s' nem található"
 #: gnucash/gnome-utils/gnc-report-combo.c:304
 #, c-format
 msgid "Report with GUID '%s' is missing"
-msgstr "GUID '%s' azonosítóval nem taláható jelentés"
+msgstr "Nem taláható jelentés '%s' GUID azonosítóval"
 
 #: gnucash/gnome-utils/gnc-splash.c:114
 msgid "Loading…"
@@ -8032,7 +8035,7 @@ msgstr "Egyenleg (időszak)"
 
 #: gnucash/gnome-utils/gnc-tree-view-account.c:865
 msgid "Cleared (Report)"
-msgstr "Elszámolt (Jelentés)"
+msgstr "Kiegyenlített, elszámolt (Jelentés)"
 
 #: gnucash/gnome-utils/gnc-tree-view-account.c:879
 msgid "Reconciled (Report)"
@@ -8118,7 +8121,7 @@ msgstr "Egyenleg (%s)"
 #: gnucash/gnome-utils/gnc-tree-view-account.c:1794
 #, c-format
 msgid "Cleared (%s)"
-msgstr "Elszámolt (%s)"
+msgstr "Kiegyenlített, elszámolt (%s)"
 
 #. Translators: %s is a currency mnemonic.
 #: gnucash/gnome-utils/gnc-tree-view-account.c:1797
@@ -30112,7 +30115,7 @@ msgstr ""
 #. Translators: This is the error message reported by the Online Quotes processing code.
 #: libgnucash/app-utils/gnc-quotes.cpp:771
 msgid "Error message:"
-msgstr ""
+msgstr "Hibaüzenet:"
 
 #. Translators: Means that the preceding element is required
 #: libgnucash/app-utils/gnc-quotes.cpp:816
@@ -30122,27 +30125,25 @@ msgstr "szükséges"
 
 #. Translators: Means that the quote will work best if the preceding element is provided
 #: libgnucash/app-utils/gnc-quotes.cpp:818
-#, fuzzy
 msgctxt "Finance::Quote"
 msgid "recommended"
-msgstr "_Nem egyeztetett"
+msgstr "ajánlott"
 
 #. Translators: Means that one of the indicated elements is required
 #: libgnucash/app-utils/gnc-quotes.cpp:820
 msgctxt "Finance::Quote"
 msgid "one of these"
-msgstr ""
+msgstr "az egyik ezek közül"
 
 #. Translators: Means that a required element wasn't reported. The *s are for emphasis.
 #: libgnucash/app-utils/gnc-quotes.cpp:822
-#, fuzzy
 msgctxt "Finance::Quote"
 msgid "**missing**"
-msgstr "Jutalék"
+msgstr "**hiányzik**"
 
 #: libgnucash/app-utils/gnc-quotes.cpp:829
 msgid "Finance::Quote fields GnuCash uses:"
-msgstr ""
+msgstr "A GnuGash által használt Finance::Quote mezők:"
 
 #. Translators: The stock or Mutual Fund symbol, ISIN, CUSIP, etc.
 #: libgnucash/app-utils/gnc-quotes.cpp:831
@@ -30249,7 +30250,7 @@ msgstr "n"
 #: libgnucash/app-utils/gnc-ui-util.cpp:474
 msgctxt "Reconciled flag 'cleared'"
 msgid "c"
-msgstr "e"
+msgstr "k"
 
 #: libgnucash/app-utils/gnc-ui-util.cpp:476
 msgctxt "Reconciled flag 'reconciled'"
@@ -30387,7 +30388,7 @@ msgstr "S/Kifizetendő"
 
 #: libgnucash/engine/Account.cpp:4285
 msgid "Root"
-msgstr "Gyök"
+msgstr "Gyökér (legfelső szintű számla)"
 
 #: libgnucash/engine/Account.cpp:4725
 msgid "Orphaned Gains"
@@ -30406,356 +30407,341 @@ msgstr ""
 "Realizált nyereség/veszteség más számlákról melyek máshol nicsenek elmentve."
 
 #: libgnucash/engine/gnc-commodity.cpp:191
-#, fuzzy
-#| msgid "Alpha Vantage API key"
 msgctxt "FQ Source"
 msgid "Alphavantage"
-msgstr "Alpha Vantage API-kulcs"
+msgstr "Alphavantage"
 
 #: libgnucash/engine/gnc-commodity.cpp:192
 msgctxt "FQ Source"
 msgid "Amsterdam Euronext eXchange, NL"
-msgstr ""
+msgstr "Amszterdami Euronext tőzsde, NL"
 
 #: libgnucash/engine/gnc-commodity.cpp:193
 msgctxt "FQ Source"
 msgid "Association of Mutual Funds in India"
-msgstr ""
+msgstr "Indiai befektetési alapok szövetsége (AMFI)"
 
 #: libgnucash/engine/gnc-commodity.cpp:194
 msgctxt "FQ Source"
 msgid "Athens Exchange Group, GR"
-msgstr ""
+msgstr "Athéni tőzsdecsoport, GR"
 
 #: libgnucash/engine/gnc-commodity.cpp:195
 msgctxt "FQ Source"
 msgid "Australian Stock Exchange, AU"
-msgstr ""
+msgstr "Ausztrál értéktőzsde, AU"
 
 #: libgnucash/engine/gnc-commodity.cpp:196
-#, fuzzy
-#| msgid "Bill number"
 msgctxt "FQ Source"
 msgid "Bloomberg"
-msgstr "Bejövőszámlaszám"
+msgstr "Bloomberg"
 
 #: libgnucash/engine/gnc-commodity.cpp:197
 msgctxt "FQ Source"
 msgid "Italian Stock Exchange, IT"
-msgstr ""
+msgstr "Olasz értéktőzsde, IT"
 
 #: libgnucash/engine/gnc-commodity.cpp:198
 msgctxt "FQ Source"
 msgid "BSE India, IN"
-msgstr ""
+msgstr "BSE India, IN"
 
 #: libgnucash/engine/gnc-commodity.cpp:199
 msgctxt "FQ Source"
 msgid "Bucharest Stock Exchange, RO"
-msgstr ""
+msgstr "Bukaresti értéktőzsde, RO"
 
 #: libgnucash/engine/gnc-commodity.cpp:200
 msgctxt "FQ Source"
 msgid "Colombo Stock Exchange, LK"
-msgstr ""
+msgstr "Colomboi értéktőzsde, LK (Srí Lanka)"
 
 #: libgnucash/engine/gnc-commodity.cpp:201
 msgctxt "FQ Source"
 msgid "comdirect, DE"
-msgstr ""
+msgstr "comdirect, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:202
 msgctxt "FQ Source"
 msgid "Consors Bank, DE"
-msgstr ""
+msgstr "Consors bank, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:203
-#, fuzzy
-#| msgid "Investments"
 msgctxt "FQ Source"
 msgid "Deka Investments, DE"
-msgstr "Befektetések"
+msgstr "Deka befektetés, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:204
 msgctxt "FQ Source"
 msgid "DWS, DE"
-msgstr ""
+msgstr "DWS, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:205
 msgctxt "FQ Source"
 msgid "Financial Times Funds service, GB"
-msgstr ""
+msgstr "Financial Times befektetési szolgáltatás, GB"
 
 #: libgnucash/engine/gnc-commodity.cpp:206
 msgctxt "FQ Source"
 msgid "Finanzpartner, DE"
-msgstr ""
+msgstr "Finanzpartner, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:207
 msgctxt "FQ Source"
 msgid "FondsWeb, DE"
-msgstr ""
+msgstr "FondsWeb, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:208
 msgctxt "FQ Source"
 msgid "GoldMoney precious metals"
-msgstr ""
+msgstr "GoldMoney nemesfémek"
 
 #: libgnucash/engine/gnc-commodity.cpp:209
 msgctxt "FQ Source"
 msgid "Google Web, US Stocks"
-msgstr ""
+msgstr "Google Web, US részvények"
 
 #: libgnucash/engine/gnc-commodity.cpp:210
 msgctxt "FQ Source"
 msgid "IEX (Investors Exchange), US"
-msgstr ""
+msgstr "IEX (Befektetői tőzsde), US"
 
 #: libgnucash/engine/gnc-commodity.cpp:211
 msgctxt "FQ Source"
 msgid "Market Watch"
-msgstr ""
+msgstr "Market Watch (Piacfigyelő)"
 
 #: libgnucash/engine/gnc-commodity.cpp:212
 msgctxt "FQ Source"
 msgid "Morningstar, AU"
-msgstr ""
+msgstr "Morningstar (Ausztrália)"
 
 #: libgnucash/engine/gnc-commodity.cpp:213
 msgctxt "FQ Source"
 msgid "Morningstar, CH"
-msgstr ""
+msgstr "Morningstar (Svájc)"
 
 #: libgnucash/engine/gnc-commodity.cpp:214
 msgctxt "FQ Source"
 msgid "Morningstar, GB"
-msgstr ""
+msgstr "Morningstar (Nagy-Britannia)"
 
 #: libgnucash/engine/gnc-commodity.cpp:215
 msgctxt "FQ Source"
 msgid "Morningstar, JP"
-msgstr ""
+msgstr "Morningstar (Japán)"
 
 #: libgnucash/engine/gnc-commodity.cpp:216
 msgctxt "FQ Source"
 msgid "Motley Fool"
-msgstr ""
+msgstr "Motley Fool"
 
 #: libgnucash/engine/gnc-commodity.cpp:217
 msgctxt "FQ Source"
 msgid "New Zealand stock eXchange, NZ"
-msgstr ""
+msgstr "Új-Zélandi értéktőzsde, NZ"
 
 #: libgnucash/engine/gnc-commodity.cpp:218
 msgctxt "FQ Source"
 msgid "NSE (National Stock Exchange), IN"
-msgstr ""
+msgstr "NSE (Nemzeti értéktőzsde), India"
 
 #: libgnucash/engine/gnc-commodity.cpp:219
 msgctxt "FQ Source"
 msgid "OnVista, DE"
-msgstr ""
+msgstr "OnVista, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:220
 msgctxt "FQ Source"
 msgid "Paris Stock Exchange/Boursorama, FR"
-msgstr ""
+msgstr "Párizsi értéktőzsde/Boursorama, FR"
 
 #: libgnucash/engine/gnc-commodity.cpp:221
 msgctxt "FQ Source"
 msgid "S-Investor, DE"
-msgstr ""
+msgstr "S-Investor (Sparkasse befektető), DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:222
 msgctxt "FQ Source"
 msgid "Sharenet, ZA"
-msgstr ""
+msgstr "Sharenet, ZA"
 
 #: libgnucash/engine/gnc-commodity.cpp:223
-#, fuzzy
-#| msgid "Show Exchange Rates"
 msgctxt "FQ Source"
 msgid "SIX Swiss Exchange shares, CH"
-msgstr "Árfolyamok megjelenítése"
+msgstr "SIX Svájci tőzsdei részvények, CH"
 
 #: libgnucash/engine/gnc-commodity.cpp:224
 msgctxt "FQ Source"
 msgid "Skandinaviska Enskilda Banken, SE"
-msgstr ""
+msgstr "Skandináv Enskilda bank, SE"
 
 #: libgnucash/engine/gnc-commodity.cpp:225
-#, fuzzy
-#| msgid "Stock"
 msgctxt "FQ Source"
 msgid "StockData"
-msgstr "Részvény"
+msgstr "StockData (részvényadat)"
 
 #: libgnucash/engine/gnc-commodity.cpp:226
 msgctxt "FQ Source"
 msgid "Stooq, PL"
-msgstr ""
+msgstr "Stooq, PL (lengyel tőzsde)"
 
 #: libgnucash/engine/gnc-commodity.cpp:227
 msgctxt "FQ Source"
 msgid "T. Rowe Price, US"
-msgstr ""
+msgstr "T. Rowe Price, US (USA állami tulajdonú globális befektetéskezelő)"
 
 #: libgnucash/engine/gnc-commodity.cpp:228
 msgctxt "FQ Source"
 msgid "Tesouro Direto bonds, BR"
-msgstr ""
+msgstr "Tesouro Direto bonds, BR (brazil kötvények)"
 
 #: libgnucash/engine/gnc-commodity.cpp:229
 msgctxt "FQ Source"
 msgid "TIAA-CREF, US"
-msgstr ""
+msgstr "TIAA-CREF, US"
 
 #: libgnucash/engine/gnc-commodity.cpp:230
 msgctxt "FQ Source"
 msgid "Toronto Stock eXchange, CA"
-msgstr ""
+msgstr "Torontói értéktőzsde, CA"
 
 #: libgnucash/engine/gnc-commodity.cpp:231
 msgctxt "FQ Source"
 msgid "Tradegate, DE"
-msgstr ""
+msgstr "Tradegate, DE (berlini székhelyű tőzsde)"
 
 #: libgnucash/engine/gnc-commodity.cpp:232
 msgctxt "FQ Source"
 msgid "Treasury Direct bonds, US"
-msgstr ""
+msgstr "Treasury Direct bonds, US (amerikai kötvények)"
 
 #: libgnucash/engine/gnc-commodity.cpp:233
 msgctxt "FQ Source"
 msgid "Twelve Data"
-msgstr ""
+msgstr "Twelve Data"
 
 #: libgnucash/engine/gnc-commodity.cpp:234
-#, fuzzy
-#| msgid "Investments"
 msgctxt "FQ Source"
 msgid "Union Investment, DE"
-msgstr "Befektetések"
+msgstr "Union Investment, DE (DZ Bank befektetési társaság)"
 
 #: libgnucash/engine/gnc-commodity.cpp:235
 msgctxt "FQ Source"
 msgid "US Govt. Thrift Savings Plan"
 msgstr ""
+"US Govt. TSP (szövetségi alkalmazottak nyugdíjcélú megtakarítási és "
+"befektetési rendszere)"
 
 #: libgnucash/engine/gnc-commodity.cpp:236
 msgctxt "FQ Source"
 msgid "XETRA, DE"
-msgstr ""
+msgstr "XETRA, DE"
 
 #: libgnucash/engine/gnc-commodity.cpp:237
 msgctxt "FQ Source"
 msgid "Yahoo as JSON"
-msgstr ""
+msgstr "Yahoo JSON formátumként"
 
 #: libgnucash/engine/gnc-commodity.cpp:238
 msgctxt "FQ Source"
 msgid "Yahoo Web"
-msgstr ""
+msgstr "Yahoo Web"
 
 #: libgnucash/engine/gnc-commodity.cpp:239
-#, fuzzy
-#| msgid "YH Finance (FinanceAPI) API key"
 msgctxt "FQ Source"
 msgid "YH Finance (FinanceAPI)"
-msgstr "YH Finance (FinanceAPI) API-kulcs"
+msgstr "YH Finance (FinanceAPI)"
 
 #: libgnucash/engine/gnc-commodity.cpp:244
 msgctxt "FQ Source"
 msgid "Australia (ASX)"
-msgstr ""
+msgstr "Ausztrália (ASX)"
 
 #: libgnucash/engine/gnc-commodity.cpp:245
 msgctxt "FQ Source"
 msgid "Australia Funds (MorningstarAU)"
-msgstr ""
+msgstr "Ausztrál alapok (MorningstarAU)"
 
 #: libgnucash/engine/gnc-commodity.cpp:246
 msgctxt "FQ Source"
 msgid "Canada (Alphavantage, TMX)"
-msgstr ""
+msgstr "Kanada (Alphavantage, TMX)"
 
 #: libgnucash/engine/gnc-commodity.cpp:247
 msgctxt "FQ Source"
 msgid "Dutch (AEX)"
-msgstr ""
+msgstr "Hollandia (AEX)"
 
 #: libgnucash/engine/gnc-commodity.cpp:248
 msgctxt "FQ Source"
 msgid "Europe (ASEGR, Bourso, …)"
-msgstr ""
+msgstr "Európa (ASEGR, Bourso, …)"
 
 #: libgnucash/engine/gnc-commodity.cpp:249
 msgctxt "FQ Source"
 msgid "France (Bourso)"
-msgstr ""
+msgstr "Franciaország (Bourso)"
 
 #: libgnucash/engine/gnc-commodity.cpp:250
 msgctxt "FQ Source"
 msgid "Greece (ASEGR)"
-msgstr ""
+msgstr "Görögország (ASEGR)"
 
 #: libgnucash/engine/gnc-commodity.cpp:251
 msgctxt "FQ Source"
 msgid "India (BSEIndia, NSEIndia)"
-msgstr ""
+msgstr "India (BSE India, NSE India)"
 
 #: libgnucash/engine/gnc-commodity.cpp:252
 msgctxt "FQ Source"
 msgid "India Mutual (AMFI)"
-msgstr ""
+msgstr "Indiai alapok (AMFI)"
 
 #: libgnucash/engine/gnc-commodity.cpp:253
 msgctxt "FQ Source"
 msgid "Nasdaq (Alphavantage, FinanceAPI, …)"
-msgstr ""
+msgstr "Nasdaq (Alphavantage, FinanceAPI, ….)"
 
 #: libgnucash/engine/gnc-commodity.cpp:254
 msgctxt "FQ Source"
 msgid "NYSE (Alphavantage, FinanceAPI, …)"
-msgstr ""
+msgstr "NYSE (Alphavantage, FinanceAPI, ….)"
 
 #: libgnucash/engine/gnc-commodity.cpp:255
 msgctxt "FQ Source"
 msgid "Poland (Stooq)"
-msgstr ""
+msgstr "Lengyelország (Stooq)"
 
 #: libgnucash/engine/gnc-commodity.cpp:256
 msgctxt "FQ Source"
 msgid "Romania (BVB)"
-msgstr ""
+msgstr "Románia (BVB)"
 
 #: libgnucash/engine/gnc-commodity.cpp:257
 msgctxt "FQ Source"
 msgid "South Africa (Sharenet)"
-msgstr ""
+msgstr "Dél-Afrika (Sharenet)"
 
 #: libgnucash/engine/gnc-commodity.cpp:258
 msgctxt "FQ Source"
 msgid "U.K. Funds (FTfunds, MorningstarUK)"
-msgstr ""
+msgstr "U.K. alapok (FTfunds, MorningstarUK)"
 
 #: libgnucash/engine/gnc-commodity.cpp:259
 msgctxt "FQ Source"
 msgid "USA (Alphavantage, FinanceAPI, …)"
-msgstr ""
+msgstr "USA (Alphavantage, FinanceAPI, .…)"
 
 #: libgnucash/engine/gnc-commodity.h:110
-#, fuzzy
 msgctxt "Commodity Type"
 msgid "All non-currency"
-msgstr "Pénznem kiválasztása"
+msgstr "Minden ami nem deviza"
 
 #: libgnucash/engine/gnc-commodity.h:111
-#, fuzzy
-#| msgid "Currencies"
 msgctxt "Commodity Type"
 msgid "Currencies"
-msgstr "Pénznemek"
+msgstr "Devizák"
 
 #: libgnucash/engine/gnc-date.cpp:76
 msgid "%B %#d, %Y"
