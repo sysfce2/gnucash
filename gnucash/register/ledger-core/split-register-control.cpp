@@ -697,7 +697,8 @@ gnc_find_split_in_trans_by_memo (Transaction *trans, const char *memo,
         if (unit_price)
         {
             gnc_numeric price = xaccSplitGetSharePrice (split);
-            if (!gnc_numeric_zero_p (price))
+            if (!gnc_numeric_equal (price, gnc_numeric_create (1, 1)) && 
+                !gnc_numeric_zero_p (price))
                 continue;
         }
 
