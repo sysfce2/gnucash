@@ -23,6 +23,7 @@
 
 #include <gtest/gtest.h>
 #include <random>
+#include <cstdint>
 #include "../gnc-rational.hpp"
 #include "../gnc-numeric.hpp" //for RoundType
 

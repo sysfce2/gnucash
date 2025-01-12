@@ -91,7 +91,7 @@ set(gtest_qof_LIBS
   ${GOBJECT_LDFLAGS}
   ${GMODULE_LDFLAGS}
   ${GTHREAD_LDFLAGS}
-  ${ICU4C_I18N_LDFLAGS}
+  ${ICU_LIBRARIES}
   ${Boost_LIBRARIES}
   gtest)
 

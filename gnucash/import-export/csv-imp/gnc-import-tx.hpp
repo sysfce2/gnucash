@@ -39,6 +39,7 @@
 #include <map>
 #include <memory>
 #include <optional>
+#include <cstdint>
 
 #include "gnc-tokenizer.hpp"
 #include "gnc-imp-props-tx.hpp"

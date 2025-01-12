@@ -132,6 +132,12 @@
     $1 = &secs;
 }
 
+#ifdef HAVE_SWIG_APPENDOUTPUT
+#define SWIG_APPENDOUTPUT(res, func) SWIG_AppendOutput(res, func)
+#else
+#define SWIG_APPENDOUTPUT(res, func) SWIG_Python_AppendOutput(res, func)
+#endif
+
 %typemap(argout) time64 *date (time64 secs) {
   PyDateTime_IMPORT;
   PyObject *tp;
@@ -148,9 +154,8 @@
       tp = PyDateTime_FromDateAndTime(t.tm_year + 1900, t.tm_mon + 1,
                                                  t.tm_mday, t.tm_hour, t.tm_min,
                                                  t.tm_sec, 0);
-
-      $result = SWIG_Python_AppendOutput($result, tp);
-  } else $result = SWIG_Python_AppendOutput($result, Py_None);
+      $result = SWIG_APPENDOUTPUT($result, tp);
+  } else $result = SWIG_APPENDOUTPUT($result, Py_None);
 }
 
 %apply time64 *date { time64 *last_date };

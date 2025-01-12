@@ -86,6 +86,12 @@ macro (gnc_add_swig_python_command _target _out_var _py_out_var _output _py_outp
 	 )
 
     set (PYTHON_SWIG_FLAGS ${DEFAULT_SWIG_PYTHON_FLAGS})
+
+    if (SWIG_VERSION VERSION_GREATER_EQUAL "4.3.0")
+      list(APPEND PYTHON_SWIG_FLAGS
+        -DHAVE_SWIG_APPENDOUTPUT=1)
+    endif()
+
     foreach (dir ${DEFAULT_SWIG_PYTHON_C_INCLUDES} ${_include_dirs})
         list (APPEND PYTHON_SWIG_FLAGS "-I${dir}")
     endforeach (dir)

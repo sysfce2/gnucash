@@ -29,7 +29,6 @@
 
 #include <config.h>
 
-#include <stdint.h>
 #include <inttypes.h>
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -2307,10 +2306,6 @@ gboolean gncInvoiceRegister (void)
         qofInvoiceGetOwner (NULL);
         qofInvoiceSetBillTo (NULL, NULL);
         qofInvoiceGetBillTo (NULL);
-    }
-    if (!qof_choice_create (GNC_ID_INVOICE))
-    {
-        return FALSE;
     }
     return qof_object_register (&gncInvoiceDesc);
 }

@@ -72,6 +72,7 @@ main(G_GNUC_UNUSED int argc, G_GNUC_UNUSED char **argv)
     const char *tmp_dir = g_get_tmp_dir();
     const char *builddir = g_getenv ("GNC_BUILDDIR");
     char *homedir = g_build_filename (builddir, "notexist", NULL);
+    char *testdatahome = g_build_filename (homedir, "gnucash", NULL);
 
     /* Assume we're not in a build environment to test
      * the function's actual behaviour in a real world use case, using
@@ -83,7 +84,9 @@ main(G_GNUC_UNUSED int argc, G_GNUC_UNUSED char **argv)
      * The code should fall back to using the temporary
      * directory in that case. */
     g_setenv("HOME", homedir, TRUE);
+    g_setenv("GNC_DATA_HOME", testdatahome, TRUE);
     g_free (homedir);
+    g_free (testdatahome);
 
     for (i = 0; strs2[i].funcname != NULL; i++)
     {

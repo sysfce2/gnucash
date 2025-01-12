@@ -39,6 +39,7 @@
 #include "gnc-plugin.h"
 #include "gnc-plugin-page.h"
 #include "gnc-gobject-utils.h"
+#include "gnc-ui.h"
 
 /** The debugging module that this .o belongs to.  */
 static QofLogModule log_module = GNC_MOD_GUI;
@@ -891,7 +892,7 @@ gnc_plugin_page_inserted_cb (GncPluginPage *page, gpointer user_data)
                                               page);
 
     // on initial load try and set the page focus
-    if (!gnc_main_window_is_restoring_pages (GNC_MAIN_WINDOW(page->window)))
+    if (!gnc_main_window_is_restoring_pages (GNC_MAIN_WINDOW (gnc_ui_get_main_window (page->window))))
         (GNC_PLUGIN_PAGE_GET_CLASS(page)->focus_page)(page, TRUE);
 }
 

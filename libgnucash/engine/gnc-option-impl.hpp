@@ -50,6 +50,7 @@
 #include <variant>
 #include <iostream>
 #include <limits>
+#include <cstdint>
 
 #include "gnc-option-uitype.hpp"
 

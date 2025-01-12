@@ -278,22 +278,42 @@ gnc_amount_edit_key_press (GtkWidget *widget, GdkEventKey *event, gpointer user_
         gtk_widget_set_tooltip_text (GTK_WIDGET(gae->image), NULL);
     }
 
-#ifdef G_OS_WIN32
-    /* gdk never sends GDK_KEY_KP_Decimal on win32. See #486658 */
-    if (event->hardware_keycode == VK_DECIMAL)
-        event->keyval = GDK_KEY_KP_Decimal;
-#endif
     if (event->keyval == GDK_KEY_KP_Decimal)
     {
+        gchar *decimal;
+    
         if (gae->print_info.monetary)
         {
             struct lconv *lc = gnc_localeconv ();
             event->keyval = lc->mon_decimal_point[0];
-            event->string[0] = lc->mon_decimal_point[0];
+            decimal = g_strdup_printf ("%c", lc->mon_decimal_point[0]);
         }
-    }
+        else
+            decimal = g_strdup_printf ("%c",'.');
 
-    result = (* GTK_WIDGET_GET_CLASS(widget)->key_press_event)(widget, event);
+        GtkEditable *editable = GTK_EDITABLE(widget);
+        gint start_pos, end_pos;
+        gint position = gtk_editable_get_position (editable);
+
+        if (gtk_editable_get_selection_bounds (editable,
+                                               &start_pos, &end_pos))
+        {
+            position = start_pos;
+
+            gtk_editable_delete_selection (editable);
+            gtk_editable_insert_text (editable,
+                                      decimal, -1, &position);
+        }
+        else
+            gtk_editable_insert_text (editable,
+                                      decimal, -1, &position);
+
+        gtk_editable_set_position (editable, position);
+        g_free (decimal);
+        result = TRUE;
+    }
+    else
+        result = (* GTK_WIDGET_GET_CLASS(widget)->key_press_event)(widget, event);
 
     switch (event->keyval)
     {

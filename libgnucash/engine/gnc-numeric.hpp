@@ -27,6 +27,7 @@
 #include <iostream>
 #include <locale>
 #include <typeinfo> // For std::bad_cast exception
+#include <cstdint>
 #include "gnc-rational-rounding.hpp"
 
 class GncRational;

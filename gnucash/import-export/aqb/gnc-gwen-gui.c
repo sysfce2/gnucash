@@ -31,6 +31,7 @@
 #include <config.h>
 
 #include <ctype.h>
+#include <stdint.h>
 #include <glib/gi18n.h>
 #include <gwenhywfar/gui_be.h>
 #include <gwenhywfar/inherit.h>

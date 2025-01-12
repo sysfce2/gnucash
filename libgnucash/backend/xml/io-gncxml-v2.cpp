@@ -44,6 +44,7 @@
 #endif
 #include <zlib.h>
 #include <errno.h>
+#include <cstdint>
 
 #include "gnc-engine.h"
 #include "gnc-pricedb-p.h"

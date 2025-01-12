@@ -21,6 +21,7 @@
  *******************************************************************/
 
 #include <sstream>
+#include <cstdint>
 #include "gnc-rational.hpp"
 #include "gnc-numeric.hpp"
 

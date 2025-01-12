@@ -33,6 +33,7 @@
 #include "gnc-commodity.h"
 #include "gnc-date.h"
 #include <time.h>
+#include <cstdint>
 #include "gnc-session.h"
 
 TEST(GncOption, test_string_ctor)

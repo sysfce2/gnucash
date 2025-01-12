@@ -63,7 +63,7 @@ gnucash/gnome/business-options-gnome.cpp
 gnucash/gnome/business-urls.c
 gnucash/gnome/dialog-billterms.c
 gnucash/gnome/dialog-choose-owner.c
-gnucash/gnome/dialog-commodities.c
+gnucash/gnome/dialog-commodities.cpp
 gnucash/gnome/dialog-customer.c
 gnucash/gnome/dialog-custom-report.c
 gnucash/gnome/dialog-date-close.c
@@ -86,7 +86,7 @@ gnucash/gnome/dialog-progress.c
 gnucash/gnome/dialog-report-column-view.cpp
 gnucash/gnome/dialog-report-style-sheet.cpp
 gnucash/gnome/dialog-sx-editor.c
-gnucash/gnome/dialog-sx-from-trans.c
+gnucash/gnome/dialog-sx-from-trans.cpp
 gnucash/gnome/dialog-sx-since-last-run.c
 gnucash/gnome/dialog-tax-info.c
 gnucash/gnome/dialog-vendor.c
@@ -669,7 +669,6 @@ libgnucash/engine/policy.cpp
 libgnucash/engine/qof-backend.cpp
 libgnucash/engine/qofbook.cpp
 libgnucash/engine/qofbookslots.h
-libgnucash/engine/qofchoice.cpp
 libgnucash/engine/qofclass.cpp
 libgnucash/engine/qofevent.cpp
 libgnucash/engine/qofid.cpp
@@ -684,15 +683,14 @@ libgnucash/engine/qofutil.cpp
 libgnucash/engine/qof-win32.cpp
 libgnucash/engine/Query.cpp
 libgnucash/engine/Recurrence.cpp
-libgnucash/engine/SchedXaction.c
+libgnucash/engine/SchedXaction.cpp
 libgnucash/engine/Scrub2.cpp
 libgnucash/engine/Scrub3.cpp
 libgnucash/engine/ScrubBudget.c
 libgnucash/engine/ScrubBusiness.c
 libgnucash/engine/Scrub.cpp
 libgnucash/engine/Split.cpp
-libgnucash/engine/SX-book.c
-libgnucash/engine/SX-ttinfo.c
+libgnucash/engine/SX-book.cpp
 libgnucash/engine/Transaction.cpp
 libgnucash/engine/TransLog.cpp
 libgnucash/gnc-module/example/gncmod-example.c

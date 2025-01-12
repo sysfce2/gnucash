@@ -27,6 +27,7 @@
 #include <config.h>
 
 #include <gnc-date.h>
+#include <cstdint>
 
 #include "gnc-xml-helper.h"
 #include "sixtp-dom-generators.h"

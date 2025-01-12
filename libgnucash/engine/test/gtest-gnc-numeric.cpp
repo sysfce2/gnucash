@@ -21,6 +21,7 @@
 \********************************************************************/
 
 #include <gtest/gtest.h>
+#include <cstdint>
 #include "../gnc-numeric.hpp"
 #include "../gnc-rational.hpp"
 

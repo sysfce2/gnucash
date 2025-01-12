@@ -141,7 +141,7 @@
 (define after-tax-day (< tax-day today))
 
 (define (make-split-list account split-filter-pred)
-  (filter split-filter-pred (xaccAccountGetSplitList account)))
+  (filter split-filter-pred (xaccAccountGetSplits account)))
 
 ;; returns a predicate that returns true only if a split is
 ;; between early-date and late-date

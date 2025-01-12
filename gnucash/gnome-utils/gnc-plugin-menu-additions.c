@@ -543,7 +543,7 @@ gnc_plugin_menu_additions_remove_from_window (GncPlugin *plugin,
      * actions name is installed into the plugin class. */
     simple_action_group = gnc_main_window_get_action_group (window, PLUGIN_ACTIONS_NAME);
 
-    if (simple_action_group && !window->just_plugin_prefs)
+    if (simple_action_group && !gnc_main_window_just_plugin_prefs (window))
         gtk_widget_insert_action_group (GTK_WIDGET(window), PLUGIN_ACTIONS_NAME, NULL);
 
     LEAVE(" ");

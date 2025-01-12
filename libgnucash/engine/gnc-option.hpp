@@ -42,6 +42,7 @@
 #include <variant>
 #include <memory>
 #include <tuple>
+#include <cstdint>
 #include "gnc-option-ui.hpp"
 #include "gnc-option-date.hpp"
 #include "guid.hpp"

@@ -8,14 +8,16 @@
 # Vladimir Melo <vladimirmelo.psi@gmail.com>, 2007.
 # LL Magical <lolayami2004@gmail.com>, 2020.
 # Fábio Rodrigues Ribeiro <farribeiro@gmail.com>, 2021.
-# Wellington Terumi Uemura <wellingtonuemura@gmail.com>, 2021, 2022, 2023.
+# Wellington Terumi Uemura <wellingtonuemura@gmail.com>, 2021, 2022, 2023, 2024.
+# Jose Delvani <jsdelvani@users.noreply.hosted.weblate.org>, 2024.
+# Fabio Lima <fabiolimace@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: GnuCash 5.4\n"
+"Project-Id-Version: GnuCash 5.6\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
 "cgi?product=GnuCash&component=Translations\n"
-"POT-Creation-Date: 2023-09-25 08:00+0200\n"
-"PO-Revision-Date: 2023-10-13 04:15+0000\n"
+"POT-Creation-Date: 2024-06-22 06:24+0200\n"
+"PO-Revision-Date: 2024-10-29 03:00+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "gnucash/glossary/pt_BR/>\n"
@@ -24,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 
 #. "English Definition (Dear translators: This file will never be visible to normal users! It should only serve as a tool for translators. E.g. matching terms from this file are displayed in Weblate's Translation pages of other GnuCash components like the program.)"
 msgid "Term"
@@ -236,7 +238,7 @@ msgstr "balanço"
 
 #. "To arrange for income and spending to be equal"
 msgid "balance, to"
-msgstr "saldo"
+msgstr "equilibrar"
 
 #. "-"
 msgid "bank"
@@ -316,7 +318,7 @@ msgstr "Símbolo"
 
 #. "interest which is earned on both the initial deposit and on any interest that has already been earned but left on deposit."
 msgid "compound interests"
-msgstr "interesses compostos"
+msgstr "juros compostos"
 
 #. "(a) A sum of money paid into an account. (b) A record of such a payment. (c) The state of having money in one's bank account."
 msgid "Credit (column in register)"
@@ -328,7 +330,7 @@ msgstr "Cartão de crédito"
 
 #. "A transfer of money direct from one bank account to another, without using a cheque"
 msgid "credit transfer"
-msgstr "transferência de crédito"
+msgstr "transferência"
 
 #. "A document that you give to a client that says you owe money to the client, i.e. the opposite of an invoice"
 msgid "credit note"
@@ -412,7 +414,7 @@ msgstr "patrimônio líquido"
 
 #. "Report that ... FIXME: Add description."
 msgid "equity statement"
-msgstr "declaração do patrimônio líquido"
+msgstr "demonstração das mutações do patrimônio líquido"
 
 #. "A trusted third party that holds a payment or deposit until a transaction is completed. In the US, many mortgage companies set up an escrow account when you get a mortgage.  You pay into the account every month and they disburse amounts out of the escrow to pay for hazard insurance and property taxes. So they are holding funds 'in escrow' to complete the transactions (paying insurance and taxes)."
 msgid "escrow (account)"
@@ -444,7 +446,7 @@ msgstr "pagamentos"
 
 #. "formal records of the financial activities and position of a business, person, or other entity. See https://en.wikipedia.org/wiki/Financial_statement for a list."
 msgid "financial statement"
-msgstr "demonstrativo financeiro"
+msgstr "demonstração financeira"
 
 #. "Free software is a matter of liberty, not price … see https://en.wikipedia.org/wiki/Free_software"
 msgid "free software"
@@ -492,7 +494,7 @@ msgstr "empréstimo"
 
 #. "Annual Percentage Rate, includes in contrast to the Nominal Rate some of the various costs to obtain a loan."
 msgid "loan: APR"
-msgstr "APR"
+msgstr "TAE"
 
 #. "The money lost in business activity"
 msgid "loss"
@@ -596,7 +598,7 @@ msgstr "senha"
 
 #. "An amount that must be paid / An amount for which money has not yet been received"
 msgid "Payables/Receivables"
-msgstr "Contas a pagar/recebíveis"
+msgstr "Contas a Pagar e a Receber"
 
 #. "A person to whom sth is paid"
 msgid "payee"
@@ -612,7 +614,7 @@ msgstr "pagamento"
 
 #. "An account where no transactions may be posted to; transactions can only be posted to subaccounts of this account, so this account serves as a placeholder in the hierarchy"
 msgid "placeholder"
-msgstr "alocador"
+msgstr "agrupador"
 
 #. "A set of investments owned by a person"
 msgid "portfolio"
@@ -676,7 +678,7 @@ msgstr "registro"
 
 #. "A transaction that is divided into two or more parts"
 msgid "register entry: split transaction"
-msgstr "divisão da transação"
+msgstr "transação dividida"
 
 #. "-"
 msgid "register entry: stock split"
@@ -737,6 +739,10 @@ msgstr "exclua"
 #. "A document or certificate showing who owns shares"
 msgid "security"
 msgstr "segurança"
+
+#. "Selling borrowed units in the hope that when you buy them back later it will be at a lower price."
+msgid "Sell short"
+msgstr "Venda a descoberto"
 
 #. "-"
 msgid "Share Balance (register)"
@@ -816,7 +822,7 @@ msgstr "transação"
 
 #. "A transaction whose amount has actually been moved. The word comes from checks: a check is issued, but several steps have to be done until the amount is actually retrieved from the bank account, which is the point in time where that transaction (check) gets cleared."
 msgid "transaction state: cleared"
-msgstr "limpo"
+msgstr "concluída"
 
 #. "-"
 msgid "transaction state: frozen"

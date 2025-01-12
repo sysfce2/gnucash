@@ -1593,8 +1593,12 @@ gnc_file_do_save_as (GtkWindow *parent, const char* filename)
     }
 
     /* Make sure all of the data from the old file is loaded */
+    qof_event_suspend ();
+    gnc_suspend_gui_refresh ();
     qof_session_ensure_all_data_loaded(session);
-
+    gnc_resume_gui_refresh ();
+    qof_event_resume ();
+    
     /* -- this session code is NOT identical in FileOpen and FileSaveAs -- */
 
     save_in_progress++;

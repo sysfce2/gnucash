@@ -38,8 +38,11 @@
 #include <Account.h>
 
 using SplitsVec = std::vector<Split*>;
+using AccountVec = std::vector<Account*>;
 
-const SplitsVec xaccAccountGetSplits (const Account*);
+const SplitsVec& xaccAccountGetSplits (const Account*);
+
+void gnc_account_foreach_descendant (const Account *, std::function<void(Account*)> func);
 
 void gnc_account_foreach_split (const Account*, std::function<void(Split*)>, bool);
 

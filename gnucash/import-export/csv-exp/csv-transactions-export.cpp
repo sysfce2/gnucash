@@ -163,7 +163,10 @@ static std::string
 get_amount (Split *split, bool t_void, bool symbol)
 {
     auto amt_num{t_void ? xaccSplitVoidFormerAmount (split) : xaccSplitGetAmount (split)};
-    return xaccPrintAmount (amt_num, gnc_split_amount_print_info (split, symbol));
+    auto pinfo{gnc_split_amount_print_info (split, symbol)};
+    if (!symbol)
+        pinfo.use_separators = 0;
+    return xaccPrintAmount (amt_num, pinfo);
 }
 
 // Value with Symbol or not
@@ -173,6 +176,8 @@ get_value (Split *split, bool t_void, bool symbol)
     auto trans{xaccSplitGetParent(split)};
     auto tcurr{xaccTransGetCurrency (trans)};
     auto pai{gnc_commodity_print_info (tcurr, symbol)};
+    if (!symbol)
+        pai.use_separators = 0;
     auto amt_num{t_void ? xaccSplitVoidFormerValue (split): xaccSplitGetValue (split)};
     return xaccPrintAmount (amt_num, pai);
 }

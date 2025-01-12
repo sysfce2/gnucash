@@ -31,14 +31,18 @@
 #include "qof.h"
 
 #include "Account.h"
+#include "Account.hpp"
 #include "SX-book.h"
 #include "SX-book-p.h"
-#include "SX-ttinfo.h"
+#include "SX-ttinfo.hpp"
 #include "SchedXaction.h"
+#include "SchedXaction.hpp"
 #include "Transaction.h"
 #include "gnc-engine.h"
 #include "engine-helpers.h"
 #include "qofinstance-p.h"
+
+#include <unordered_set>
 
 #undef G_LOG_DOMAIN
 #define G_LOG_DOMAIN "gnc.engine.sx"
@@ -208,25 +212,25 @@ gnc_schedxaction_set_property (GObject         *object,
         /* Note: when passed through a boxed gvalue, the julian value of the date is copied.
            The date may appear invalid until a function requiring for dmy calculation is
            called. */
-        xaccSchedXactionSetStartDate(sx, g_value_get_boxed(value));
+        xaccSchedXactionSetStartDate(sx, static_cast<const GDate*>(g_value_get_boxed(value)));
         break;
     case PROP_END_DATE:
         /* Note: when passed through a boxed gvalue, the julian value of the date is copied.
            The date may appear invalid until a function requiring for dmy calculation is
            called. */
-        xaccSchedXactionSetEndDate(sx, g_value_get_boxed(value));
+        xaccSchedXactionSetEndDate(sx, static_cast<const GDate*>(g_value_get_boxed(value)));
         break;
     case PROP_LAST_OCCURANCE_DATE:
         /* Note: when passed through a boxed gvalue, the julian value of the date is copied.
            The date may appear invalid until a function requiring for dmy calculation is
            called. */
-        xaccSchedXactionSetLastOccurDate(sx, g_value_get_boxed(value));
+        xaccSchedXactionSetLastOccurDate(sx, static_cast<const GDate*>(g_value_get_boxed(value)));
         break;
     case PROP_INSTANCE_COUNT:
         gnc_sx_set_instance_count(sx, g_value_get_int(value));
         break;
     case PROP_TEMPLATE_ACCOUNT:
-        sx_set_template_account(sx, g_value_get_object(value));
+        sx_set_template_account(sx, GNC_ACCOUNT(g_value_get_object(value)));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);
@@ -409,7 +413,7 @@ xaccSchedXactionMalloc(QofBook *book)
 
     g_return_val_if_fail (book, NULL);
 
-    sx = g_object_new(GNC_TYPE_SCHEDXACTION, NULL);
+    sx = GNC_SX(g_object_new(GNC_TYPE_SCHEDXACTION, NULL));
     xaccSchedXactionInit( sx, book );
     qof_event_gen( &sx->inst, QOF_EVENT_CREATE , NULL);
 
@@ -417,45 +421,19 @@ xaccSchedXactionMalloc(QofBook *book)
 }
 
 static void
-sxprivTransMapDelete( gpointer data, gpointer user_data )
-{
-    Transaction *t = (Transaction *) data;
-    xaccTransBeginEdit( t );
-    xaccTransDestroy( t );
-    xaccTransCommitEdit( t );
-    return;
-}
-
-static void
 delete_template_trans(SchedXaction *sx)
 {
-    GList *templ_acct_splits, *curr_split_listref;
-    Split *curr_split;
-    Transaction *split_trans;
-    GList *templ_acct_transactions = NULL;
-
-    templ_acct_splits
-    = xaccAccountGetSplitList(sx->template_acct);
-
-    for (curr_split_listref = templ_acct_splits;
-            curr_split_listref;
-            curr_split_listref = curr_split_listref->next)
-    {
-        curr_split = (Split *) curr_split_listref->data;
-        split_trans = xaccSplitGetParent(curr_split);
-        if (! (g_list_find(templ_acct_transactions, split_trans)))
-        {
-            templ_acct_transactions
-            = g_list_prepend(templ_acct_transactions, split_trans);
-        }
-    }
-
-    g_list_foreach(templ_acct_transactions,
-                   sxprivTransMapDelete,
-                   NULL);
-
-    g_list_free (templ_acct_splits);
-    g_list_free (templ_acct_transactions);
+    std::unordered_set<Transaction*> txns;
+    auto& splits{xaccAccountGetSplits (sx->template_acct)};
+    std::for_each (splits.begin(), splits.end(),
+                   [&txns](auto s){ txns.insert (xaccSplitGetParent (s)); });
+    std::for_each (txns.begin(), txns.end(),
+                   [](auto t)
+                   {
+                       xaccTransBeginEdit (t);
+                       xaccTransDestroy (t);
+                       xaccTransCommitEdit (t);
+                   });
     return;
 }
 
@@ -483,8 +461,6 @@ xaccSchedXactionDestroy( SchedXaction *sx )
 static void
 xaccSchedXactionFree( SchedXaction *sx )
 {
-    GList *l;
-
     if ( sx == NULL ) return;
 
     qof_event_gen( &sx->inst, QOF_EVENT_DESTROY , NULL);
@@ -502,16 +478,7 @@ xaccSchedXactionFree( SchedXaction *sx )
     xaccAccountBeginEdit( sx->template_acct );
     xaccAccountDestroy( sx->template_acct );
 
-    for ( l = sx->deferredList; l; l = l->next )
-    {
-        gnc_sx_destroy_temporal_state( l->data );
-        l->data = NULL;
-    }
-    if ( sx->deferredList )
-    {
-        g_list_free( sx->deferredList );
-        sx->deferredList = NULL;
-    }
+    g_list_free_full (sx->deferredList, g_free);
 
     /* a GList of Recurrences */
     g_list_free_full (sx->schedule, g_free);
@@ -799,7 +766,7 @@ gint gnc_sx_get_num_occur_daterange(const SchedXaction *sx, const GDate* start_d
         gnc_sx_incr_temporal_state (sx, tmpState);
         if (xaccSchedXactionHasOccurDef(sx) && tmpState->num_occur_rem < 0)
         {
-            gnc_sx_destroy_temporal_state (tmpState);
+            g_free (tmpState);
             return result;
         }
     }
@@ -812,7 +779,7 @@ gint gnc_sx_get_num_occur_daterange(const SchedXaction *sx, const GDate* start_d
         gnc_sx_incr_temporal_state (sx, tmpState);
         if (xaccSchedXactionHasOccurDef(sx) && tmpState->num_occur_rem < 0)
         {
-            gnc_sx_destroy_temporal_state (tmpState);
+            g_free (tmpState);
             return result;
         }
     }
@@ -840,7 +807,7 @@ gint gnc_sx_get_num_occur_daterange(const SchedXaction *sx, const GDate* start_d
     if (!countFirstDate && result > 0)
         --result;
 
-    gnc_sx_destroy_temporal_state (tmpState);
+    g_free (tmpState);
     return result;
 }
 
@@ -997,7 +964,7 @@ xaccSchedXactionGetSplits( const SchedXaction *sx )
 }
 
 static Split *
-pack_split_info (TTSplitInfo *s_info, Account *parent_acct,
+pack_split_info (TTSplitInfoPtr s_info, Account *parent_acct,
                  Transaction *parent_trans, QofBook *book)
 {
     Split *split;
@@ -1007,20 +974,18 @@ pack_split_info (TTSplitInfo *s_info, Account *parent_acct,
 
     split = xaccMallocSplit(book);
 
-    xaccSplitSetMemo(split,
-                     gnc_ttsplitinfo_get_memo(s_info));
+    xaccSplitSetMemo(split, s_info->get_memo());
 
     /* Set split-action with gnc_set_num_action which is the same as
      * xaccSplitSetAction with these arguments */
-    gnc_set_num_action(NULL, split, NULL,
-                       gnc_ttsplitinfo_get_action(s_info));
+    gnc_set_num_action(NULL, split, NULL, s_info->get_action());
 
     xaccAccountInsertSplit(parent_acct,
                            split);
 
-    credit_formula = gnc_ttsplitinfo_get_credit_formula(s_info);
-    debit_formula = gnc_ttsplitinfo_get_debit_formula(s_info);
-    acc_guid = qof_entity_get_guid(QOF_INSTANCE(gnc_ttsplitinfo_get_account(s_info)));
+    credit_formula = s_info->get_credit_formula ();
+    debit_formula = s_info->get_debit_formula ();
+    acc_guid = qof_entity_get_guid(QOF_INSTANCE(s_info->get_account ()));
     qof_instance_set (QOF_INSTANCE (split),
 		      "sx-credit-formula", credit_formula,
 		      "sx-debit-formula", debit_formula,
@@ -1032,48 +997,31 @@ pack_split_info (TTSplitInfo *s_info, Account *parent_acct,
 
 
 void
-xaccSchedXactionSetTemplateTrans(SchedXaction *sx, GList *t_t_list,
-                                 QofBook *book)
+xaccSchedXactionSetTemplateTrans (SchedXaction *sx, const TTInfoVec& tt_vec, QofBook *book)
 {
     Transaction *new_trans;
-    TTInfo *tti;
-    TTSplitInfo *s_info;
-    Split *new_split;
-    GList *split_list;
 
     g_return_if_fail (book);
 
     /* delete any old transactions, if there are any */
     delete_template_trans( sx );
 
-    for (; t_t_list != NULL; t_t_list = t_t_list->next)
+    for (auto tti : tt_vec)
     {
-        tti = t_t_list->data;
-
         new_trans = xaccMallocTransaction(book);
 
         xaccTransBeginEdit(new_trans);
-
-        xaccTransSetDescription(new_trans,
-                                gnc_ttinfo_get_description(tti));
-
+        xaccTransSetDescription(new_trans, tti->get_description());
         xaccTransSetDatePostedSecsNormalized(new_trans, gnc_time (NULL));
-
         /* Set tran-num with gnc_set_num_action which is the same as
          * xaccTransSetNum with these arguments */
-        gnc_set_num_action(new_trans, NULL,
-                        gnc_ttinfo_get_num(tti), NULL);
-        xaccTransSetNotes (new_trans, gnc_ttinfo_get_notes (tti));
-        xaccTransSetCurrency( new_trans,
-                              gnc_ttinfo_get_currency(tti) );
+        gnc_set_num_action (new_trans, NULL, tti->get_num(), NULL);
+        xaccTransSetNotes (new_trans, tti->get_notes ());
+        xaccTransSetCurrency (new_trans, tti->get_currency ());
 
-        for (split_list = gnc_ttinfo_get_template_splits(tti);
-                split_list;
-                split_list = split_list->next)
+        for (auto s_info : tti->get_template_splits())
         {
-            s_info = split_list->data;
-            new_split = pack_split_info(s_info, sx->template_acct,
-                                        new_trans, book);
+            auto new_split = pack_split_info(s_info, sx->template_acct, new_trans, book);
             xaccTransAppendSplit(new_trans, new_split);
         }
         xaccTransCommitEdit(new_trans);
@@ -1083,12 +1031,11 @@ xaccSchedXactionSetTemplateTrans(SchedXaction *sx, GList *t_t_list,
 SXTmpStateData*
 gnc_sx_create_temporal_state(const SchedXaction *sx )
 {
-    SXTmpStateData *toRet =
-	 g_new0( SXTmpStateData, 1 );
+    auto toRet = g_new0 (SXTmpStateData, 1);
     if (g_date_valid (&(sx->last_date)))
-	 toRet->last_date       = sx->last_date;
+        toRet->last_date       = sx->last_date;
     else
-	g_date_set_dmy (&(toRet->last_date), 1, 1, 1970);
+        g_date_set_dmy (&toRet->last_date, 1, static_cast<GDateMonth>(1), 1970);
     toRet->num_occur_rem   = sx->num_occurances_remain;
     toRet->num_inst   = sx->instance_num;
     return toRet;
@@ -1173,7 +1120,7 @@ gnc_sx_remove_defer_instance( SchedXaction *sx, void *deferStateData )
         return;
     }
 
-    gnc_sx_destroy_temporal_state(found_by_value->data);
+    g_free (found_by_value->data);
     sx->deferredList = g_list_delete_link(sx->deferredList, found_by_value);
 }
 
@@ -1230,7 +1177,7 @@ static QofObject SXDesc =
     DI(.interface_version = ) QOF_OBJECT_VERSION,
     DI(.e_type            = ) GNC_SX_ID,
     DI(.type_label        = ) "Scheduled Transaction",
-    DI(.create            = ) (gpointer)xaccSchedXactionMalloc,
+    DI(.create            = ) (void* (*)(QofBook*))xaccSchedXactionMalloc,
     DI(.book_begin        = ) NULL,
     DI(.book_end          = ) gnc_sx_book_end,
     DI(.is_dirty          = ) qof_collection_is_dirty,

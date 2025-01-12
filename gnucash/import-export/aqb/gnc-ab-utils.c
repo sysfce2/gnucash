@@ -427,7 +427,7 @@ gnc_ab_description_to_gnc (const AB_TRANSACTION *ab_trans, gboolean is_ofx)
     acc = g_list_prepend (acc, gnc_ab_get_remote_name (ab_trans));
     acc = g_list_prepend (acc, gnc_ab_get_purpose (ab_trans, is_ofx));
     acc = g_list_prepend (acc, ab_ultimate_creditor_debtor_to_gnc (ab_trans, is_ofx));
-    retval = gnc_g_list_stringjoin (acc, "; ");
+    retval = gnc_g_list_stringjoin_nodups (acc, "; ");
 
     g_list_free_full (acc, g_free);
     return retval ? retval : g_strdup (_("Unspecified"));

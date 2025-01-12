@@ -99,7 +99,7 @@ typedef struct AccountPrivate
      * hierarchy, of accounts that have sub-accounts ("detail accounts").
      */
     Account *parent;    /* back-pointer to parent */
-    GList *children;    /* list of sub-accounts */
+    std::vector<Account*> children;    /* list of sub-accounts */
 
     /* protected data - should only be set by backends */
     gnc_numeric starting_balance;
@@ -112,10 +112,6 @@ typedef struct AccountPrivate
     gnc_numeric noclosing_balance;
     gnc_numeric cleared_balance;
     gnc_numeric reconciled_balance;
-
-    std::optional<gnc_numeric> higher_balance_limit;
-    std::optional<gnc_numeric> lower_balance_limit;
-    std::optional<bool>    include_sub_account_balances;
  
     gboolean balance_dirty;     /* balances in splits incorrect */
 

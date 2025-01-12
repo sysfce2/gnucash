@@ -185,6 +185,15 @@ typedef char gchar;
 }
 %enddef
 
+
+%define VECTORREF_HELPER_INOUT(VectorType, ElemSwigType, ElemType)
+
+%typemap(out) VectorType {
+    auto accum = [](SCM acc, auto n){ return scm_cons(SWIG_NewPointerObj(n, ElemSwigType, 0), acc); };
+    $result = std::accumulate ($1->rbegin(), $1->rend(), SCM_EOL, accum);
+}
+%enddef
+
 #elif defined(SWIGPYTHON) /* Typemaps for Python */
 
 %import "glib.h"

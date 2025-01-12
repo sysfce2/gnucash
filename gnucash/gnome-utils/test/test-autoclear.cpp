@@ -26,6 +26,7 @@
 // GoogleTest is written in C++, however, the function we test in C.
 #include "../gnc-autoclear.h"
 #include <memory>
+#include <cstdint>
 #include <Account.h>
 #include <Split.h>
 #include <gtest/gtest.h>

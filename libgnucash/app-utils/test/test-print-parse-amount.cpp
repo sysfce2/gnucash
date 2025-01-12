@@ -23,6 +23,7 @@
 
 #include <config.h>
 #include <stdlib.h>
+#include <cstdint>
 
 #include "gnc-ui-util.h"
 #include "gnc-numeric.h"

@@ -43,6 +43,7 @@
 #include <fstream>      // fstream
 #include <vector>
 #include <string>
+#include <cstdint>
 #include "gnc-tokenizer.hpp"
 
 class GncFwTokenizer : public GncTokenizer

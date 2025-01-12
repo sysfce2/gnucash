@@ -243,19 +243,19 @@ in the Options panel."))
                   (cons 'sortkey (list SPLIT-ACTION))
                   (cons 'split-sortvalue xaccSplitGetAction)
                   (cons 'text (G_ "Number/Action"))
-                  (cons 'renderer-fn #f))
+                  (cons 'renderer-fn xaccSplitGetAction))
 
             (list 'number
                   (cons 'sortkey (list SPLIT-TRANS TRANS-NUM))
                   (cons 'split-sortvalue (compose xaccTransGetNum xaccSplitGetParent))
                   (cons 'text (G_ "Number"))
-                  (cons 'renderer-fn #f)))
+                  (cons 'renderer-fn (compose xaccTransGetNum xaccSplitGetParent))))
 
         (list 't-number
               (cons 'sortkey (list SPLIT-TRANS TRANS-NUM))
               (cons 'split-sortvalue (compose xaccTransGetNum xaccSplitGetParent))
               (cons 'text (G_ "Transaction Number"))
-              (cons 'renderer-fn #f))
+              (cons 'renderer-fn (compose xaccTransGetNum xaccSplitGetParent)))
 
         (list 'memo
               (cons 'sortkey (list SPLIT-MEMO))

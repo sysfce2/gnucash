@@ -173,7 +173,8 @@ GncDbiSqlConnection::unlock_database ()
 {
     if (m_conn == nullptr) return;
     if (m_readonly) return;
-    g_return_if_fail (dbi_conn_error (m_conn, nullptr) == 0);
+    auto dbi_error{dbi_conn_error (m_conn, nullptr)};
+    g_return_if_fail (dbi_error == DBI_ERROR_NONE || dbi_error == DBI_ERROR_BADIDX);
 
     auto tables = m_provider->get_table_list (m_conn, lock_table);
     if (tables.empty())

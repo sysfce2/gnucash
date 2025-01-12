@@ -3,14 +3,15 @@
 # Copyright (C) 2022 by the GnuCash developers and the translators:
 # Automatically generated, 2022.
 #
-# Vesna Micajkova <vmicajkova@institutpraktikum.mk>, 2022.
+# Vesna Micajkova <vmicajkova@institutpraktikum.mk>, 2022, 2024.
+# Bojan Topalovski <3dcncinfo@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: GnuCash 5.4\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug.cgi?"
-"product=GnuCash&component=Translations\n"
-"POT-Creation-Date: 2023-09-25 08:00+0200\n"
-"PO-Revision-Date: 2022-11-25 13:48+0000\n"
+"Project-Id-Version: GnuCash 5.6\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
+"cgi?product=GnuCash&component=Translations\n"
+"POT-Creation-Date: 2024-06-22 06:24+0200\n"
+"PO-Revision-Date: 2024-07-30 16:09+0000\n"
 "Last-Translator: Vesna Micajkova <vmicajkova@institutpraktikum.mk>\n"
 "Language-Team: Macedonian <https://hosted.weblate.org/projects/gnucash/"
 "glossary/mk/>\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #. "English Definition (Dear translators: This file will never be visible to normal users! It should only serve as a tool for translators. E.g. matching terms from this file are displayed in Weblate's Translation pages of other GnuCash components like the program.)"
 msgid "Term"
@@ -31,7 +32,7 @@ msgstr "\"\""
 
 #. "A detailed record of money spent and received"
 msgid "account"
-msgstr "конто"
+msgstr "Сметка"
 
 #. "An alphanumerical code applied to accounts for sorting. Some jurisdictions mandate codes and some GnuCash book templates include codes as part of the tree structure. Account codes can be set and changed in the Edit Account dialog."
 msgid "account code"
@@ -327,7 +328,7 @@ msgstr "префрлање средства"
 
 #. "A document that you give to a client that says you owe money to the client, i.e. the opposite of an invoice"
 msgid "credit note"
-msgstr "Белешка за долг"
+msgstr "Книжно одобрение"
 
 #. "The system of money used in a country"
 msgid "currency"
@@ -733,6 +734,10 @@ msgstr "неодобрено"
 msgid "security"
 msgstr "документ за сопственост"
 
+#. "Selling borrowed units in the hope that when you buy them back later it will be at a lower price."
+msgid "Sell short"
+msgstr ""
+
 #. "-"
 msgid "Share Balance (register)"
 msgstr "Регистер"
@@ -791,7 +796,7 @@ msgstr "ДДВ"
 
 #. "If you create a new e.g. style sheet, you can start from a template."
 msgid "template"
-msgstr "урнек"
+msgstr "шаблон"
 
 #. "see: date range"
 msgid "time period"

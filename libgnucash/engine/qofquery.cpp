@@ -407,7 +407,7 @@ check_object (const QofQuery *q, gpointer object)
                     /* The last term is the actual parameter getter */
                     if (!node->next) break;
 
-                    conv_obj = param->param_getfcn (conv_obj, param);
+                    conv_obj = (void*)param->param_getfcn (conv_obj, param);
                 }
 
                 if (((qt->pred_fcn)(conv_obj, param, qt->pdata)) == qt->invert)

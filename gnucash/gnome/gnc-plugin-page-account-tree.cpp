@@ -34,6 +34,8 @@
 
 #include <config.h>
 
+#include <algorithm>
+
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include "gnc-plugin-page-account-tree.h"
@@ -752,7 +754,20 @@ gnc_plugin_page_account_tree_destroy_widget (GncPluginPage *plugin_page)
                                  (gpointer)gnc_plugin_page_account_tree_summarybar_position_changed,
                                  page);
 
-    // Save account filter state information to account section
+    gnc_prefs_remove_cb_by_func(GNC_PREFS_GROUP_ACCT_SUMMARY, GNC_PREF_START_CHOICE_ABS,
+                                (gpointer)accounting_period_changed_cb, page);
+    gnc_prefs_remove_cb_by_func(GNC_PREFS_GROUP_ACCT_SUMMARY, GNC_PREF_START_DATE,
+                                (gpointer)accounting_period_changed_cb, page);
+    gnc_prefs_remove_cb_by_func(GNC_PREFS_GROUP_ACCT_SUMMARY, GNC_PREF_START_PERIOD,
+                                (gpointer)accounting_period_changed_cb, page);
+    gnc_prefs_remove_cb_by_func(GNC_PREFS_GROUP_ACCT_SUMMARY, GNC_PREF_END_CHOICE_ABS,
+                                (gpointer)accounting_period_changed_cb, page);
+    gnc_prefs_remove_cb_by_func(GNC_PREFS_GROUP_ACCT_SUMMARY, GNC_PREF_END_DATE,
+                                (gpointer)accounting_period_changed_cb, page);
+    gnc_prefs_remove_cb_by_func(GNC_PREFS_GROUP_ACCT_SUMMARY, GNC_PREF_END_PERIOD,
+                                (gpointer)accounting_period_changed_cb, page);
+
+// Save account filter state information to account section
     gnc_tree_view_account_save_filter (GNC_TREE_VIEW_ACCOUNT(priv->tree_view), &priv->fd,
        gnc_state_get_current(), gnc_tree_view_get_state_section (GNC_TREE_VIEW(priv->tree_view)));
 
@@ -1149,21 +1164,11 @@ static gpointer
 delete_account_helper (Account * account, gpointer data)
 {
     auto helper_res = static_cast<delete_helper_t*>(data);
-    auto splits{xaccAccountGetSplits (account)};
+    auto& splits{xaccAccountGetSplits (account)};
+    auto split_ro = [](auto s) -> bool { return xaccTransGetReadOnly (xaccSplitGetParent (s)); };
 
-    if (!splits.empty())
-    {
-        helper_res->has_splits = TRUE;
-        for (auto s : splits)
-        {
-            Transaction *txn = xaccSplitGetParent (s);
-            if (xaccTransGetReadOnly (txn))
-            {
-                helper_res->has_ro_splits = TRUE;
-                break;
-            }
-        }
-    }
+    helper_res->has_splits = !splits.empty();
+    helper_res->has_ro_splits = std::any_of (splits.begin(), splits.end(), split_ro);
 
     return GINT_TO_POINTER (helper_res->has_splits || helper_res->has_ro_splits);
 }
@@ -1175,18 +1180,17 @@ delete_account_helper (Account * account, gpointer data)
 static void
 set_ok_sensitivity(GtkWidget *dialog)
 {
-    gint sa_mas_cnt, trans_mas_cnt;
     gboolean sensitive;
 
     auto sa_mas = GTK_WIDGET(g_object_get_data(G_OBJECT(dialog), DELETE_DIALOG_SA_MAS));
     auto trans_mas = GTK_WIDGET(g_object_get_data(G_OBJECT(dialog), DELETE_DIALOG_TRANS_MAS));
-    sa_mas_cnt = gnc_account_sel_get_visible_account_num(GNC_ACCOUNT_SEL(sa_mas));
-    trans_mas_cnt = gnc_account_sel_get_visible_account_num(GNC_ACCOUNT_SEL(trans_mas));
 
-    sensitive = (((NULL == sa_mas) ||
-                  (!gtk_widget_is_sensitive(sa_mas) || sa_mas_cnt)) &&
-                 ((NULL == trans_mas) ||
-                  (!gtk_widget_is_sensitive(trans_mas) || trans_mas_cnt)));
+    sensitive = ((!sa_mas ||
+                  !gtk_widget_is_sensitive (sa_mas) ||
+                  gnc_account_sel_get_visible_account_num (GNC_ACCOUNT_SEL (sa_mas))) &&
+                 (!trans_mas ||
+                  !gtk_widget_is_sensitive (trans_mas) ||
+                  gnc_account_sel_get_visible_account_num (GNC_ACCOUNT_SEL (trans_mas))));
 
     auto button = GTK_WIDGET(g_object_get_data(G_OBJECT(dialog), DELETE_DIALOG_OK_BUTTON));
     gtk_widget_set_sensitive(button, sensitive);
@@ -1508,6 +1512,9 @@ gnc_plugin_page_account_tree_cmd_delete_account (GSimpleAction *simple,
     GtkWidget *dialog = NULL;
 
     if (account == NULL)
+        return;
+
+    if (!gnc_main_window_all_finish_pending())
         return;
 
     memset (&adopt, 0, sizeof (adopt));

@@ -66,7 +66,7 @@
   ;; This procedure does all the work. We'll define it, then call it safely.
   (define (private-find)
     (cond
-     ((any (compose pair? xaccAccountGetSplitList) old-accounts)
+     ((any (compose positive? xaccAccountGetSplitsSize) old-accounts)
       ;; Get all the splits in the new tree, then iterate over them
       ;; trying to find matches in the old tree.  If there are
       ;; matches, push the splits' parent onto a list.

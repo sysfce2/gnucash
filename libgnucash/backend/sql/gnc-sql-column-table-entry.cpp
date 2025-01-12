@@ -25,6 +25,7 @@
 #include <qof.h>
 #include <sstream>
 #include <iomanip>
+#include <cstdint>
 #include <gnc-datetime.hpp>
 #include "gnc-sql-backend.hpp"
 #include "gnc-sql-object-backend.hpp"
