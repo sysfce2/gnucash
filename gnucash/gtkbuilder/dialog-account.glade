@@ -903,7 +903,7 @@
                     </child>
                     <child>
                       <object class="GtkButton" id="clear_all">
-                        <property name="label" translatable="yes">C_lear All</property>
+                        <property name="label" translatable="yes">Clear _All</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="can-default">True</property>

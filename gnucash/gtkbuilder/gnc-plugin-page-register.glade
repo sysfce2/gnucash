@@ -467,7 +467,7 @@ If 0, all previous days included</property>
                     </child>
                     <child>
                       <object class="GtkButton" id="button84">
-                        <property name="label" translatable="yes">Select _All</property>
+                        <property name="label" translatable="yes">_Select All</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
