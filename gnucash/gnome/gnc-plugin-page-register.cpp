@@ -162,8 +162,10 @@ void gnc_plugin_page_register_filter_end_cb (GtkWidget* radio,
                                              GncPluginPageRegister* page);
 void gnc_plugin_page_register_filter_response_cb (GtkDialog* dialog,
                                                   gint response, GncPluginPageRegister* plugin_page);
-void gnc_plugin_page_register_filter_status_all_cb (GtkButton* button,
-                                                    GncPluginPageRegister* plugin_page);
+void gnc_plugin_page_register_filter_status_select_all_cb (GtkButton* button,
+                                                           GncPluginPageRegister* plugin_page);
+void gnc_plugin_page_register_filter_status_clear_all_cb (GtkButton* button,
+                                                          GncPluginPageRegister* plugin_page);
 void gnc_plugin_page_register_filter_status_one_cb (GtkToggleButton* button,
                                                     GncPluginPageRegister* page);
 void gnc_plugin_page_register_filter_save_cb (GtkToggleButton* button,
@@ -2766,8 +2768,8 @@ gnc_plugin_page_register_filter_status_one_cb (GtkToggleButton* button,
  *  associated with this filter dialog.
  */
 void
-gnc_plugin_page_register_filter_status_all_cb (GtkButton* button,
-                                               GncPluginPageRegister* page)
+gnc_plugin_page_register_filter_status_select_all_cb (GtkButton* button,
+                                                      GncPluginPageRegister* page)
 {
     GncPluginPageRegisterPrivate* priv;
     GtkWidget* widget;
@@ -2792,6 +2794,48 @@ gnc_plugin_page_register_filter_status_all_cb (GtkButton* button,
     /* Set the requested status */
     priv = GNC_PLUGIN_PAGE_REGISTER_GET_PRIVATE (page);
     priv->fd.cleared_match = CLEARED_ALL;
+    gnc_ppr_update_status_query (page);
+    LEAVE (" ");
+}
+
+
+
+/** This function is called whenever the "clear all" status button is
+ *  clicked.  It updates all of the checkbox widgets, then updates the
+ *  query on the register.
+ *
+ *  @param button The button that was clicked.
+ *
+ *  @param page A pointer to the GncPluginPageRegister that is
+ *  associated with this filter dialog.
+ */
+void
+gnc_plugin_page_register_filter_status_clear_all_cb (GtkButton* button,
+                                                     GncPluginPageRegister* page)
+{
+    GncPluginPageRegisterPrivate* priv;
+    GtkWidget* widget;
+    gint i;
+
+    g_return_if_fail (GTK_IS_BUTTON (button));
+    g_return_if_fail (GNC_IS_PLUGIN_PAGE_REGISTER (page));
+
+    ENTER ("(button %p, page %p)", button, page);
+
+    /* Turn off all the check menu items */
+    for (i = 0; status_actions[i].action_name; i++)
+    {
+        widget = status_actions[i].widget;
+        g_signal_handlers_block_by_func (widget,
+                                         (gpointer)gnc_plugin_page_register_filter_status_one_cb, page);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), FALSE);
+        g_signal_handlers_unblock_by_func (widget,
+                                           (gpointer)gnc_plugin_page_register_filter_status_one_cb, page);
+    }
+
+    /* Set the requested status */
+    priv = GNC_PLUGIN_PAGE_REGISTER_GET_PRIVATE (page);
+    priv->fd.cleared_match = CLEARED_NONE;
     gnc_ppr_update_status_query (page);
     LEAVE (" ");
 }
