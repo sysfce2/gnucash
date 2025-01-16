@@ -430,7 +430,11 @@
             ;; Update the progress.
             (update-progress)
 
-            (if (not (qif-xtn:mark xtn))
+            ;; xaccTransCommitEdit will delete the transaction if
+            ;; there aren't at least 2 splits and that will cause a
+            ;; UAF in xaccTransRecordPrice. See https://bugs.gnucash.org/show_bug.cgi?id=799420
+            (let ((splits (qif-xtn:splits xtn)))
+              (if (not (or (qif-xtn:mark xtn) (null? splits)))
                 ;; Convert into a GnuCash transaction.
                 (let ((gnc-xtn (xaccMallocTransaction
                                 (gnc-get-current-book))))
@@ -451,7 +455,8 @@
 
                   ;; rebalance and commit everything
                   (xaccTransCommitEdit gnc-xtn)
-                  (xaccTransRecordPrice gnc-xtn PRICE-SOURCE-SPLIT-IMPORT))))
+                  (format #t "transaction splits ~s~%" (qif-xtn:splits xtn))
+                  (xaccTransRecordPrice gnc-xtn PRICE-SOURCE-SPLIT-IMPORT)))))
           (qif-file:xtns qif-file)))
        sorted-qif-files-list)
 

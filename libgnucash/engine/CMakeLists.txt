@@ -8,7 +8,7 @@ set(engine_noinst_HEADERS
   AccountP.hpp
   SplitP.hpp
   SX-book.h
-  SX-ttinfo.h
+  SX-ttinfo.hpp
   TransactionP.hpp
   gnc-backend-prov.hpp
   gnc-date-p.h
@@ -36,8 +36,9 @@ set (engine_HEADERS
   FreqSpec.h
   Recurrence.h
   SchedXaction.h
+  SchedXaction.hpp
   SX-book.h
-  SX-ttinfo.h
+  SX-ttinfo.hpp
   Query.h
   Scrub.h
   Scrub2.h
@@ -108,7 +109,6 @@ set (engine_HEADERS
   qofbook.h
   qofbook.hpp
   qofbookslots.h
-  qofchoice.h
   qofclass.h
   qofevent.h
   qofid-p.h
@@ -140,9 +140,8 @@ set (engine_SOURCES
   Account.cpp
   Recurrence.cpp
   Query.cpp
-  SchedXaction.c
-  SX-book.c
-  SX-ttinfo.c
+  SchedXaction.cpp
+  SX-book.cpp
   Scrub.cpp
   Scrub2.cpp
   Scrub3.cpp
@@ -196,7 +195,6 @@ set (engine_SOURCES
   kvp-value.cpp
   qof-backend.cpp
   qofbook.cpp
-  qofchoice.cpp
   qofclass.cpp
   qofevent.cpp
   qofid.cpp
@@ -239,7 +237,7 @@ target_link_libraries(gnc-engine
     gnc-core-utils
     ${Boost_DATE_TIME_LIBRARY}
     ${Boost_REGEX_LIBRARY}
-    ${ICU4C_I18N_LDFLAGS}
+    ${ICU_LIBRARIES}
     ${REGEX_LDFLAGS}
     ${GMODULE_LDFLAGS}
     PkgConfig::GLIB2

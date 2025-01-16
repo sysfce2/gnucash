@@ -28,6 +28,7 @@
 #include "../kvp-frame.hpp"
 #include "../gnc-date.h"
 #include <memory>
+#include <cstdint>
 #include <gtest/gtest.h>
 
 TEST (KvpValueTest, Equality)

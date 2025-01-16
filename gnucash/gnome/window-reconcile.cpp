@@ -603,7 +603,6 @@ gnc_save_reconcile_interval(Account *account, time64 statement_date)
 {
     time64 prev_statement_date;
     int days = 0, months = 0;
-    double seconds;
 
     if (!xaccAccountGetReconcileLastDate (account, &prev_statement_date))
         return;
@@ -611,8 +610,8 @@ gnc_save_reconcile_interval(Account *account, time64 statement_date)
     /*
      * Compute the number of days difference.
      */
-    seconds = gnc_difftime (statement_date, prev_statement_date);
-    days = (int)(seconds / 60 / 60 / 24);
+    auto seconds = statement_date - prev_statement_date;
+    days = seconds / 60 / 60 / 24;
 
     /*
      * See if we need to remember days(weeks) or months.  The only trick
@@ -984,7 +983,11 @@ gnc_reconcile_window_button_press_cb (GtkWidget *widget,
         {
             GtkTreeSelection *selection = gtk_tree_view_get_selection (GTK_TREE_VIEW(qview));
 
-            gtk_tree_selection_select_path (selection, path);
+            if (!gtk_tree_selection_path_is_selected (selection, path))
+            {
+                gtk_tree_selection_unselect_all (selection);
+                gtk_tree_selection_select_path (selection, path);
+            }
             gtk_tree_path_free (path);
         }
         do_popup_menu (recnData, event);
@@ -1621,29 +1624,15 @@ recn_set_watches_one_account (gpointer data, gpointer user_data)
                                     xaccAccountGetGUID (account),
                                     QOF_EVENT_MODIFY | QOF_EVENT_DESTROY);
 
-    /* add a watch on each unreconciled or cleared split for the account */
+    /* add a watch on each split for the account */
     for (auto split : xaccAccountGetSplits (account))
     {
-        Transaction *trans;
-        char recn;
-
-        recn = xaccSplitGetReconcile (split);
-        switch (recn)
-        {
-        case NREC:
-        case CREC:
-            trans = xaccSplitGetParent (split);
-
-            gnc_gui_component_watch_entity (recnData->component_id,
-                                            xaccTransGetGUID (trans),
-                                            QOF_EVENT_MODIFY
-                                            | QOF_EVENT_DESTROY
-                                            | GNC_EVENT_ITEM_CHANGED);
-            break;
-
-        default:
-            break;
-        }
+        auto trans = xaccSplitGetParent (split);
+        gnc_gui_component_watch_entity (recnData->component_id,
+                                        xaccTransGetGUID (trans),
+                                        QOF_EVENT_MODIFY
+                                        | QOF_EVENT_DESTROY
+                                        | GNC_EVENT_ITEM_CHANGED);
     }
 }
 
@@ -2258,66 +2247,45 @@ recn_key_press_cb(GtkWidget *widget, GdkEventKey *event, gpointer data)
 static Account *
 find_payment_account(Account *account)
 {
-    if (account == NULL)
-        return NULL;
+    if (account == nullptr)
+        return nullptr;
 
-    GList *list = xaccAccountGetSplitList (account);
-    Account *rv = nullptr;
+    const auto& splits = xaccAccountGetSplits (account);
 
     /* Search backwards to find the latest payment */
-    for (GList *node = g_list_last (list); !rv && node; node = node->prev)
+    for (auto it = splits.rbegin(); it != splits.rend(); it++)
     {
-        Transaction *trans;
-        GList *n;
-
-        auto split = GNC_SPLIT(node->data);
-        if (split == NULL)
-            continue;
+        auto split = *it;
 
         /* ignore 'purchases' */
         if (!gnc_numeric_positive_p (xaccSplitGetAmount(split)))
             continue;
 
-        trans = xaccSplitGetParent(split);
-        if (trans == NULL)
-            continue;
-
-        for (n = xaccTransGetSplitList (trans); n; n = n->next)
+        for (auto n = xaccTransGetSplitList (xaccSplitGetParent(split)); n; n = n->next)
         {
-            GNCAccountType type;
-            Account *a;
-
             auto s = GNC_SPLIT(n->data);
-            if ((s == NULL) || (s == split))
+            if (s == split)
                 continue;
 
-            a = xaccSplitGetAccount(s);
-            if ((a == NULL) || (a == account))
+            auto a = xaccSplitGetAccount(s);
+            if (a == account)
                 continue;
 
-            type = xaccAccountGetType(a);
-            if ((type == ACCT_TYPE_BANK) || (type == ACCT_TYPE_CASH) ||
-                    (type == ACCT_TYPE_ASSET))
-                rv = a;
+            auto type = xaccAccountGetType(a);
+            if (type == ACCT_TYPE_BANK || type == ACCT_TYPE_CASH || type == ACCT_TYPE_ASSET)
+                return a;
         }
     }
 
-    g_list_free (list);
-    return rv;
-}
-
-typedef void (*AccountProc) (Account *a);
-static void traverse_fn (Account *acct, AccountProc fn)
-{
-    fn (acct);
+    return nullptr;
 }
 
 static void
-acct_traverse_descendants (Account *acct, AccountProc fn)
+acct_traverse_descendants (Account *acct, std::function<void(Account*)> fn)
 {
     fn (acct);
     if (xaccAccountGetReconcileChildrenStatus (acct))
-        gnc_account_foreach_descendant (acct, (AccountCb)traverse_fn, (gpointer)fn);
+        gnc_account_foreach_descendant (acct, fn);
 }
 
 /********************************************************************\

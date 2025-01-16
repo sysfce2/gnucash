@@ -39,6 +39,7 @@
 
 #include <string>
 #include <sstream>
+#include <cstdint>
 
 #include "gnc-sql-connection.hpp"
 #include "gnc-sql-backend.hpp"

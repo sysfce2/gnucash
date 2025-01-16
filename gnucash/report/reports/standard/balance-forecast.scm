@@ -193,7 +193,7 @@ date point, a projected minimum balance including scheduled transactions."))
       ;; accounts up to the report start date.
       (let* ((accounts-dates (map (compose xaccTransGetDate xaccSplitGetParent car)
                                   (filter pair?
-                                          (map xaccAccountGetSplitList accounts))))
+                                          (map xaccAccountGetSplits accounts))))
              (earliest (and (pair? accounts-dates) (apply min accounts-dates)))
              (sx-hash (if earliest
                           (gnc-sx-all-instantiate-cashflow-all earliest from-date)
@@ -290,10 +290,6 @@ date point, a projected minimum balance including scheduled transactions."))
         chart (gnc-commodity-get-mnemonic currency))
         (gnc:html-chart-set-currency-symbol!
          chart (gnc-commodity-get-nice-symbol currency))
-
-        ;; Allow tooltip in whole chartarea
-        (gnc:html-chart-set! chart '(options tooltips mode) "index")
-        (gnc:html-chart-set! chart '(options tooltips intersect) #f)
 
         ;; We're done!
         (gnc:html-document-add-object! document chart)

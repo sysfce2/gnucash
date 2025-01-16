@@ -49,7 +49,7 @@ set(gtest_import_backend_LIBS
   ${Boost_LIBRARIES}
   ${GMODULE_LDFLAGS}
   ${GTHREAD_LDFLAGS}
-  ${ICU4C_I18N_LDFLAGS}
+  ${ICU_LIBRARIES}
   gmock
   gtest
 )

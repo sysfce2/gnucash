@@ -185,6 +185,19 @@ void gnc_g_list_cut(GList **list, GList *cut_point);
  **/
 gchar * gnc_g_list_stringjoin (GList *list_of_strings, const gchar *sep);
 /**
+ * @brief Like stringjoin but ensures that the string to be added isn't
+ * already part of the return string.
+ *
+ * @param list_of_strings A GList of chars*
+ *
+ * @param sep a separator or NULL
+ *
+ * @return A newly allocated string that has to be g_free'd by the
+ * caller.
+ **/
+gchar * gnc_g_list_stringjoin_nodups (GList *list_of_strings, const gchar *sep);
+
+/**
  * @brief Scans the GList elements the minimum number of iterations
  * required to test it against a specified size. Returns -1, 0 or 1
  * depending on whether the GList length has less, same, or more

@@ -25,6 +25,7 @@
 #include "gnc-option-gtk-ui.hpp"
 #include <config.h>  // for scanf format string
 #include <memory>
+#include <cstdint>
 #include <qof.h>
 #include <gnc-engine.h> // for GNC_MOD_GUI
 #include <gnc-commodity.h> // for GNC_COMMODITY
@@ -1104,6 +1105,10 @@ create_option_widget<GncOptionUIType::ACCOUNT_SEL> (GncOption& option,
     g_signal_connect(widget, "account_sel_changed",
                      G_CALLBACK(gnc_option_changed_widget_cb), &option);
     wrap_widget(option, widget, page_box, row);
+    // wrap_widget sets the parent so this comes after.
+    gtk_container_child_set(GTK_CONTAINER(gtk_widget_get_parent(widget)),
+                            widget, "fill", TRUE, "expand", TRUE,
+                            nullptr);
 }
 
 static void

@@ -1150,7 +1150,7 @@ gnc_payment_set_account_types (GncTreeViewAccount *tree)
     gnc_tree_view_account_get_view_info (tree, &avi);
 
     for (i = 0; i < NUM_ACCOUNT_TYPES; i++)
-        avi.include_type[i] = gncBusinessIsPaymentAcctType (i);
+        avi.include_type[i] = !xaccAccountIsAPARType (i);
 
     gnc_tree_view_account_set_view_info (tree, &avi);
 }

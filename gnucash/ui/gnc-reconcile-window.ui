@@ -55,7 +55,7 @@
       <attribute name="label" translatable="yes">_Transaction</attribute>
       <section>
         <item>
-          <attribute name="label" translatable="yes">_Balance</attribute>
+          <attribute name="label" translatable="yes" context="reconcile menu">_Balance</attribute>
           <attribute name="action">recwin.TransBalanceAction</attribute>
           <attribute name="accel">&lt;Primary&gt;b</attribute>
         </item>
@@ -95,7 +95,7 @@
 
   <menu id="recwin-popup">
     <item>
-      <attribute name="label" translatable="yes">_Balance</attribute>
+      <attribute name="label" translatable="yes" context="reconcile menu">_Balance</attribute>
       <attribute name="action">recwin.TransBalanceAction</attribute>
     </item>
     <item>
@@ -126,7 +126,7 @@
         <property name="can-focus">False</property>
         <property name="tooltip-text" translatable="yes">Add a new balancing entry to the account</property>
         <property name="action-name">recwin.TransBalanceAction</property>
-        <property name="label" translatable="yes">_Balance</property>
+        <property name="label" translatable="yes" context="reconcile menu">_Balance</property>
         <property name="use-underline">True</property>
         <property name="icon-name">document-new</property>
       </object>

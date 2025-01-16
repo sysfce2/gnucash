@@ -6,9 +6,17 @@ cmake_minimum_required (VERSION 3.14.5)
 if (POLICY CMP0094)
   cmake_policy(SET CMP0094 NEW)
 endif()
+# CMake 3.30+ Use Boost's builtin BoostConfig.cmake instead of
+# FindBoost, the latter of which is removed. Setting this policy to OLD
+# temporarily restores it. BoostConfig.cmake was introduced in Boost
+# 1.70.  A fair number of distros are still shipping Boost 1.69 in
+# "legacy" versions so make it OLD for the 5.x series and NEW for 6.x.
+if (POLICY CMP0167)
+  cmake_policy(SET CMP0167 OLD)
+endif()
 
 project (gnucash
-    VERSION 5.6
+    VERSION 5.10
 )
 
 enable_testing()
@@ -134,7 +142,7 @@ else()
   if (BASH)
     set(SHELL ${BASH})
   else()
-    message(SEND_ERROR "Can't find a suitable bash executable. Please set GNC_SHELL.")
+    message(SEND_ERROR "Can't find a suitable bash executable. Please install bash or set GNC_SHELL.")
   endif()
 endif()
 
@@ -152,16 +160,25 @@ if (GNC_VCS_INFO_RESULT EQUAL 0)
   # if building from VCS, we need git
   find_package(Git)
   if (NOT GIT_FOUND)
-    message(SEND_ERROR "Looks like we're building from version control, but can't find git executable. Please set GIT_EXECUTABLE.")
+    message(SEND_ERROR "Looks like we're building from version control, but can't find git executable. Please install git or set GIT_EXECUTABLE.")
   endif()
+endif()
+
+# Determine whether or not we have to generate a gnc-vcs-info.h file
+# Distribution tarballs have this file in the source tree
+# Git checkouts or zipfiles downloaded straight from github won't have it
+# and require us to build it.
+if (BUILDING_FROM_VCS OR NOT EXISTS "${CMAKE_SOURCE_DIR}/libgnucash/core-utilsgnc-vcs-info.h")
   set(VCS_INFO_BASE_DIR ${CMAKE_BINARY_DIR})
+  set(GENERATE_VCS_INFO "Yes")
 else()
   set(VCS_INFO_BASE_DIR ${CMAKE_SOURCE_DIR})
+  set(GENERATE_VCS_INFO "No")
 endif()
-# The location of gnc-vcs-info.h depends on whether we build from VCS or not
-# And this file is needed in several other build rules, so we define its
-# location once here.
-set(VCS_INFO_FILE ${VCS_INFO_BASE_DIR}/libgnucash/core-utils/gnc-vcs-info.h)
+# As the file's path is needed by several other build rules, we already define
+# that here. The actual build rules (if needed) are in libgnucash/core-utils.
+set(VCS_INFO_FILE ${VCS_INFO_BASE_DIR}/libgnucash/core-utils/gnc-vcs-info.h CACHE STRING "path to gnc-vcs-info.h file")
+
 
 if (WIN32)
   # Help Windows find the various dependencies. We assume here that the standard advice for building
@@ -544,8 +561,7 @@ get_filename_component(PERL_DIR ${PERL_EXECUTABLE} DIRECTORY)
 find_program(POD2MAN_EXECUTABLE pod2man HINTS ${PERL_DIR})
 
 #ICU
-pkg_check_modules (ICU4C REQUIRED icu-uc)
-pkg_check_modules (ICU4C_I18N REQUIRED icu-i18n)
+find_package(ICU REQUIRED COMPONENTS uc i18n)
 
 pkg_check_modules (LIBSECRET libsecret-1>=0.18)
 IF (LIBSECRET_FOUND)
@@ -564,23 +580,9 @@ find_package (Boost 1.67.0 COMPONENTS date_time filesystem locale program_option
 if (Boost_FOUND)
   include_directories(${Boost_INCLUDE_DIRS})
   set(HAVE_BOOST 1)
-else()
-  find_package (Boost 1.60.0 REQUIRED COMPONENTS date_time regex locale filesystem system program_options)
-  if (Boost_FOUND)
-    include (CheckIncludeFileCXX)
-    set(CMAKE_REQUIRED_FLAGS "-std=c++17")
-    set(CMAKE_REQUIRED_INCLUDES ${Boost_INCLUDE_DIR})
-    check_include_file_cxx("boost/locale.hpp" AUTO_PTR)
-    unset(CMAKE_REQUIRED_FLAGS)
-    unset(CMAKE_REQUIRED_INCLUDES)
-    if(AUTO_PTR)
-      include_directories(${Boost_INCLUDE_DIRS})
-      set(HAVE_BOOST 1)
-    endif()
-  endif()
 endif()
 if (NOT HAVE_BOOST)
-message (SEND_ERROR "A suitable Boost is not installed, and is required. GnuCash requires that Boost be compatible and compiled with C++17. Boost 1.67 is the first compatible release but some distributions have patched earlier ones to work with C++17. Please install it and ensure that the following libraries are built: date_time, filesystem, locale, regex, program_options and system.")
+message (SEND_ERROR "A suitable Boost is not installed, and is required. GnuCash requires that Boost be compatible and compiled with C++17. Please install it and ensure that the following libraries are built: date_time, filesystem, locale, regex, program_options and system.")
 endif()
 
 

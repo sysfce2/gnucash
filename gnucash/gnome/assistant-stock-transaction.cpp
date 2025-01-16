@@ -188,7 +188,7 @@ static const TxnTypeVec long_types
     },
     {
         FieldMask::ENABLED_CREDIT | FieldMask::AMOUNT_CREDIT,         // stock_amt
-        FieldMask::ENABLED_DEBIT,          // cash_amt
+        FieldMask::ENABLED_DEBIT | FieldMask::ALLOW_ZERO,          // cash_amt
         FieldMask::ENABLED_DEBIT | FieldMask::ALLOW_ZERO,          // fees_amt
         FieldMask::DISABLED,               // dividend_amt
         FieldMask::ENABLED_CREDIT | FieldMask::ALLOW_ZERO | FieldMask::ALLOW_NEGATIVE | FieldMask::CAPGAINS_IN_STOCK, // capgains_amt
@@ -196,7 +196,7 @@ static const TxnTypeVec long_types
         // sale of stock, and recording capital gain/loss
         N_("Sell"),
         N_("Selling stock long, and record capital gain/loss."
-           "\n\nIf you are unable to calculate capital gains you can enter a"
+           "\n\nIf you are unable to calculate capital gains you can enter a "
            "placeholder amount and correct it in the transaction later.")
     },
     {
@@ -303,7 +303,7 @@ static const TxnTypeVec short_types
     },
     {
         FieldMask::ENABLED_DEBIT | FieldMask::AMOUNT_DEBIT,          // stock_amt
-        FieldMask::ENABLED_CREDIT,         // cash_amt
+        FieldMask::ENABLED_CREDIT | FieldMask::ALLOW_ZERO,         // cash_amt
         FieldMask::ENABLED_DEBIT | FieldMask::ALLOW_ZERO,          // fees_amt
         FieldMask::DISABLED,               // dividend_amt
         FieldMask::ENABLED_CREDIT | FieldMask::ALLOW_ZERO | FieldMask::ALLOW_NEGATIVE | FieldMask::CAPGAINS_IN_STOCK,          // capg_amt
@@ -516,6 +516,13 @@ Logger::report()
     return summary.str();
 }
 
+/* StockTransactionEntry QofEventHandler for accounts.
+ * Nulls the tranaction entry's account member if the account gets destroyed on
+ * us.
+ */
+static void account_destroyed_handler(QofInstance *inst, QofEventId event,
+                                      void* handler_data, [[maybe_unused]]void* event_data);
+
 /** @class StockTransactionEntry
  *
  * Holds the configuration information from the fieldmask and the data
@@ -538,17 +545,18 @@ protected:
     const char* m_action;
     gnc_numeric m_balance = gnc_numeric_zero();
     const char* m_kvp_tag;
+    int m_qof_event_handler;
 public:
     StockTransactionEntry() :
         m_enabled{false}, m_debit_side{false}, m_allow_zero{false},  m_account{nullptr},
         m_value{gnc_numeric_error(GNC_ERROR_ARG)}, m_memo{nullptr}, m_action{nullptr},
-        m_kvp_tag{nullptr} {}
+        m_kvp_tag{nullptr}, m_qof_event_handler{qof_event_register_handler(account_destroyed_handler, this)} {}
     StockTransactionEntry(const char* action, const char* kvp_tag) :
         m_enabled{false}, m_debit_side{false}, m_allow_zero{false},  m_account{nullptr},
         m_value{gnc_numeric_error(GNC_ERROR_ARG)}, m_memo{nullptr}, m_action{action},
-        m_kvp_tag{kvp_tag} {}
+        m_kvp_tag{kvp_tag}, m_qof_event_handler{qof_event_register_handler(account_destroyed_handler, this)} {}
     StockTransactionEntry(const StockTransactionEntry&) = default;
-    virtual ~StockTransactionEntry() = default;
+    virtual ~StockTransactionEntry() { qof_event_unregister_handler(m_qof_event_handler); }
     /** Set up the state variables from the FieldMask.
      *
      * @param A Fieldmast to configure the StockTransactionEntry.
@@ -615,6 +623,16 @@ public:
      */
     virtual  const char* print_price() const;
 };
+
+static void
+account_destroyed_handler(QofInstance *inst, QofEventId event,
+                          void* handler_data, [[maybe_unused]]void* event_data)
+{
+    auto entry{static_cast<StockTransactionEntry*>(handler_data)};
+    if ((inst && inst != QOF_INSTANCE(entry->account())) || (event & QOF_EVENT_DESTROY) == 0)
+        return;
+    entry->set_account(nullptr);
+}
 
 using StockTransactionEntryPtr = std::unique_ptr<StockTransactionEntry>;
 
@@ -1072,7 +1090,7 @@ StockTransactionFeesEntry::create_split(Transaction* trans,  AccountVec& commits
 using EntryVec = std::vector<StockTransactionEntry*>;
 
 static void stock_assistant_model_date_changed_cb(GtkWidget*, void*);
-static void stock_assistant_model_description_changed_cb(GtkWidget*, void*);
+static void stock_assistant_model_description_changed_cb(GtkWidget *, void *);
 
 /** @class StockAssistantModel Manages the available transaction types
  * based on the state of the account, the collection and validation of
@@ -1104,15 +1122,20 @@ class StockAssistantModel
     EntryVec m_list_of_splits;
 
 public:
-    StockAssistantModel (Account *account) :
-        m_acct{account},
-        m_currency{gnc_account_get_currency_or_parent(account)},
-        m_stock_entry{std::make_unique<StockTransactionStockEntry>(NC_ ("Stock Assistant: Page name","Stock"))},
-        m_cash_entry{std::make_unique<StockTransactionEntry>(NC_ ("Stock Assistant: Page name","Cash"), PROCEEDS_KVP_TAG)},
-        m_fees_entry{std::make_unique<StockTransactionFeesEntry>(NC_ ("Stock Assistant: Page name","Fees"), FEES_KVP_TAG)},
-        m_dividend_entry{std::make_unique<StockTransactionEntry>(NC_ ("Stock Assistant: Page name","Dividend"), DIVIDEND_KVP_TAG)},
-        m_capgains_entry{std::make_unique<StockTransactionEntry>(NC_ ("Stock Assistant: Page name","Capital Gains"), CAPGAINS_KVP_TAG)}
-    {
+  StockAssistantModel(Account *account)
+      : m_acct{account}, m_currency{gnc_account_get_currency_or_parent(
+                             account)},
+        m_stock_entry{std::make_unique<StockTransactionStockEntry>(
+            NC_("Stock Assistant: Page name", "Stock"))},
+        m_cash_entry{std::make_unique<StockTransactionEntry>(
+            NC_("Stock Assistant: Page name", "Cash"), PROCEEDS_KVP_TAG)},
+        m_fees_entry{std::make_unique<StockTransactionFeesEntry>(
+            NC_("Stock Assistant: Page name", "Fees"), FEES_KVP_TAG)},
+        m_dividend_entry{std::make_unique<StockTransactionEntry>(
+            NC_("Stock Assistant: Page name", "Dividend"), DIVIDEND_KVP_TAG)},
+        m_capgains_entry{std::make_unique<StockTransactionEntry>(
+            NC_("Stock Assistant: Page name", "Capital Gains"),
+            CAPGAINS_KVP_TAG)} {
         DEBUG ("StockAssistantModel constructor\n");
         m_stock_entry->set_account(m_acct);
     };
@@ -1212,6 +1235,7 @@ public:
      * transaction was created and a pointer to the new transaction.
      */
     std::tuple<bool, Transaction*> create_transaction ();
+    Account* account() { return m_acct; }
 private:
     /** Private function that adds the calculated price to the book's
      * price database.
@@ -1263,7 +1287,7 @@ StockAssistantModel::set_txn_type (guint type_idx)
 };
 
 static void
-check_txn_date(Split* last_split, time64 txn_date, Logger& logger)
+check_txn_date(const Split* last_split, time64 txn_date, Logger& logger)
 {
     auto last_split_date = xaccTransGetDate(xaccSplitGetParent(last_split));
     if (txn_date <= last_split_date) {
@@ -1301,8 +1325,7 @@ StockAssistantModel::generate_list_of_splits() {
     // transactions dated after the date specified, it is very likely
     // the later stock transactions will be invalidated. warn the user
     // to review them.
-    auto splits{xaccAccountGetSplits (m_acct)};
-    if (!splits.empty())
+    if (const auto& splits = xaccAccountGetSplits (m_acct); !splits.empty())
         check_txn_date(splits.back(), m_transaction_date, m_logger);
 
     if (m_stock_entry->enabled()  || m_stock_entry->has_amount())
@@ -2571,15 +2594,21 @@ StockAssistantView::prepare(int page, StockAssistantModel* model)
  * objects and is responsible for creating, connecting, and destroying
  * both.
  */
+
+static void stock_account_destroyed_handler(QofInstance *inst, QofEventId event,
+                                            void* handler_data, [[maybe_unused]]void* event_data);
+
 class StockAssistantController
 {
     std::unique_ptr<StockAssistantModel> m_model;
     StockAssistantView m_view;
     bool m_destroying = false;
+    int m_qof_event_handler;
 public:
     StockAssistantController (GtkWidget *parent, GtkBuilder* builder, Account* acct)
         : m_model{std::make_unique<StockAssistantModel>(acct)},
-          m_view{builder, acct, parent}
+          m_view{builder, acct, parent},
+          m_qof_event_handler{qof_event_register_handler(stock_account_destroyed_handler, this)}
     {
         connect_signals (builder);
         DEBUG ("StockAssistantController constructor\n");
@@ -2589,16 +2618,17 @@ public:
     void prepare(GtkAssistant* assistant, GtkWidget *page);
     void finish();
     bool destroying() { return m_destroying; }
+    Account* model_account() { return m_model->account(); }
 };
 
 static void stock_assistant_window_destroy_cb(GtkWidget *object, gpointer user_data);
-static void refresh_handler (GHashTable *changes, gpointer user_data);
 static void close_handler (gpointer user_data);
 
 StockAssistantController::~StockAssistantController()
 {
     m_destroying = true;
     gnc_unregister_gui_component_by_data (ASSISTANT_STOCK_TRANSACTION_CM_CLASS, this);
+    qof_event_unregister_handler(m_qof_event_handler);
 }
 
 void
@@ -2611,7 +2641,7 @@ StockAssistantController::connect_signals (GtkBuilder *builder)
 
 
     auto component_id = gnc_register_gui_component
-        (ASSISTANT_STOCK_TRANSACTION_CM_CLASS, refresh_handler, close_handler, this);
+        (ASSISTANT_STOCK_TRANSACTION_CM_CLASS, nullptr, close_handler, this);
     gnc_gui_component_watch_entity_type (component_id, GNC_ID_ACCOUNT,
                                          QOF_EVENT_MODIFY | QOF_EVENT_DESTROY);
 }
@@ -2633,6 +2663,17 @@ StockAssistantController::finish()
     gnc_resume_gui_refresh ();
 
     gnc_close_gui_component_by_data (ASSISTANT_STOCK_TRANSACTION_CM_CLASS, this);
+}
+
+static void
+stock_account_destroyed_handler(QofInstance *inst, QofEventId event,
+                          void* handler_data, [[maybe_unused]]void* event_data)
+{
+    auto controller{static_cast<StockAssistantController*>(handler_data)};
+    if ((inst && inst != QOF_INSTANCE(controller->model_account())) || (event & QOF_EVENT_DESTROY) == 0 ||
+        controller->destroying())
+        return;
+    delete controller;
 }
 
 // These callbacks must be registered with the GtkAssistant so they can't be member functions.
@@ -2674,30 +2715,6 @@ stock_assistant_cancel_cb (GtkAssistant *assistant, gpointer user_data)
     gnc_close_gui_component_by_data (ASSISTANT_STOCK_TRANSACTION_CM_CLASS, controller);
 }
 
-
-static void
-refresh_handler (GHashTable *changes, gpointer user_data)
-{
-    if (!changes) // None of our watches fired, we don't need to do anything.
-        return;
-
-/* We have only one watch so we don't need to check GUIDs. There
- * should be only one entry, so just get the value and see if it
- * matches QOF_EVENT_DESTROY.
- */
-    auto list = g_hash_table_get_values(changes);
-    for (auto node = list; node; node = g_list_next(node))
-    {
-        auto change{static_cast<EventInfo*>(node->data)};
-        if (change->event_mask & QOF_EVENT_DESTROY)
-        {
-            PWARN ("Stock account destroyed, cancelling assistant.");
-            auto controller = static_cast<StockAssistantController*>(user_data);
-            gnc_close_gui_component_by_data(ASSISTANT_STOCK_TRANSACTION_CM_CLASS, controller);
-        }
-    }
-    g_list_free (list);
-}
 
 static void
 close_handler (gpointer user_data)

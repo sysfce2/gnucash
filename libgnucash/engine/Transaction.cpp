@@ -1190,56 +1190,6 @@ xaccTransGetAccountAmount (const Transaction *trans, const Account *acc)
     return total;
 }
 
-/*################## Added for Reg2 #################*/
-gboolean
-xaccTransGetRateForCommodity(const Transaction *trans,
-                             const gnc_commodity *split_com,
-                             const Split *split, gnc_numeric *rate)
-{
-    GList *splits;
-    gnc_commodity *trans_curr;
-
-    if (trans == nullptr || split_com == nullptr || split == nullptr)
-	return FALSE;
-
-    trans_curr = xaccTransGetCurrency (trans);
-    if (gnc_commodity_equal (trans_curr, split_com))
-    {
-        if (rate)
-            *rate = gnc_numeric_create (1, 1);
-        return TRUE;
-    }
-
-    for (splits = trans->splits; splits; splits = splits->next)
-    {
-        Split *s = GNC_SPLIT(splits->data);
-        gnc_commodity *comm;
-
-        if (!xaccTransStillHasSplit (trans, s)) continue;
-
-        if (s == split)
-        {
-            comm = xaccAccountGetCommodity (xaccSplitGetAccount(s));
-            if (gnc_commodity_equal (split_com, comm))
-            {
-                gnc_numeric amt = xaccSplitGetAmount (s);
-                gnc_numeric val = xaccSplitGetValue (s);
-
-                if (!gnc_numeric_zero_p (xaccSplitGetAmount (s)) &&
-                    !gnc_numeric_zero_p (xaccSplitGetValue (s)))
-                {
-                    if (rate)
-                        *rate = gnc_numeric_div (amt, val, GNC_DENOM_AUTO,
-                                                GNC_HOW_DENOM_REDUCE);
-                    return TRUE;
-                }
-            }
-        }
-    }
-    return FALSE;
-}
-/*################## Added for Reg2 #################*/
-
 gnc_numeric
 xaccTransGetAccountConvRate(const Transaction *txn, const Account *acc)
 {
@@ -1668,9 +1618,6 @@ xaccTransCommitEdit (Transaction *trans)
     LEAVE ("(trans=%p)", trans);
 }
 
-#define SWAP_STR(a, b) do { const char *tmp = (a); (a) = (b); (b) = tmp; } while (0);
-#define SWAP(a, b)     do { gpointer tmp = (a); (a) = (b); (b) = tmp; } while (0);
-
 /* Ughhh. The Rollback function is terribly complex, and, what's worse,
  * it only rolls back the basics.  The TransCommit functions did a bunch
  * of Lot/Cap-gains scrubbing that don't get addressed/undone here, and
@@ -1708,8 +1655,8 @@ xaccTransRollbackEdit (Transaction *trans)
     /* copy the original values back in. */
 
     orig = trans->orig;
-    SWAP_STR(trans->num, orig->num);
-    SWAP_STR(trans->description, orig->description);
+    std::swap (trans->num, orig->num);
+    std::swap (trans->description, orig->description);
     trans->date_entered = orig->date_entered;
     trans->date_posted = orig->date_posted;
     std::swap (trans->common_currency, orig->common_currency);
@@ -1736,8 +1683,8 @@ xaccTransRollbackEdit (Transaction *trans)
             Split *so = GNC_SPLIT(onode->data);
 
             xaccSplitRollbackEdit(s);
-            SWAP_STR(s->action, so->action);
-            SWAP_STR(s->memo, so->memo);
+            std::swap (s->action, so->action);
+            std::swap (s->memo, so->memo);
             qof_instance_copy_kvp (QOF_INSTANCE (s), QOF_INSTANCE (so));
             s->reconciled = so->reconciled;
             s->amount = so->amount;
@@ -2596,26 +2543,6 @@ gboolean xaccTransIsReadonlyByPostedDate(const Transaction *trans)
     g_date_free(threshold_date);
     return result;
 }
-
-/*################## Added for Reg2 #################*/
-
-gboolean xaccTransInFutureByPostedDate (const Transaction *trans)
-{
-    time64 present;
-    gboolean result;
-    g_assert(trans);
-
-    present = gnc_time64_get_today_end ();
-
-    if (trans->date_posted > present)
-        result = TRUE;
-    else
-        result = FALSE;
-
-    return result;
-}
-
-/*################## Added for Reg2 #################*/
 
 gboolean
 xaccTransHasReconciledSplitsByAccount (const Transaction *trans,

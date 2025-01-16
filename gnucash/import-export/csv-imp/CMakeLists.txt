@@ -62,7 +62,7 @@ add_library(gnc-csv-import ${csv_import_noinst_HEADERS}
 target_link_libraries(
   gnc-csv-import
   ${Boost_LIBRARIES}
-  ${ICU4C_I18N_LDFLAGS}
+  ${ICU_LIBRARIES}
   gnc-generic-import
   gnc-gnome-utils
   gnc-app-utils

@@ -28,6 +28,7 @@
 #include <kvp-frame.hpp>
 #include <gtest/gtest.h>
 #include <string>
+#include <cstdint>
 
 class ImapTest : public testing::Test
 {

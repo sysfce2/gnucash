@@ -4,14 +4,15 @@
 # Automatically generated, 2023.
 #
 # soramikan <sora_yana@icloud.com>, 2024.
+# YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: GnuCash 5.4\n"
+"Project-Id-Version: GnuCash 5.6\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/enter_bug."
 "cgi?product=GnuCash&component=Translations\n"
-"POT-Creation-Date: 2023-09-25 08:00+0200\n"
-"PO-Revision-Date: 2024-03-24 02:01+0000\n"
-"Last-Translator: soramikan <sora_yana@icloud.com>\n"
+"POT-Creation-Date: 2024-06-22 06:24+0200\n"
+"PO-Revision-Date: 2024-12-12 17:00+0000\n"
+"Last-Translator: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnucash/"
 "glossary/ja/>\n"
 "Language: ja\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #. "English Definition (Dear translators: This file will never be visible to normal users! It should only serve as a tool for translators. E.g. matching terms from this file are displayed in Weblate's Translation pages of other GnuCash components like the program.)"
 msgid "Term"
@@ -733,6 +734,10 @@ msgstr ""
 msgid "security"
 msgstr ""
 
+#. "Selling borrowed units in the hope that when you buy them back later it will be at a lower price."
+msgid "Sell short"
+msgstr ""
+
 #. "-"
 msgid "Share Balance (register)"
 msgstr ""
@@ -861,11 +866,11 @@ msgstr ""
 
 #. "In small business accounting: A person or company that sells items and is supplying goods"
 msgid "vendor"
-msgstr "製造元"
+msgstr "仕入先"
 
 #. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in gnucash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in gnucash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
 msgid "voucher"
-msgstr "経費報告書"
+msgstr "立替払請求書"
 
 #. "see debit"
 msgid "withdraw (in the reconcile dialog)"

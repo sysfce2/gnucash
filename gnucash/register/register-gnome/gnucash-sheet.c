@@ -1104,6 +1104,8 @@ gnucash_sheet_insert_cb (GtkEditable *editable,
         g_signal_stop_emission_by_name (G_OBJECT(sheet->entry),
                                         "insert_text");
     }
+
+    g_free (new_text);
 }
 
 static char*
@@ -1876,14 +1878,8 @@ gnucash_sheet_key_press_event (GtkWidget *widget, GdkEventKey *event)
     sheet = GNUCASH_SHEET(widget);
     /* bug#60582 comment#27 2
            save shift state to enable <shift minus> and <shift equal>
-       bug#618434
-           save keyval to handle GDK_KEY_KP_Decimal event
      */
-#ifdef G_OS_WIN32
-    /* gdk never sends GDK_KEY_KP_Decimal on win32. See #486658 */
-    if (event->hardware_keycode == VK_DECIMAL)
-        event->keyval = GDK_KEY_KP_Decimal;
-#endif
+
     sheet->shift_state = event->state & GDK_SHIFT_MASK;
     sheet->keyval_state =
         (event->keyval == GDK_KEY_KP_Decimal) ? GDK_KEY_KP_Decimal : 0;

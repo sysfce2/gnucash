@@ -1,5 +1,238 @@
 Version history:
 ------- -------
+5.10 - 15 December 2024
+the following bugfixes were accomplished:
+
+    Bug 798789 - Trading Accounts
+    Bug 799283 - Segfault/Crash if payment dialog change from customer to vendor
+    Bug 799420 - gnucash 5.8 crashes on windows 10 while importing qif
+    Bug 799423 - Crash when creating ETF transaction
+    Bug 799429 - Crash when changing accounting period end date
+    Bug 799430 - Type-Ahead feature lost account setting functionality
+    Bug 799433 - Right-click issue in import window
+                 Make the context menu apply to the row under the pointer
+                 instead of the selected row.
+    Bug 799435 - Right-click issue in reconcile window
+                 Right click should open the context menu, not extend the
+                 selection.
+    Bug 799437 - Crash deleting and recreating an SX with the scheduled
+                 transaction editor open
+    Bug 799439 - Duplicate information in description when importing
+                 CAMT.053.001.02 via aqbanking
+    Bug 799443 - Edit find account jump then open, open the last highlighted
+                 account not the jumped to account
+    Bug 799444 - Silent crash on CSV import
+    Bug 799451 - Cannot translate different meanings of string "_Balance" to
+                 Chinese.
+                 Add context to the msgids.
+    Bug 799452 - Transaction Report: Cannot subtotal based on Number field
+                 Enable grouping and subtotals for Num field
+    Bug 799454 - Numeric value in exported CSV transactions
+    Bug 799456 - Tabbing through fields autoselects all but Num field
+                 By which the reporter means that the value in every cell
+                 except Num is selected on cell entry.
+    Bug 799458 - Crash attempting to edit a scheduled transaction
+    Bug 799470 - Crash when clicking on Schedule Transaction Editor
+
+The following fixes and improvements were not associated with bug reports:
+
+    Tabs now close when you middle-click on them.
+    The SX editor's saved duration and height are stored differently in
+        preferences so values previously saved will be lost when switching
+        between versions 5.9 and 5.10 (and later). We regret the inconvenience
+        but the new scheme better matches GnuCash's use of the preferences.
+    Allow 0 cash amount when using the Stock Assistant to create a sell
+        transaction. This might happen if the commission and fees exactly
+        balance the proceeds of the sale.
+    Enforce searching for our gsettings schema files first where they were
+        installed. This was not done when the installation prefix was /usr
+        or /usr/local which could potentially cause gnucash to find other
+        schema files first.
+    Set tooltip text on the outer tab container again so that it can be updated
+        by main_window_update_page_long_name.
+    Tooltips on chart reports now appear any time the pointer hovers in the
+        chart area and reflect the nearest point. Previously the pointer had
+        to be very close to a point.
+    Updated the quote source lists in the Security Editor dialog to reflect the
+        current Finance::Quote version.
+    Display a warning dialog when a transaction is unbalanceable because the
+        user has set a minimum fraction on an account smaller than the
+        security's fraction in a book using trading accounts.
+    Deleting a commodity will fail if there are accounts denominated in the
+        commodity. When reporting the error to the user list those accounts.
+    Correct in Tips of the Day the IRC network where GnuCash's channel can be
+        found.
+    Ensure Python bindings Session constructor loads the session's data.
+    Fix compile failures with Boost 1.87. This requires the minimum Boost
+        version to be 1.67, removing the option for distributions to patch
+        older versions.
+    Prevent deleting an account with an open register from logging spurious
+        errors
+    Check that GUI refreshes are not suspended before calling
+        gnc_gui_refresh_all.
+    Unify wording for alphavazntage tooltips.
+    New script to update translator-credits. See POD for usage instructions.
+    Document cmake 3.14 requirement set a year ago.
+
+New and Updated Translations: Chinese (Simplified Han script),
+    Chinese (Traditional Han script), Croatian, Dutch, English (Australia),
+    English (New Zealand), English (United Kingdom), French, German, Hebrew,
+    Hungarian, Japanese, Portuguese, Portuguese (Brazil), Russian, Spanish,
+    Swedish, Ukrainian
+
+5.9  - 29 September 2024
+The following bugs have been fixed:
+    Bug 724745 - Added new transaction during reconcile, didn't show up in
+                 reconcile window.
+    Bug 797045 - Improve error reporting for bad credentials with MySQL backend
+                 ("bad or corrupt data" => "access denied")
+    Bug 798568 - Transaction Copy/Paste problem
+    Bug 799308 - sqlite backend: Example Python script prints error when
+                 creating new file.
+    Bug 799370 - Transaction Journal view cursor placement after commit to
+                 transaction change.
+    Bug 799384 - Reconciled date cannot be parsed.
+    Bug 799389 - Crash when removing an account
+    Bug 799391 - Transaction Cut/Paste doesn't move the transaction to the
+                 target account
+    Bug 799395 - relative date offset quarters occasionally wrong
+    Bug 799399 - Windows Keypad decimal locale error
+    Bug 799416 - Post invoice: post to account dropdown listbox too small
+    Bug 799419 - Intermittent quote price issue
+
+Other repairs or enhancements not marked as bugs:
+
+    Add YH Finance (FINANCEAPI) API Key to Quotes infrastructure with a
+        preference in the Online Quotes page and add financeapi to known
+        sources.
+    Move copied_class and copied_leader_guid
+    Move static copied_class and static copied_leader_guid to be part of the
+        copied_item structure. This makes it more evident that calling
+        clear_copied_item needs to be called before copied_item is used.
+    [gnc-datetime] improve CSV date parser with ICU and Boost.
+        1. Add dateformat "Locale" with ICU; uses current locale for date
+           parsing. ICU's locale date parser may parse "3 May 2023" or
+           "2024年9月13日" (LC_TIME=zh_TW.utf8) and maybe others.
+        2. Augment d-m-y m-d-y and y-m-d with boost UK/US/ISO parsers. This
+           allows CSV import of dates with months as words as "30 Sep 2023"
+           or "May 4, 1978" or "2023-Dec-25". Note boost parser cannot
+           recognise 2-digit years, therefore "30 Sep 24" is invalid.
+    Csv Import - improve assisant's introduction page
+    Correctly handle uncommitted edits when opening a file from history.
+    Don't use gnc_difftime and deprecate it because it casts time64 to doubles
+    [gnc-pricedb.h] remove unused gnc_pricedb_substitute_commodity
+    [gnc-pricedb.h] remove unused gnc_pricedb_lookup_at_time64
+
+New and Updated Translations: Assamese, Chinese (Simplified),
+    Chinese (Traditional), Croatian, Dutch, English (United Kingdom), Hebrew,
+    Hungarian, Macedonian, Norwegian Bokmål, Portuguese (Brazil), Russian,
+    Spanish, Swedish, Turkish
+
+5.8  - 7 July 2024
+The following bugs have been fixed:
+
+    Bug 799347 - Edit account to make it sub account under other account
+
+There were no other changes.
+New and Updated Translations: Chinese (Traditional), Hebrew, Hungarian, Macedonian, Spanish
+5.7  - 20 June 2024
+The following bugs have been fixed:
+
+    Bug 669031 - Save the Scheduled Transactions number of months
+    Bug 669035 - Save the Scheduled Transaction divider position
+    Bug 798822 - Move to blank transaction
+    Bug 799047 - AutoComplete Only Considers Visible Transactions
+    Bug 799258 - Reports calculating net worth incorrectly after stock split
+    Bug 799262 - Failed import QIF investment
+    Bug 799264 - option account selector fails to include appropriate hidden
+                 accounts.
+    Bug 799268 - Cannot write a check over $1000
+    Bug 799272 - Crashes when pasting a copied transaction
+    Bug 799279 - Import Matcher (CSV) does not compute correctly the share
+                 amount based
+                 on security price
+    Bug 799281 - Deleting a transaction may trigger a crash
+    Bug 799290 - Invoice register context menu issue
+    Bug 799298 - Shortcut Ctrl-G does not work in the General Journal register
+                 for the default date value
+    Bug 799300 - Nullpointer exception in gnc_quote_source_s
+    Bug 799305 - Crash when there is more than one unknown quote source for
+                 commodities
+    Bug 799309 - Import Multi-split CSV can duplicate 'Notes' field from one
+                 transaction to next
+    Bug 799320 - GNUCash Immediately Exits on Startup
+    Bug 799324 - Invalid free in gvalue_from_kvp_value()
+    Bug 799334 - GnuCash re-opens to incorrect account window if there are
+                 transient tabs present when closed.
+    Bug 799336 - Stock Assistant closes with its New Account dialog
+    Bug 799339 - RFE: Add Document Link for Payments to Owner Report
+
+Other repairs or enhancements not marked as bugs:
+
+    New Report: Exprimental>Transaction Breakdown Report
+
+        Retrieves transactions from an account, distributes the splits into accounts
+        - note if a transaction has 2 or more splits into 1 account, the transaction
+          account cell will show the sum of the 2 splits
+        - note if a transaction's currency is different from the account's currency,
+          both amounts will be shown into the appropriate currency.
+        [txn-columns] multilevel sorting - type then name.
+    Add ability for the dense calendar to start from any week day.
+    In the dense calendar, add a default number of months per column entry to the view
+        model to get a better layout when the function gnc_dense_cal_set_num_months is
+        solely used.
+    Add today indication on the dense calendar
+    Updated the Quote Sources list in the Security Editor to match F::Q v1.59
+    Import Matcher - select row if none is selected yet when right-clicking the
+        list of matches
+    Change the default visible period for General Ledger from 1 calendar month to 30 days.
+    Fix Failing SRFI-64 tests being reported as pass by ctest with guile-3.
+    Ensure that filters are re-applied to multi-account registers when the number of
+        included sub-accounts changes.
+    Copy the latest price when creating a new entry in the Price Editor from a
+        commodity selection
+    New function gnc_account_foreach_until_date uses binary search to find first split
+        after date, then for_each from earliest split to (but excluding) that split.
+    New function gnc_reports_foreach to abstract GHashTable-base implementation.
+    Cleanup - remove deprecated function (re-)defines that were deprected 11 years ago.
+    [engine.i] move gnc_accounts_and_all_descendants to engine.i
+    [Account.cpp] Convert children from GList to std::vector.
+    [html-utilities.scm] show acct full names in gnc:html-render-options-changed
+    [ifrs-cost-basis.scm] amend truth table as per bug 797796 comment 241 further
+        amendments to match updated truth table.
+    Clean up some obsolete tools and references to non-git VCS's
+    Rework version-info rules to allow building from github downloaded zip archives
+    Remove account splits in reverse crono order, speeds up book shutdown.
+    Move libgnucash/doc/xml to libgnucash/backend/xml/DTD
+    Remove libgnucash/docs, ensuring all of the content is available either in Doxygen
+        comments or in the Wiki.
+    Remove XCode info from HACKING, obsolete. Move valgrind/callgrind instructions to
+        the Wiki.
+    Move doxygen target and related files to toplevel. Note: this also means the target
+        directory changes from libgnucash/docs/html to [toplevel]/doxygen/html and the
+        main page is specified directly in doxygen.cfg.
+    Drop old migration script to split qof from engine
+    Update doxygen.cfg file to more recent release
+    Doxygen - Clean up obsolete files and comments.
+    [gnc-ofx-import.cpp] show message while deduplicating download
+    Replace more GLib containers with C++ containers.
+    Change python install path to be compatible with distro installations.
+    Update some C++ template override signatures to be C++20 compliant.
+    [gnc-log-replay.cpp] don't set import to DEBUG because it'll spew too many debug
+        messages when gnc-log-replay completes.
+    Fix transaction report sorting/show-account-description and display.
+    [test-commodity-utils.scm] don't test TZ-sensitive datetimes
+    [engine.i] gnc_get_match_commodity_splits from scheme to c++ for better efficiency.
+    [utest-Account] add more balance limit tests
+    Convert more C files to C++
+    Fix more memory leaks and use-after-frees.
+    [Transaction|Split.cpp] Remove Reg2 unused functions
+
+New and Updated Translations: Arabic, Croatian, Dutch, English (Australia),
+    English (New Zealand), English (United Kingdom), French, German, Hebrew, Hungarian,
+    Italian, Japanese, Macedonian, Norwegian Bokmål, Polish, Portuguese (Brazil), Slovak,
+    Tamil, Turkish, Urdu
+
 5.6  - 31 March 2024
 The following bugs have been fixed:
 

@@ -213,6 +213,7 @@ gnc_commodity* parse_commodity (const std::string& comm_str)
             if (comm)
                 break;
         }
+        g_list_free (namespaces);
     }
 
     if (!comm)

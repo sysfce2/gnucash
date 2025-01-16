@@ -54,6 +54,8 @@
 #include "gncTaxTable.h"
 #include "gncVendor.h"
 
+#include <numeric>
+#include <unordered_set>
 %}
 #if defined(SWIGGUILE) //Always C++
 %{
@@ -63,6 +65,8 @@ using AccountVec = std::vector<Account*>;
 
 SplitsVec gnc_get_match_commodity_splits (AccountVec accounts, bool use_end_date,
                                           time64 end_date, gnc_commodity *comm, bool sort);
+
+AccountVec gnc_accounts_and_all_descendants (AccountVec accounts);
 
 extern "C"
 {
@@ -82,6 +86,7 @@ GLIST_HELPER_INOUT(PriceList, SWIGTYPE_p_GNCPrice);
 // TODO: free PriceList?
 GLIST_HELPER_INOUT(CommodityList, SWIGTYPE_p_gnc_commodity);
 VECTOR_HELPER_INOUT(SplitsVec, SWIGTYPE_p_Split, Split);
+VECTORREF_HELPER_INOUT(SplitsVec&, SWIGTYPE_p_Split, Split);
 VECTOR_HELPER_INOUT(AccountVec, SWIGTYPE_p_Account, Account);
 
 %typemap(newfree) char * "g_free($1);"
@@ -155,6 +160,22 @@ SplitsVec gnc_get_match_commodity_splits (AccountVec accounts, bool use_end_date
     return rv;
 }
 
+using AccountSet = std::unordered_set<Account*>;
+static void maybe_add_descendants (Account* acc, AccountSet* accset)
+{
+    if (accset->insert (acc).second)
+        gnc_account_foreach_child (acc, (AccountCb)maybe_add_descendants, accset);
+};
+
+AccountVec
+gnc_accounts_and_all_descendants (AccountVec accounts)
+{
+    AccountSet accset;
+    for (auto a : accounts)
+        maybe_add_descendants (a, &accset);
+    return AccountVec (accset.begin(), accset.end());
+}
+
 %}
 
 /* NB: The object ownership annotations should already cover all the
@@ -171,7 +192,6 @@ functions. */
 %newobject gnc_pricedb_lookup_latest_before_any_currency_t64;
 %newobject gnc_pricedb_get_prices;
 %newobject gnc_pricedb_lookup_at_time;
-%newobject gnc_pricedb_lookup_at_time64;
 %newobject gnc_pricedb_lookup_day;
 %newobject gnc_pricedb_lookup_day_t64;
 
@@ -301,6 +321,8 @@ Account * gnc_book_get_template_root(QofBook *book);
 %typemap(out) KvpValue * " $result = gnc_kvp_value_ptr_to_scm($1); "
 %typemap(in) GSList *key_path " $1 = gnc_scm_to_gslist_string($input);"
 %typemap(freearg) GSList *key_path "g_slist_free_full ($1, g_free);"
+
+const SplitsVec& xaccAccountGetSplits (const Account*);
 
 QofBook* qof_book_new (void);
 void qof_book_options_delete (QofBook *book, GSList *key_path);

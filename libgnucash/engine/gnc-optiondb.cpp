@@ -707,6 +707,7 @@ gnc_register_commodity_option(GncOptionDB* db, const char* section,
                 commodity,
                 GncOptionUIType::COMMODITY}};
     db->register_option(section, std::move(option));
+    g_list_free (namespaces);
 }
 
 void

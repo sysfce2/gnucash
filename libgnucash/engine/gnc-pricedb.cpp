@@ -2178,33 +2178,6 @@ gnc_pricedb_lookup_day_t64(GNCPriceDB *db,
     return lookup_nearest_in_time(db, c, currency, t, TRUE);
 }
 
-// return 0 if price's time matches exactly
-static int price_same_time (GNCPrice *p, time64 *time)
-{
-    return !(gnc_price_get_time64 (p) == *time);
-}
-
-GNCPrice *
-gnc_pricedb_lookup_at_time64(GNCPriceDB *db,
-                             const gnc_commodity *c,
-                             const gnc_commodity *currency,
-                             time64 t)
-{
-    GNCPrice *rv = nullptr;
-    if (!db || !c || !currency) return nullptr;
-    ENTER ("db=%p commodity=%p currency=%p", db, c, currency);
-    auto price_list = pricedb_get_prices_internal (db, c, currency, TRUE);
-    auto p = g_list_find_custom (price_list, &t, (GCompareFunc) price_same_time);
-    if (p)
-    {
-        rv = GNC_PRICE (p->data);
-        gnc_price_ref (rv);
-    }
-    g_list_free (price_list);
-    LEAVE (" ");
-    return rv;
-}
-
 static GNCPrice *
 lookup_nearest_in_time(GNCPriceDB *db,
                        const gnc_commodity *c,
@@ -2769,66 +2742,6 @@ gnc_pricedb_foreach_price(GNCPriceDB *db,
     }
     LEAVE (" use unstable order");
     return unstable_price_traversal(db, f, user_data);
-}
-
-/* ==================================================================== */
-/* commodity substitution */
-
-typedef struct
-{
-    gnc_commodity *old_c;
-    gnc_commodity *new_c;
-} GNCPriceFixupData;
-
-static gboolean
-add_price_to_list (GNCPrice *p, gpointer data)
-{
-    auto list = static_cast<GList**>(data);
-
-    *list = g_list_prepend (*list, p);
-
-    return TRUE;
-}
-
-static void
-gnc_price_fixup_legacy_commods(gpointer data, gpointer user_data)
-{
-    auto p = static_cast<GNCPrice*>(data);
-    auto fixup_data = static_cast<GNCPriceFixupData*>(user_data);
-    gnc_commodity *price_c;
-
-    if (!p) return;
-
-    price_c = gnc_price_get_commodity(p);
-    if (gnc_commodity_equiv(price_c, fixup_data->old_c))
-    {
-        gnc_price_set_commodity (p, fixup_data->new_c);
-    }
-    price_c = gnc_price_get_currency(p);
-    if (gnc_commodity_equiv(price_c, fixup_data->old_c))
-    {
-        gnc_price_set_currency (p, fixup_data->new_c);
-    }
-}
-
-void
-gnc_pricedb_substitute_commodity(GNCPriceDB *db,
-                                 gnc_commodity *old_c,
-                                 gnc_commodity *new_c)
-{
-    GNCPriceFixupData data;
-    GList *prices = nullptr;
-
-    if (!db || !old_c || !new_c) return;
-
-    data.old_c = old_c;
-    data.new_c = new_c;
-
-    gnc_pricedb_foreach_price (db, add_price_to_list, &prices, FALSE);
-
-    g_list_foreach (prices, gnc_price_fixup_legacy_commods, &data);
-
-    g_list_free (prices);
 }
 
 /***************************************************************************/

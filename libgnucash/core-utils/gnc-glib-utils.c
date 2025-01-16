@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include <string.h>
+#include <stdbool.h>
 
 #include "gnc-glib-utils.h"
 
@@ -287,9 +288,25 @@ gnc_g_list_cut(GList **list, GList *cut_point)
     cut_point->prev = NULL;
 }
 
+static bool
+utf8_strstr(char **needle, char *haystack)
+{
+    char *tmp = g_utf8_normalize (*needle, -1, G_NORMALIZE_NFC);
+    if (haystack && *haystack)
+    {
+        char *place = strstr(haystack, tmp);
+        if (place)
+        {
+            g_free (tmp);
+            return false;
+        }
+    }
+    *needle = tmp; //so that haystack is already normalized
+    return true;
+}
 
-gchar *
-gnc_g_list_stringjoin (GList *list_of_strings, const gchar *sep)
+static gchar *
+gnc_g_list_stringjoin_internal (GList *list_of_strings, const gchar *sep, bool testdups)
 {
     gint seplen = sep ? strlen(sep) : 0;
     gint length = -seplen;
@@ -311,12 +328,29 @@ gnc_g_list_stringjoin (GList *list_of_strings, const gchar *sep)
         gchar *str = n->data;
         if (!str || !str[0])
             continue;
-        if (sep && (p != retval))
-            p = g_stpcpy (p, sep);
-        p = g_stpcpy (p, str);
+        if (!testdups || utf8_strstr (&str, retval))
+        {
+            if (sep && (p != retval))
+                p = g_stpcpy (p, sep);
+            p = g_stpcpy (p, str);
+            if (testdups)
+                g_free (str);
+        }
     }
 
     return retval;
+}
+
+gchar *
+gnc_g_list_stringjoin (GList *list_of_strings, const gchar *sep)
+{
+    return gnc_g_list_stringjoin_internal (list_of_strings, sep, false);
+}
+
+gchar *
+gnc_g_list_stringjoin_nodups (GList *list_of_strings, const gchar *sep)
+{
+    return gnc_g_list_stringjoin_internal (list_of_strings, sep, true);
 }
 
 gint

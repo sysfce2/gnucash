@@ -2,6 +2,7 @@
 #include <kvp-frame.hpp>
 #include <libguile.h>
 #include <numeric>
+#include <cstdint>
 
 #include <config.h>
 

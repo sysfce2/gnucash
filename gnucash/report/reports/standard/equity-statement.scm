@@ -175,7 +175,7 @@
                          (and (eq? direction 'out)
                               (negative? split-value))))
                 (total-flow 'add (xaccTransGetCurrency transaction) split-value))))
-        (xaccAccountGetSplitList target-account)))
+        (xaccAccountGetSplits target-account)))
      target-account-list)
     total-flow))
 

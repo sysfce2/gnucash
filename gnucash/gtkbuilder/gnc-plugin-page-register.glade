@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.38.2 -->
+<!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.22"/>
   <object class="GtkAdjustment" id="days_adjustment">
@@ -378,7 +378,7 @@ If 0, all previous days included</property>
                 <property name="can-focus">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <!-- n-columns=1 n-rows=7 -->
+                  <!-- n-columns=1 n-rows=8 -->
                   <object class="GtkGrid" id="table1">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
@@ -467,13 +467,13 @@ If 0, all previous days included</property>
                     </child>
                     <child>
                       <object class="GtkButton" id="button84">
-                        <property name="label" translatable="yes">Select _All</property>
+                        <property name="label" translatable="yes">_Select All</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
                         <property name="halign">center</property>
                         <property name="use-underline">True</property>
-                        <signal name="clicked" handler="gnc_plugin_page_register_filter_status_all_cb" swapped="no"/>
+                        <signal name="clicked" handler="gnc_plugin_page_register_filter_status_select_all_cb" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left-attach">0</property>
@@ -491,6 +491,21 @@ If 0, all previous days included</property>
                       <packing>
                         <property name="left-attach">0</property>
                         <property name="top-attach">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="button85">
+                        <property name="label" translatable="yes">Clear _All</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="halign">center</property>
+                        <property name="use-underline">True</property>
+                        <signal name="clicked" handler="gnc_plugin_page_register_filter_status_clear_all_cb" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left-attach">0</property>
+                        <property name="top-attach">7</property>
                       </packing>
                     </child>
                   </object>
