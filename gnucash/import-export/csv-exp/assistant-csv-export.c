@@ -398,8 +398,7 @@ update_accounts_tree (CsvExportInfo *info)
     num_accounts = gtk_tree_selection_count_selected_rows (selection);
 
     label = info->csva.num_acct_label;
-
-    string = g_strdup_printf ("%d", num_accounts);
+    string = g_strdup_printf (_("Accounts Selected: %d"), num_accounts);
     gtk_label_set_text (GTK_LABEL (label), string);
     g_free (string);
 }
