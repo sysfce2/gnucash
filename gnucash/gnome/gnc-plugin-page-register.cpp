@@ -2845,7 +2845,7 @@ get_filter_times (GncPluginPageRegister* page)
     else
     {
         if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (
-                                              priv->fd.start_date_today)))
+                                              priv->fd.end_date_today)))
         {
             priv->fd.end_time = gnc_time64_get_today_end();
         }
