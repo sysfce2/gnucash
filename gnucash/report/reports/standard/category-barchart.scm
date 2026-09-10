@@ -547,14 +547,13 @@ Please deselect the accounts with negative balances."))
             (let ((isAverage  (string=? (gnc-prefs-get-string "general.report" "chart-tooltip-position") "average"))
                   (pointSize  (gnc-prefs-get-int "general.report" "chart-point-size"))
                   (pointSizeH (gnc-prefs-get-int "general.report" "chart-point-size-hover"))
-                  (isLineChart (if (eq? chart-type 'linechart) #t #f))
-                 )(
-                    if (or (not isLineChart) (and tooltip-indexed isAverage isLineChart))
-                         (gnc:html-chart-set! chart '(options tooltips caretPadding) 0)
-                         (if tooltip-indexed
-                           (gnc:html-chart-set! chart '(options tooltips caretPadding) (+ pointSize 2))
-                           (gnc:html-chart-set! chart '(options tooltips caretPadding) (+ pointSizeH 2))
-             )))
+                  (isLineChart (eq? chart-type 'linechart)))
+              (gnc:html-chart-set!
+               chart '(options tooltips caretPadding)
+               (cond
+                ((or (not isLineChart) (and tooltip-indexed isAverage)) 0)
+                (tooltip-indexed (+ pointSize 2))
+                (else (+ pointSizeH 2)))))
 
             (gnc:html-chart-set-data-labels! chart date-string-list)
             (gnc:html-chart-set-y-axis-label!

@@ -326,14 +326,13 @@
        ;; tailor applied GC's preferences toward this particular chart
        (let ((isAverage  (string=? (gnc-prefs-get-string "general.report" "chart-tooltip-position") "average"))
              (pointSize  (gnc-prefs-get-int "general.report" "chart-point-size"))
-             (pointSizeH (gnc-prefs-get-int "general.report" "chart-point-size-hover"))
-            )(
-               if (or (not linechart?) (and tooltip-indexed isAverage linechart?))
-                    (gnc:html-chart-set! chart '(options tooltips caretPadding) 0)
-                    (if tooltip-indexed
-                      (gnc:html-chart-set! chart '(options tooltips caretPadding) (+ pointSize 2))
-                      (gnc:html-chart-set! chart '(options tooltips caretPadding) (+ pointSizeH 2))
-        )))
+             (pointSizeH (gnc-prefs-get-int "general.report" "chart-point-size-hover")))
+         (gnc:html-chart-set!
+          chart '(options tooltips caretPadding)
+          (cond
+           ((or (not linechart?) (and tooltip-indexed isAverage)) 0)
+           (tooltip-indexed (+ pointSize 2))
+           (else (+ pointSizeH 2)))))
 
        (gnc:html-chart-set-y-axis-label!
         chart (gnc-commodity-get-mnemonic report-currency))
