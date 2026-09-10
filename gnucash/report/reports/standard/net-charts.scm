@@ -312,8 +312,6 @@
             (date-string-list (map qof-print-date dates-list)))
 
        (gnc:report-percent-done 90)
-       ;; apply default settings from preferences
-       (gnc:html-chart-apply-preferences-report! chart)
 
        (gnc:html-chart-set-type! chart (if linechart? 'line 'bar))
        (gnc:html-chart-set-width! chart width)

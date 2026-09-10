@@ -70,7 +70,6 @@
 (export gnc:html-chart-set-grid?!)
 (export gnc:html-chart-set-y-axis-label!)
 (export gnc:html-chart-add-data-series!)
-(export gnc:html-chart-apply-preferences-report!)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -189,7 +188,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define (gnc:make-html-chart)
+(define (make-html-chart-object)
   (gnc:make-html-chart-internal
    '(percent . 100)  ;;width
    '(percent . 100)  ;;height
@@ -278,6 +277,11 @@
    #t        ;custom y-axis ticks?
    ))
 
+(define (gnc:make-html-chart)
+  (let ((chart (make-html-chart-object)))
+    (apply-report-preferences! chart)
+    chart))
+
 (define (gnc:html-chart-type chart)
   (gnc:html-chart-get chart '(type)))
 
@@ -310,7 +314,7 @@
 (define (gnc:html-chart-set-tooltip-non-zero-only! chart nonZeroOnly)
   (gnc:html-chart-set! chart '(options tooltips showNonZeroOnly) nonZeroOnly))
 
-(define (gnc:html-chart-apply-preferences-report! chart)
+(define (apply-report-preferences! chart)
 
   (define pointstyles
     '(circle cross crossRot dash line rect rectRounded rectRot star triangle))

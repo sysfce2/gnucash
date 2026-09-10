@@ -163,9 +163,6 @@
         (gnc:html-markup-h3 title)
         (gnc:html-markup-p text))))
 
-    ;; apply default settings from preferences
-    (gnc:html-chart-apply-preferences-report! chart)
-
     (gnc:html-chart-set-type! chart 'line)
 
     (gnc:html-chart-set-currency-iso!

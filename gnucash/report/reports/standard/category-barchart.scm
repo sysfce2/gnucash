@@ -525,9 +525,6 @@ Please deselect the accounts with negative balances."))
                  (list-of-rows #f)
                  (row-totals #f))
 
-            ;; apply default settings from preferences
-            (gnc:html-chart-apply-preferences-report! chart)
-
             ;; Set chart title, subtitle etc.
             (gnc:html-chart-set-type!
              chart (if (eq? chart-type 'barchart) 'bar 'line))
