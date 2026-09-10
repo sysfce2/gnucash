@@ -540,7 +540,7 @@ Please deselect the accounts with negative balances."))
             (gnc:html-chart-set-width! chart width)
             (gnc:html-chart-set-height! chart height)
 
-            (gnc:html-chart-set-tooltip-indexed?! chart tooltip-indexed)
+            (gnc:html-chart-set-tooltip-mode! chart (if tooltip-indexed 'index 'point))
             (gnc:html-chart-set-tooltip-non-zero-only! chart (get-option gnc:pagename-display optname-tooltip-non-zero-only))
 
             ;; tailor applied GC's preferences toward this particular chart

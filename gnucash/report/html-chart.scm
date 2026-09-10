@@ -55,7 +55,7 @@
 (export gnc:html-chart-format-style)
 (export gnc:html-chart-set-format-style!)
 (export gnc:html-chart-render)
-(export gnc:html-chart-set-tooltip-indexed?!)
+(export gnc:html-chart-set-tooltip-mode!)
 (export gnc:html-chart-set-tooltip-caretpadding!)
 (export gnc:html-chart-set-tooltip-non-zero-only!)
 (export gnc:html-chart-set-custom-x-axis-ticks?!)
@@ -301,8 +301,8 @@
 (define (gnc:html-chart-set-x-axis-type! chart type)
   (gnc:html-chart-set! chart '(options scales xAxes (0) type) type))
 
-(define (gnc:html-chart-set-tooltip-indexed?! chart indexed?)
-  (gnc:html-chart-set! chart '(options tooltips mode) (if indexed? 'index 'point)))
+(define (gnc:html-chart-set-tooltip-mode! chart mode)
+  (gnc:html-chart-set! chart '(options tooltips mode) mode))
 
 (define (gnc:html-chart-set-tooltip-caretpadding! chart padding)
   (gnc:html-chart-set! chart '(options tooltips caretPadding) padding))

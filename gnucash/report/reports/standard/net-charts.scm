@@ -320,7 +320,7 @@
        (gnc:html-chart-set-height! chart height)
        (gnc:html-chart-set-title!
         chart (list report-title (gnc-date-interval-format from-date-t64 to-date-t64)))
-       (gnc:html-chart-set-tooltip-indexed?! chart tooltip-indexed)
+       (gnc:html-chart-set-tooltip-mode! chart (if tooltip-indexed 'index 'point))
        (gnc:html-chart-set-tooltip-non-zero-only! chart (get-option gnc:pagename-display optname-tooltip-non-zero-only))
 
        ;; tailor applied GC's preferences toward this particular chart
