@@ -327,8 +327,8 @@
        (let ((isAverage  (string=? (gnc-prefs-get-string "general.report" "chart-tooltip-position") "average"))
              (pointSize  (gnc-prefs-get-int "general.report" "chart-point-size"))
              (pointSizeH (gnc-prefs-get-int "general.report" "chart-point-size-hover")))
-         (gnc:html-chart-set!
-          chart '(options tooltips caretPadding)
+         (gnc:html-chart-set-tooltip-caretpadding!
+          chart
           (cond
            ((or (not linechart?) (and tooltip-indexed isAverage)) 0)
            (tooltip-indexed (+ pointSize 2))

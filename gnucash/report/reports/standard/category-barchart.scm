@@ -548,8 +548,8 @@ Please deselect the accounts with negative balances."))
                   (pointSize  (gnc-prefs-get-int "general.report" "chart-point-size"))
                   (pointSizeH (gnc-prefs-get-int "general.report" "chart-point-size-hover"))
                   (isLineChart (eq? chart-type 'linechart)))
-              (gnc:html-chart-set!
-               chart '(options tooltips caretPadding)
+              (gnc:html-chart-set-tooltip-caretpadding!
+               chart
                (cond
                 ((or (not isLineChart) (and tooltip-indexed isAverage)) 0)
                 (tooltip-indexed (+ pointSize 2))

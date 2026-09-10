@@ -190,7 +190,8 @@
     (gnc:html-chart-set-custom-x-axis-ticks?! chart #f)
 
     ;; tailor applied GC's preferences toward this particular chart
-    (gnc:html-chart-set! chart '(options tooltips caretPadding) (+ (gnc-prefs-get-int "general.report" "chart-point-size") 2))
+    (gnc:html-chart-set-tooltip-caretpadding!
+     chart (+ (gnc-prefs-get-int "general.report" "chart-point-size") 2))
 
     (cond
      ((gnc-commodity-equiv report-currency price-commodity)
